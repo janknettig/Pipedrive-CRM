@@ -1,0 +1,25 @@
+[
+    {
+        "name": "object",
+        "type": "select",
+        "label": "Object",
+        "required": true,
+        "options": [
+            { "label": "Deals", "value": "deals" },
+            { "label": "Organizations", "value": "organizations" },
+            { "label": "Persons", "value": "persons" }
+        ]
+    },
+    {
+        "name": "id",
+        "type": "number",
+        "label": "Object ID",
+        "required": true
+    },
+    {
+        "name": "follower_id",
+        "type": "number",
+        "label": "Follower ID",
+        "required": true
+    }
+]

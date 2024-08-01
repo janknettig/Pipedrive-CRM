@@ -1,0 +1,11 @@
+{
+    "response": {
+        "output": {
+            "name": "url",
+            "type": "text",
+            "label": "URL",
+            "help": "Enter a path relative to `{{getApiURL(connection.accessToken, connection.customDomain, connection.apiDomain)}}/`, E.g. `deals`.",
+            "required": true
+        }
+    }
+}

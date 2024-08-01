@@ -1,0 +1,649 @@
+[
+    {
+        "name": "id",
+        "type": "number",
+        "label": "Mail thread ID"
+    },
+    {
+        "name": "parties",
+        "type": "collection",
+        "label": "Parties",
+        "spec": [
+            {
+                "name": "to",
+                "type": "array",
+                "label": "To",
+                "spec": {
+                    "type": "collection",
+                    "spec": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "label": "ID"
+                        },
+                        {
+                            "name": "name",
+                            "type": "text",
+                            "label": "Name"
+                        },
+                        {
+                            "name": "latest_sent",
+                            "type": "boolean",
+                            "label": "Latest sent"
+                        },
+                        {
+                            "name": "email_address",
+                            "type": "email",
+                            "label": "Email address"
+                        },
+                        {
+                            "name": "message_time",
+                            "type": "number",
+                            "label": "Message time"
+                        },
+                        {
+                            "name": "linked_person_id",
+                            "type": "text",
+                            "label": "Linked person ID"
+                        },
+                        {
+                            "name": "linked_person_name",
+                            "type": "text",
+                            "label": "Linked person name"
+                        },
+                        {
+                            "name": "linked_organization_id",
+                            "type": "text",
+                            "label": "Linked organization ID"
+                        },
+                        {
+                            "name": "mail_message_party_id",
+                            "type": "number",
+                            "label": "Mail message party ID"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "from",
+                "type": "array",
+                "label": "From",
+                "spec": {
+                    "type": "collection",
+                    "spec": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "label": "ID"
+                        },
+                        {
+                            "name": "name",
+                            "type": "text",
+                            "label": "Name"
+                        },
+                        {
+                            "name": "latest_sent",
+                            "type": "boolean",
+                            "label": "Latest sent"
+                        },
+                        {
+                            "name": "email_address",
+                            "type": "email",
+                            "label": "Email address"
+                        },
+                        {
+                            "name": "message_time",
+                            "type": "number",
+                            "label": "Message time"
+                        },
+                        {
+                            "name": "linked_person_id",
+                            "type": "text",
+                            "label": "Linked person ID"
+                        },
+                        {
+                            "name": "linked_person_name",
+                            "type": "text",
+                            "label": "Linked person name"
+                        },
+                        {
+                            "name": "linked_organization_id",
+                            "type": "text",
+                            "label": "Linked organization ID"
+                        },
+                        {
+                            "name": "mail_message_party_id",
+                            "type": "number",
+                            "label": "Mail message party ID"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "cc",
+                "type": "array",
+                "label": "Cc",
+                "spec": {
+                    "type": "collection",
+                    "spec": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "label": "ID"
+                        },
+                        {
+                            "name": "name",
+                            "type": "text",
+                            "label": "Name"
+                        },
+                        {
+                            "name": "latest_sent",
+                            "type": "boolean",
+                            "label": "Latest sent"
+                        },
+                        {
+                            "name": "email_address",
+                            "type": "email",
+                            "label": "Email address"
+                        },
+                        {
+                            "name": "message_time",
+                            "type": "number",
+                            "label": "Message time"
+                        },
+                        {
+                            "name": "linked_person_id",
+                            "type": "text",
+                            "label": "Linked person ID"
+                        },
+                        {
+                            "name": "linked_person_name",
+                            "type": "text",
+                            "label": "Linked person name"
+                        },
+                        {
+                            "name": "linked_organization_id",
+                            "type": "text",
+                            "label": "Linked organization ID"
+                        },
+                        {
+                            "name": "mail_message_party_id",
+                            "type": "number",
+                            "label": "Mail message party ID"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "bcc",
+                "type": "array",
+                "label": "Bcc",
+                "spec": {
+                    "type": "collection",
+                    "spec": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "label": "ID"
+                        },
+                        {
+                            "name": "name",
+                            "type": "text",
+                            "label": "Name"
+                        },
+                        {
+                            "name": "latest_sent",
+                            "type": "boolean",
+                            "label": "Latest sent"
+                        },
+                        {
+                            "name": "email_address",
+                            "type": "email",
+                            "label": "Email address"
+                        },
+                        {
+                            "name": "message_time",
+                            "type": "number",
+                            "label": "Message time"
+                        },
+                        {
+                            "name": "linked_person_id",
+                            "type": "text",
+                            "label": "Linked person ID"
+                        },
+                        {
+                            "name": "linked_person_name",
+                            "type": "text",
+                            "label": "Linked person name"
+                        },
+                        {
+                            "name": "linked_organization_id",
+                            "type": "text",
+                            "label": "Linked organization ID"
+                        },
+                        {
+                            "name": "mail_message_party_id",
+                            "type": "number",
+                            "label": "Mail message party ID"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "name": "drafts_parties",
+        "type": "collection",
+        "label": "Drafts parties",
+        "spec": [
+            {
+                "name": "to",
+                "type": "array",
+                "label": "To",
+                "spec": {
+                    "type": "collection",
+                    "spec": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "label": "ID"
+                        },
+                        {
+                            "name": "name",
+                            "type": "text",
+                            "label": "Name"
+                        },
+                        {
+                            "name": "latest_sent",
+                            "type": "boolean",
+                            "label": "Latest sent"
+                        },
+                        {
+                            "name": "email_address",
+                            "type": "email",
+                            "label": "Email address"
+                        },
+                        {
+                            "name": "message_time",
+                            "type": "number",
+                            "label": "Message time"
+                        },
+                        {
+                            "name": "linked_person_id",
+                            "type": "text",
+                            "label": "Linked person ID"
+                        },
+                        {
+                            "name": "linked_person_name",
+                            "type": "text",
+                            "label": "Linked person name"
+                        },
+                        {
+                            "name": "linked_organization_id",
+                            "type": "text",
+                            "label": "Linked organization ID"
+                        },
+                        {
+                            "name": "mail_message_party_id",
+                            "type": "number",
+                            "label": "Mail message party ID"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "from",
+                "type": "array",
+                "label": "From",
+                "spec": {
+                    "type": "collection",
+                    "spec": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "label": "ID"
+                        },
+                        {
+                            "name": "name",
+                            "type": "text",
+                            "label": "Name"
+                        },
+                        {
+                            "name": "latest_sent",
+                            "type": "boolean",
+                            "label": "Latest sent"
+                        },
+                        {
+                            "name": "email_address",
+                            "type": "email",
+                            "label": "Email address"
+                        },
+                        {
+                            "name": "message_time",
+                            "type": "number",
+                            "label": "Message time"
+                        },
+                        {
+                            "name": "linked_person_id",
+                            "type": "text",
+                            "label": "Linked person ID"
+                        },
+                        {
+                            "name": "linked_person_name",
+                            "type": "text",
+                            "label": "Linked person name"
+                        },
+                        {
+                            "name": "linked_organization_id",
+                            "type": "text",
+                            "label": "Linked organization ID"
+                        },
+                        {
+                            "name": "mail_message_party_id",
+                            "type": "number",
+                            "label": "Mail message party ID"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "cc",
+                "type": "array",
+                "label": "Cc",
+                "spec": {
+                    "type": "collection",
+                    "spec": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "label": "ID"
+                        },
+                        {
+                            "name": "name",
+                            "type": "text",
+                            "label": "Name"
+                        },
+                        {
+                            "name": "latest_sent",
+                            "type": "boolean",
+                            "label": "Latest sent"
+                        },
+                        {
+                            "name": "email_address",
+                            "type": "email",
+                            "label": "Email address"
+                        },
+                        {
+                            "name": "message_time",
+                            "type": "number",
+                            "label": "Message time"
+                        },
+                        {
+                            "name": "linked_person_id",
+                            "type": "text",
+                            "label": "Linked person ID"
+                        },
+                        {
+                            "name": "linked_person_name",
+                            "type": "text",
+                            "label": "Linked person name"
+                        },
+                        {
+                            "name": "linked_organization_id",
+                            "type": "text",
+                            "label": "Linked organization ID"
+                        },
+                        {
+                            "name": "mail_message_party_id",
+                            "type": "number",
+                            "label": "Mail message party ID"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "bcc",
+                "type": "array",
+                "label": "Bcc",
+                "spec": {
+                    "type": "collection",
+                    "spec": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "label": "ID"
+                        },
+                        {
+                            "name": "name",
+                            "type": "text",
+                            "label": "Name"
+                        },
+                        {
+                            "name": "latest_sent",
+                            "type": "boolean",
+                            "label": "Latest sent"
+                        },
+                        {
+                            "name": "email_address",
+                            "type": "email",
+                            "label": "Email address"
+                        },
+                        {
+                            "name": "message_time",
+                            "type": "number",
+                            "label": "Message time"
+                        },
+                        {
+                            "name": "linked_person_id",
+                            "type": "text",
+                            "label": "Linked person ID"
+                        },
+                        {
+                            "name": "linked_person_name",
+                            "type": "text",
+                            "label": "Linked person name"
+                        },
+                        {
+                            "name": "linked_organization_id",
+                            "type": "text",
+                            "label": "Linked organization ID"
+                        },
+                        {
+                            "name": "mail_message_party_id",
+                            "type": "number",
+                            "label": "Mail message party ID"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "name": "folders",
+        "label": "Folders",
+        "type": "array",
+        "spec": {
+            "type": "text"
+        }
+    },
+    {
+        "name": "account_id",
+        "type": "text",
+        "label": "Account ID"
+    },
+    {
+        "name": "user_id",
+        "type": "number",
+        "label": "User ID"
+    },
+    {
+        "name": "version",
+        "type": "number",
+        "label": "Version"
+    },
+    {
+        "name": "subject",
+        "type": "text",
+        "label": "Subject"
+    },
+    {
+        "name": "snippet",
+        "type": "text",
+        "label": "Snippet"
+    },
+    {
+        "name": "snippet_draft",
+        "type": "text",
+        "label": "Snippet draft"
+    },
+    {
+        "name": "snippet_sent",
+        "type": "text",
+        "label": "Snippet sent"
+    },
+    {
+        "name": "message_count",
+        "type": "number",
+        "label": "Message count"
+    },
+    {
+        "name": "read_flag",
+        "type": "number",
+        "label": "Read flag"
+    },
+    {
+        "name": "mail_tracking_status",
+        "type": "text",
+        "label": "Mal tracking status"
+    },
+    {
+        "name": "has_attachments_flag",
+        "type": "number",
+        "label": "Has attachments flag"
+    },
+    {
+        "name": "has_inline_attachments_flag",
+        "type": "number",
+        "label": "Has inline attachments flag"
+    },
+    {
+        "name": "has_real_attachments_flag",
+        "type": "number",
+        "label": "Has real attachments flag"
+    },
+    {
+        "name": "has_draft_flag",
+        "type": "number",
+        "label": "Has draft flag"
+    },
+    {
+        "name": "has_sent_flag",
+        "type": "number",
+        "label": "Has sent flag"
+    },
+    {
+        "name": "archived_flag",
+        "type": "number",
+        "label": "Archived flag"
+    },
+    {
+        "name": "deleted_flag",
+        "type": "number",
+        "label": "Deleted flag"
+    },
+    {
+        "name": "shared_flag",
+        "type": "number",
+        "label": "Shared flag"
+    },
+    {
+        "name": "synced_flag",
+        "type": "number",
+        "label": "Synced flag"
+    },
+    {
+        "name": "external_deleted_flag",
+        "type": "number",
+        "label": "External deleted flag"
+    },
+    {
+        "name": "smart_bcc_flag",
+        "type": "number",
+        "label": "Smart bcc flag"
+    },
+    {
+        "name": "first_message_to_me_flag",
+        "type": "number",
+        "label": "First message to me flag"
+    },
+    {
+        "name": "mail_link_tracking_enabled_flag",
+        "type": "number",
+        "label": "Mail link tracking enabled flag"
+    },
+    {
+        "name": "last_message_timestamp",
+        "type": "date",
+        "label": "Last message timestamp"
+    },
+    {
+        "name": "first_message_timestamp",
+        "type": "date",
+        "label": "First message timestamp"
+    },
+    {
+        "name": "last_message_sent_timestamp",
+        "type": "text",
+        "label": "Last message sent timestamp"
+    },
+    {
+        "name": "last_message_received_timestamp",
+        "type": "date",
+        "label": "Last message received timestamp"
+    },
+    {
+        "name": "add_time",
+        "type": "date",
+        "label": "Add time"
+    },
+    {
+        "name": "update_time",
+        "type": "date",
+        "label": "Update time"
+    },
+    {
+        "name": "deal_id",
+        "type": "text",
+        "label": "Deal ID"
+    },
+    {
+        "name": "deal_status",
+        "type": "text",
+        "label": "Deal status"
+    },
+    {
+        "name": "write_flag",
+        "type": "boolean",
+        "label": "Write flag"
+    },
+    {
+        "name": "all_messages_sent_flag",
+        "type": "number",
+        "label": "All messages sent flag"
+    },
+    {
+        "name": "lead_id",
+        "type": "text",
+        "label": "Lead ID"
+    },
+    {
+        "name": "project_id",
+        "type": "text",
+        "label": "Project ID"
+    },
+    {
+        "name": "has_message_in_queue",
+        "type": "number",
+        "label": "Has Message In Queue"
+    }
+]

@@ -1,0 +1,11 @@
+{
+    "response": {
+        "output": {
+            "event": "{{payload.event}}",
+            "current": "{{getResponseOutput(payload.current, environment.timezone, metadata.interface, 'webhook')}}",
+            "previous": "{{getResponseOutput(payload.previous, environment.timezone, metadata.interface, 'webhook')}}"
+            //"current": "{{getResponseOutput(changeProductResStruct(payload.current), environment.timezone, metadata.interface, 'webhook')}}",
+            //"previous": "{{getResponseOutput(changeProductResStruct(payload.previous), environment.timezone, metadata.interface, 'webhook')}}"
+        }
+    }
+}

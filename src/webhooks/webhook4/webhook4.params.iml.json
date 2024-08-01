@@ -1,0 +1,26 @@
+[
+	{
+		"name": "event_action",
+		"label": "Event action",
+		"required": true,
+		"type": "select",
+		"options": [
+			{"label": "added", "value": "added"},
+			{"label": "updated", "value": "updated"},
+			{"label": "deleted", "value": "deleted"},
+			{"label": "all", "value": "*"}
+		]
+	},
+	{
+		"name": "http_auth_user",
+		"label": "HTTP basic auth username",
+		"required": false,
+		"type": "text"
+	},
+	{
+		"name": "http_auth_password",
+		"label": "HTTP basic auth password",
+		"required": false,
+		"type": "text"
+	}
+]

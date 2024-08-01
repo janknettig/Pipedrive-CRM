@@ -1,0 +1,7 @@
+[
+	{
+		"name": "id",
+		"label": "File ID",
+		"type": "number"
+	}
+]

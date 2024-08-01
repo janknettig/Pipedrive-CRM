@@ -1,0 +1,4062 @@
+{
+    "fileVersion": 1,
+    "generalCodeFiles": {
+        "base": "general/base.iml.json",
+        "common": "general/common.json",
+        "readme": "README.md",
+        "groups": "modules/groups.json"
+    },
+    "components": {
+        "connection": {
+            "pipedrive-apikey": {
+                "label": "Pipedrive API token",
+                "connectionType": "basic",
+                "codeFiles": {
+                    "communication": "connections/pipedrive-apikey/pipedrive-apikey.communication.iml.json",
+                    "params": "connections/pipedrive-apikey/pipedrive-apikey.params.iml.json",
+                    "common": "connections/pipedrive-apikey/pipedrive-apikey.common.json"
+                }
+            },
+            "pipedrive-auth": {
+                "label": "Pipedrive OAuth",
+                "connectionType": "oauth",
+                "codeFiles": {
+                    "communication": "connections/pipedrive-auth/pipedrive-auth.oauth-communication.iml.json",
+                    "params": "connections/pipedrive-auth/pipedrive-auth.params.iml.json",
+                    "common": "connections/pipedrive-auth/pipedrive-auth.common.json",
+                    "scopeList": "connections/pipedrive-auth/pipedrive-auth.scope-list.iml.json",
+                    "defaultScope": "connections/pipedrive-auth/pipedrive-auth.default-scope.iml.json",
+                    "installSpec": "connections/pipedrive-auth/pipedrive-auth.install-spec.iml.json",
+                    "installDirectives": "connections/pipedrive-auth/pipedrive-auth.install-directives.iml.json"
+                }
+            }
+        },
+        "module": {
+            "AddFollower": {
+                "label": "Add a Follower",
+                "description": "Add follower to an object of selected type (deals, organizations, persons).",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/add-follower/add-follower.communication.iml.json",
+                    "staticParams": "modules/add-follower/add-follower.static-params.iml.json",
+                    "mappableParams": "modules/add-follower/add-follower.mappable-params.iml.json",
+                    "interface": "modules/add-follower/add-follower.interface.iml.json",
+                    "samples": "modules/add-follower/add-follower.samples.iml.json",
+                    "scope": "modules/add-follower/add-follower.scope.iml.json"
+                }
+            },
+            "addInstallmentSubscription": {
+                "label": "Add an Installment Subscription",
+                "description": "Adds a new installment subscription.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/add-installment-subscription/add-installment-subscription.communication.iml.json",
+                    "staticParams": "modules/add-installment-subscription/add-installment-subscription.static-params.iml.json",
+                    "mappableParams": "modules/add-installment-subscription/add-installment-subscription.mappable-params.iml.json",
+                    "interface": "modules/add-installment-subscription/add-installment-subscription.interface.iml.json",
+                    "samples": "modules/add-installment-subscription/add-installment-subscription.samples.iml.json",
+                    "scope": "modules/add-installment-subscription/add-installment-subscription.scope.iml.json"
+                }
+            },
+            "AddParticipantToDeal": {
+                "label": "Add a Participant to a Deal",
+                "description": "Adds a participant to a deal.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/add-participant-to-deal/add-participant-to-deal.communication.iml.json",
+                    "staticParams": "modules/add-participant-to-deal/add-participant-to-deal.static-params.iml.json",
+                    "mappableParams": "modules/add-participant-to-deal/add-participant-to-deal.mappable-params.iml.json",
+                    "interface": "modules/add-participant-to-deal/add-participant-to-deal.interface.iml.json",
+                    "samples": "modules/add-participant-to-deal/add-participant-to-deal.samples.iml.json",
+                    "scope": "modules/add-participant-to-deal/add-participant-to-deal.scope.iml.json"
+                }
+            },
+            "AddProductToDeal": {
+                "label": "Add a Product to a Deal",
+                "description": "Adds a product to the deal.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/add-product-to-deal/add-product-to-deal.communication.iml.json",
+                    "staticParams": "modules/add-product-to-deal/add-product-to-deal.static-params.iml.json",
+                    "mappableParams": "modules/add-product-to-deal/add-product-to-deal.mappable-params.iml.json",
+                    "interface": "modules/add-product-to-deal/add-product-to-deal.interface.iml.json",
+                    "samples": "modules/add-product-to-deal/add-product-to-deal.samples.iml.json",
+                    "scope": "modules/add-product-to-deal/add-product-to-deal.scope.iml.json"
+                }
+            },
+            "addRecurringSubscription": {
+                "label": "Add a Recurring Subscription",
+                "description": "Adds a new recurring subscription to a deal.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/add-recurring-subscription/add-recurring-subscription.communication.iml.json",
+                    "staticParams": "modules/add-recurring-subscription/add-recurring-subscription.static-params.iml.json",
+                    "mappableParams": "modules/add-recurring-subscription/add-recurring-subscription.mappable-params.iml.json",
+                    "interface": "modules/add-recurring-subscription/add-recurring-subscription.interface.iml.json",
+                    "samples": "modules/add-recurring-subscription/add-recurring-subscription.samples.iml.json",
+                    "scope": "modules/add-recurring-subscription/add-recurring-subscription.scope.iml.json"
+                }
+            },
+            "cancelRecurringSubscription": {
+                "label": "Cancel a Recurring Subscription",
+                "description": "Cancels a recurring subscription.",
+                "moduleType": "action",
+                "actionCrud": "update",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/cancel-recurring-subscription/cancel-recurring-subscription.communication.iml.json",
+                    "staticParams": "modules/cancel-recurring-subscription/cancel-recurring-subscription.static-params.iml.json",
+                    "mappableParams": "modules/cancel-recurring-subscription/cancel-recurring-subscription.mappable-params.iml.json",
+                    "interface": "modules/cancel-recurring-subscription/cancel-recurring-subscription.interface.iml.json",
+                    "samples": "modules/cancel-recurring-subscription/cancel-recurring-subscription.samples.iml.json",
+                    "scope": "modules/cancel-recurring-subscription/cancel-recurring-subscription.scope.iml.json"
+                }
+            },
+            "CreateObject": {
+                "label": "Create a Deal",
+                "description": "Creates a deal.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/create-object/create-object.communication.iml.json",
+                    "staticParams": "modules/create-object/create-object.static-params.iml.json",
+                    "mappableParams": "modules/create-object/create-object.mappable-params.iml.json",
+                    "interface": "modules/create-object/create-object.interface.iml.json",
+                    "samples": "modules/create-object/create-object.samples.iml.json",
+                    "scope": "modules/create-object/create-object.scope.iml.json"
+                }
+            },
+            "createLead": {
+                "label": "Create a Lead",
+                "description": "Creates a lead.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/create-lead/create-lead.communication.iml.json",
+                    "staticParams": "modules/create-lead/create-lead.static-params.iml.json",
+                    "mappableParams": "modules/create-lead/create-lead.mappable-params.iml.json",
+                    "interface": "modules/create-lead/create-lead.interface.iml.json",
+                    "samples": "modules/create-lead/create-lead.samples.iml.json",
+                    "scope": "modules/create-lead/create-lead.scope.iml.json"
+                }
+            },
+            "CreateActivity": {
+                "label": "Create an Activity",
+                "description": "Creates an activity.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/create-activity/create-activity.communication.iml.json",
+                    "staticParams": "modules/create-activity/create-activity.static-params.iml.json",
+                    "mappableParams": "modules/create-activity/create-activity.mappable-params.iml.json",
+                    "interface": "modules/create-activity/create-activity.interface.iml.json",
+                    "samples": "modules/create-activity/create-activity.samples.iml.json",
+                    "scope": "modules/create-activity/create-activity.scope.iml.json"
+                }
+            },
+            "CreateOrganization": {
+                "label": "Create an Organization",
+                "description": "Creates an organization.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/create-organization/create-organization.communication.iml.json",
+                    "staticParams": "modules/create-organization/create-organization.static-params.iml.json",
+                    "mappableParams": "modules/create-organization/create-organization.mappable-params.iml.json",
+                    "interface": "modules/create-organization/create-organization.interface.iml.json",
+                    "samples": "modules/create-organization/create-organization.samples.iml.json",
+                    "scope": "modules/create-organization/create-organization.scope.iml.json"
+                }
+            },
+            "CreateNote": {
+                "label": "Create a Note",
+                "description": "Creates a note.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/create-note/create-note.communication.iml.json",
+                    "staticParams": "modules/create-note/create-note.static-params.iml.json",
+                    "mappableParams": "modules/create-note/create-note.mappable-params.iml.json",
+                    "interface": "modules/create-note/create-note.interface.iml.json",
+                    "samples": "modules/create-note/create-note.samples.iml.json",
+                    "scope": "modules/create-note/create-note.scope.iml.json"
+                }
+            },
+            "CreatePerson": {
+                "label": "Create a Person",
+                "description": "Creates a person.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/create-person/create-person.communication.iml.json",
+                    "staticParams": "modules/create-person/create-person.static-params.iml.json",
+                    "mappableParams": "modules/create-person/create-person.mappable-params.iml.json",
+                    "interface": "modules/create-person/create-person.interface.iml.json",
+                    "samples": "modules/create-person/create-person.samples.iml.json",
+                    "scope": "modules/create-person/create-person.scope.iml.json"
+                }
+            },
+            "CreateProduct": {
+                "label": "Create a Product",
+                "description": "Creates a product.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/create-product/create-product.communication.iml.json",
+                    "staticParams": "modules/create-product/create-product.static-params.iml.json",
+                    "mappableParams": "modules/create-product/create-product.mappable-params.iml.json",
+                    "interface": "modules/create-product/create-product.interface.iml.json",
+                    "samples": "modules/create-product/create-product.samples.iml.json",
+                    "scope": "modules/create-product/create-product.scope.iml.json"
+                }
+            },
+            "DeleteDeal": {
+                "label": "Delete a Deal",
+                "description": "Deletes a deal.",
+                "moduleType": "action",
+                "actionCrud": "delete",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/delete-deal/delete-deal.communication.iml.json",
+                    "staticParams": "modules/delete-deal/delete-deal.static-params.iml.json",
+                    "mappableParams": "modules/delete-deal/delete-deal.mappable-params.iml.json",
+                    "interface": "modules/delete-deal/delete-deal.interface.iml.json",
+                    "samples": "modules/delete-deal/delete-deal.samples.iml.json",
+                    "scope": "modules/delete-deal/delete-deal.scope.iml.json"
+                }
+            },
+            "DeleteFollower": {
+                "label": "Delete a Follower",
+                "description": "Delete a follower from a deal.",
+                "moduleType": "action",
+                "actionCrud": "delete",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/delete-follower/delete-follower.communication.iml.json",
+                    "staticParams": "modules/delete-follower/delete-follower.static-params.iml.json",
+                    "mappableParams": "modules/delete-follower/delete-follower.mappable-params.iml.json",
+                    "interface": "modules/delete-follower/delete-follower.interface.iml.json",
+                    "samples": "modules/delete-follower/delete-follower.samples.iml.json",
+                    "scope": "modules/delete-follower/delete-follower.scope.iml.json"
+                }
+            },
+            "deleteLead": {
+                "label": "Delete a Lead",
+                "description": "Deletes a lead.",
+                "moduleType": "action",
+                "actionCrud": "delete",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/delete-lead/delete-lead.communication.iml.json",
+                    "staticParams": "modules/delete-lead/delete-lead.static-params.iml.json",
+                    "mappableParams": "modules/delete-lead/delete-lead.mappable-params.iml.json",
+                    "interface": "modules/delete-lead/delete-lead.interface.iml.json",
+                    "samples": "modules/delete-lead/delete-lead.samples.iml.json",
+                    "scope": "modules/delete-lead/delete-lead.scope.iml.json"
+                }
+            },
+            "DeleteMailThread": {
+                "label": "Delete a Mail Thread",
+                "description": "Marks mail thread as deleted.",
+                "moduleType": "action",
+                "actionCrud": "delete",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/delete-mail-thread/delete-mail-thread.communication.iml.json",
+                    "staticParams": "modules/delete-mail-thread/delete-mail-thread.static-params.iml.json",
+                    "mappableParams": "modules/delete-mail-thread/delete-mail-thread.mappable-params.iml.json",
+                    "interface": "modules/delete-mail-thread/delete-mail-thread.interface.iml.json",
+                    "samples": "modules/delete-mail-thread/delete-mail-thread.samples.iml.json",
+                    "scope": "modules/delete-mail-thread/delete-mail-thread.scope.iml.json"
+                }
+            },
+            "DeleteActivity": {
+                "label": "Delete an Activity",
+                "description": "Deletes an activity.",
+                "moduleType": "action",
+                "actionCrud": "delete",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/delete-activity/delete-activity.communication.iml.json",
+                    "staticParams": "modules/delete-activity/delete-activity.static-params.iml.json",
+                    "mappableParams": "modules/delete-activity/delete-activity.mappable-params.iml.json",
+                    "interface": "modules/delete-activity/delete-activity.interface.iml.json",
+                    "samples": "modules/delete-activity/delete-activity.samples.iml.json",
+                    "scope": "modules/delete-activity/delete-activity.scope.iml.json"
+                }
+            },
+            "DeleteAttachedProduct": {
+                "label": "Delete an Attached Product",
+                "description": "Deletes a product attachment from a deal.",
+                "moduleType": "action",
+                "actionCrud": "delete",
+                "connection": "pipedrive-apikey",
+                "altConnection": "pipedrive-auth",
+                "codeFiles": {
+                    "communication": "modules/delete-attached-product/delete-attached-product.communication.iml.json",
+                    "staticParams": "modules/delete-attached-product/delete-attached-product.static-params.iml.json",
+                    "mappableParams": "modules/delete-attached-product/delete-attached-product.mappable-params.iml.json",
+                    "interface": "modules/delete-attached-product/delete-attached-product.interface.iml.json",
+                    "samples": "modules/delete-attached-product/delete-attached-product.samples.iml.json",
+                    "scope": "modules/delete-attached-product/delete-attached-product.scope.iml.json"
+                }
+            },
+            "DeleteOrganization": {
+                "label": "Delete an Organization",
+                "description": "Deletes an organization.",
+                "moduleType": "action",
+                "actionCrud": "delete",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/delete-organization/delete-organization.communication.iml.json",
+                    "staticParams": "modules/delete-organization/delete-organization.static-params.iml.json",
+                    "mappableParams": "modules/delete-organization/delete-organization.mappable-params.iml.json",
+                    "interface": "modules/delete-organization/delete-organization.interface.iml.json",
+                    "samples": "modules/delete-organization/delete-organization.samples.iml.json",
+                    "scope": "modules/delete-organization/delete-organization.scope.iml.json"
+                }
+            },
+            "DeleteNote": {
+                "label": "Delete a Note",
+                "description": "Deletes a note.",
+                "moduleType": "action",
+                "actionCrud": "delete",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/delete-note/delete-note.communication.iml.json",
+                    "staticParams": "modules/delete-note/delete-note.static-params.iml.json",
+                    "mappableParams": "modules/delete-note/delete-note.mappable-params.iml.json",
+                    "interface": "modules/delete-note/delete-note.interface.iml.json",
+                    "samples": "modules/delete-note/delete-note.samples.iml.json",
+                    "scope": "modules/delete-note/delete-note.scope.iml.json"
+                }
+            },
+            "DeletePerson": {
+                "label": "Delete a Person",
+                "description": "Deletes a person.",
+                "moduleType": "action",
+                "actionCrud": "delete",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/delete-person/delete-person.communication.iml.json",
+                    "staticParams": "modules/delete-person/delete-person.static-params.iml.json",
+                    "mappableParams": "modules/delete-person/delete-person.mappable-params.iml.json",
+                    "interface": "modules/delete-person/delete-person.interface.iml.json",
+                    "samples": "modules/delete-person/delete-person.samples.iml.json",
+                    "scope": "modules/delete-person/delete-person.scope.iml.json"
+                }
+            },
+            "DeleteProduct": {
+                "label": "Delete a Product",
+                "description": "Deletes a product.",
+                "moduleType": "action",
+                "actionCrud": "delete",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/delete-product/delete-product.communication.iml.json",
+                    "staticParams": "modules/delete-product/delete-product.static-params.iml.json",
+                    "mappableParams": "modules/delete-product/delete-product.mappable-params.iml.json",
+                    "interface": "modules/delete-product/delete-product.interface.iml.json",
+                    "samples": "modules/delete-product/delete-product.samples.iml.json",
+                    "scope": "modules/delete-product/delete-product.scope.iml.json"
+                }
+            },
+            "deleteSubscription": {
+                "label": "Delete a Subscription",
+                "description": "Marks an installment or a recurring subscription as deleted.",
+                "moduleType": "action",
+                "actionCrud": "delete",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/delete-subscription/delete-subscription.communication.iml.json",
+                    "staticParams": "modules/delete-subscription/delete-subscription.static-params.iml.json",
+                    "mappableParams": "modules/delete-subscription/delete-subscription.mappable-params.iml.json",
+                    "interface": "modules/delete-subscription/delete-subscription.interface.iml.json",
+                    "samples": "modules/delete-subscription/delete-subscription.samples.iml.json",
+                    "scope": "modules/delete-subscription/delete-subscription.scope.iml.json"
+                }
+            },
+            "DownloadFile": {
+                "label": "Download a File",
+                "description": "Downloads a file.",
+                "moduleType": "action",
+                "actionCrud": "read",
+                "connection": "pipedrive-apikey",
+                "altConnection": "pipedrive-auth",
+                "codeFiles": {
+                    "communication": "modules/download-file/download-file.communication.iml.json",
+                    "staticParams": "modules/download-file/download-file.static-params.iml.json",
+                    "mappableParams": "modules/download-file/download-file.mappable-params.iml.json",
+                    "interface": "modules/download-file/download-file.interface.iml.json",
+                    "samples": "modules/download-file/download-file.samples.iml.json",
+                    "scope": "modules/download-file/download-file.scope.iml.json"
+                }
+            },
+            "FindPersonByName": {
+                "label": "Find a Person by Name or Email (Deprecated)",
+                "description": "Searches all persons by their name or email.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/find-person-by-name/find-person-by-name.communication.iml.json",
+                    "staticParams": "modules/find-person-by-name/find-person-by-name.static-params.iml.json",
+                    "mappableParams": "modules/find-person-by-name/find-person-by-name.mappable-params.iml.json",
+                    "interface": "modules/find-person-by-name/find-person-by-name.interface.iml.json",
+                    "samples": "modules/find-person-by-name/find-person-by-name.samples.iml.json",
+                    "scope": "modules/find-person-by-name/find-person-by-name.scope.iml.json"
+                }
+            },
+            "findSubscriptionByDeal": {
+                "label": "Find Subscription By Deal",
+                "description": "Returns details of an installment or a recurring subscription by the deal ID.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/find-subscription-by-deal/find-subscription-by-deal.communication.iml.json",
+                    "staticParams": "modules/find-subscription-by-deal/find-subscription-by-deal.static-params.iml.json",
+                    "mappableParams": "modules/find-subscription-by-deal/find-subscription-by-deal.mappable-params.iml.json",
+                    "interface": "modules/find-subscription-by-deal/find-subscription-by-deal.interface.iml.json",
+                    "samples": "modules/find-subscription-by-deal/find-subscription-by-deal.samples.iml.json",
+                    "scope": "modules/find-subscription-by-deal/find-subscription-by-deal.scope.iml.json"
+                }
+            },
+            "GetDeal": {
+                "label": "Get a Deal",
+                "description": "Returns details of a specific deal. ",
+                "moduleType": "action",
+                "actionCrud": "read",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/get-deal/get-deal.communication.iml.json",
+                    "staticParams": "modules/get-deal/get-deal.static-params.iml.json",
+                    "mappableParams": "modules/get-deal/get-deal.mappable-params.iml.json",
+                    "interface": "modules/get-deal/get-deal.interface.iml.json",
+                    "samples": "modules/get-deal/get-deal.samples.iml.json",
+                    "scope": "modules/get-deal/get-deal.scope.iml.json"
+                }
+            },
+            "getLead": {
+                "label": "Get a Lead",
+                "description": "Gets a lead.",
+                "moduleType": "action",
+                "actionCrud": "read",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/get-lead/get-lead.communication.iml.json",
+                    "staticParams": "modules/get-lead/get-lead.static-params.iml.json",
+                    "mappableParams": "modules/get-lead/get-lead.mappable-params.iml.json",
+                    "interface": "modules/get-lead/get-lead.interface.iml.json",
+                    "samples": "modules/get-lead/get-lead.samples.iml.json",
+                    "scope": "modules/get-lead/get-lead.scope.iml.json"
+                }
+            },
+            "GetMailThread": {
+                "label": "Get a Mail Thread",
+                "description": "Returns specific mail thread.",
+                "moduleType": "action",
+                "actionCrud": "read",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/get-mail-thread/get-mail-thread.communication.iml.json",
+                    "staticParams": "modules/get-mail-thread/get-mail-thread.static-params.iml.json",
+                    "mappableParams": "modules/get-mail-thread/get-mail-thread.mappable-params.iml.json",
+                    "interface": "modules/get-mail-thread/get-mail-thread.interface.iml.json",
+                    "samples": "modules/get-mail-thread/get-mail-thread.samples.iml.json",
+                    "scope": "modules/get-mail-thread/get-mail-thread.scope.iml.json"
+                }
+            },
+            "GetMessage": {
+                "label": "Get a Message",
+                "description": "Returns data about specific mail message.",
+                "moduleType": "action",
+                "actionCrud": "read",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/get-message/get-message.communication.iml.json",
+                    "staticParams": "modules/get-message/get-message.static-params.iml.json",
+                    "mappableParams": "modules/get-message/get-message.mappable-params.iml.json",
+                    "interface": "modules/get-message/get-message.interface.iml.json",
+                    "samples": "modules/get-message/get-message.samples.iml.json",
+                    "scope": "modules/get-message/get-message.scope.iml.json"
+                }
+            },
+            "GetActivity": {
+                "label": "Get an Activity",
+                "description": "Returns details of a specific activity.",
+                "moduleType": "action",
+                "actionCrud": "read",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/get-activity/get-activity.communication.iml.json",
+                    "staticParams": "modules/get-activity/get-activity.static-params.iml.json",
+                    "mappableParams": "modules/get-activity/get-activity.mappable-params.iml.json",
+                    "interface": "modules/get-activity/get-activity.interface.iml.json",
+                    "samples": "modules/get-activity/get-activity.samples.iml.json",
+                    "scope": "modules/get-activity/get-activity.scope.iml.json"
+                }
+            },
+            "GetOrganization": {
+                "label": "Get an Organization",
+                "description": "Returns details of an organization. ",
+                "moduleType": "action",
+                "actionCrud": "read",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/get-organization/get-organization.communication.iml.json",
+                    "staticParams": "modules/get-organization/get-organization.static-params.iml.json",
+                    "mappableParams": "modules/get-organization/get-organization.mappable-params.iml.json",
+                    "interface": "modules/get-organization/get-organization.interface.iml.json",
+                    "samples": "modules/get-organization/get-organization.samples.iml.json",
+                    "scope": "modules/get-organization/get-organization.scope.iml.json"
+                }
+            },
+            "GetNote": {
+                "label": "Get a Note",
+                "description": "Returns details about a specific note.",
+                "moduleType": "action",
+                "actionCrud": "read",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/get-note/get-note.communication.iml.json",
+                    "staticParams": "modules/get-note/get-note.static-params.iml.json",
+                    "mappableParams": "modules/get-note/get-note.mappable-params.iml.json",
+                    "interface": "modules/get-note/get-note.interface.iml.json",
+                    "samples": "modules/get-note/get-note.samples.iml.json",
+                    "scope": "modules/get-note/get-note.scope.iml.json"
+                }
+            },
+            "GetPerson": {
+                "label": "Get a Person",
+                "description": "Returns details of a person.",
+                "moduleType": "action",
+                "actionCrud": "read",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/get-person/get-person.communication.iml.json",
+                    "staticParams": "modules/get-person/get-person.static-params.iml.json",
+                    "mappableParams": "modules/get-person/get-person.mappable-params.iml.json",
+                    "interface": "modules/get-person/get-person.interface.iml.json",
+                    "samples": "modules/get-person/get-person.samples.iml.json",
+                    "scope": "modules/get-person/get-person.scope.iml.json"
+                }
+            },
+            "GetProduct": {
+                "label": "Get a Product",
+                "description": "Returns data about a specific product.",
+                "moduleType": "action",
+                "actionCrud": "read",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/get-product/get-product.communication.iml.json",
+                    "staticParams": "modules/get-product/get-product.static-params.iml.json",
+                    "mappableParams": "modules/get-product/get-product.mappable-params.iml.json",
+                    "interface": "modules/get-product/get-product.interface.iml.json",
+                    "samples": "modules/get-product/get-product.samples.iml.json",
+                    "scope": "modules/get-product/get-product.scope.iml.json"
+                }
+            },
+            "getSubscription": {
+                "label": "Get a Subscription",
+                "description": "Returns details of an installment or a recurring subscription.",
+                "moduleType": "action",
+                "actionCrud": "read",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/get-subscription/get-subscription.communication.iml.json",
+                    "staticParams": "modules/get-subscription/get-subscription.static-params.iml.json",
+                    "mappableParams": "modules/get-subscription/get-subscription.mappable-params.iml.json",
+                    "interface": "modules/get-subscription/get-subscription.interface.iml.json",
+                    "samples": "modules/get-subscription/get-subscription.samples.iml.json",
+                    "scope": "modules/get-subscription/get-subscription.scope.iml.json"
+                }
+            },
+            "GetUser": {
+                "label": "Get a User",
+                "description": "Returns data about a specific user within the company.",
+                "moduleType": "action",
+                "actionCrud": "read",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/get-user/get-user.communication.iml.json",
+                    "staticParams": "modules/get-user/get-user.static-params.iml.json",
+                    "mappableParams": "modules/get-user/get-user.mappable-params.iml.json",
+                    "interface": "modules/get-user/get-user.interface.iml.json",
+                    "samples": "modules/get-user/get-user.samples.iml.json",
+                    "scope": "modules/get-user/get-user.scope.iml.json"
+                }
+            },
+            "SearchForActivity": {
+                "label": "List Activities",
+                "description": "Searches for activities.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/search-for-activity/search-for-activity.communication.iml.json",
+                    "staticParams": "modules/search-for-activity/search-for-activity.static-params.iml.json",
+                    "mappableParams": "modules/search-for-activity/search-for-activity.mappable-params.iml.json",
+                    "interface": "modules/search-for-activity/search-for-activity.interface.iml.json",
+                    "samples": "modules/search-for-activity/search-for-activity.samples.iml.json",
+                    "scope": "modules/search-for-activity/search-for-activity.scope.iml.json"
+                }
+            },
+            "ListActivityDeals": {
+                "label": "List Activities in a Deal",
+                "description": "Lists activities associated with a deal.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-activity-deals/list-activity-deals.communication.iml.json",
+                    "staticParams": "modules/list-activity-deals/list-activity-deals.static-params.iml.json",
+                    "mappableParams": "modules/list-activity-deals/list-activity-deals.mappable-params.iml.json",
+                    "interface": "modules/list-activity-deals/list-activity-deals.interface.iml.json",
+                    "samples": "modules/list-activity-deals/list-activity-deals.samples.iml.json",
+                    "scope": "modules/list-activity-deals/list-activity-deals.scope.iml.json"
+                }
+            },
+            "ListDeals": {
+                "label": "List Deals",
+                "description": "Searches for deals.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-deals/list-deals.communication.iml.json",
+                    "staticParams": "modules/list-deals/list-deals.static-params.iml.json",
+                    "mappableParams": "modules/list-deals/list-deals.mappable-params.iml.json",
+                    "interface": "modules/list-deals/list-deals.interface.iml.json",
+                    "samples": "modules/list-deals/list-deals.samples.iml.json",
+                    "scope": "modules/list-deals/list-deals.scope.iml.json"
+                }
+            },
+            "listDealsForPerson": {
+                "label": "List Deals for a Person",
+                "description": "Lists deals associated with a person.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-deals-for-person/list-deals-for-person.communication.iml.json",
+                    "staticParams": "modules/list-deals-for-person/list-deals-for-person.static-params.iml.json",
+                    "mappableParams": "modules/list-deals-for-person/list-deals-for-person.mappable-params.iml.json",
+                    "interface": "modules/list-deals-for-person/list-deals-for-person.interface.iml.json",
+                    "samples": "modules/list-deals-for-person/list-deals-for-person.samples.iml.json",
+                    "scope": "modules/list-deals-for-person/list-deals-for-person.scope.iml.json"
+                }
+            },
+            "listDealsForProduct": {
+                "label": "List Deals for a Product",
+                "description": "Returns data about deals that have a product attached to them.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-deals-for-product/list-deals-for-product.communication.iml.json",
+                    "staticParams": "modules/list-deals-for-product/list-deals-for-product.static-params.iml.json",
+                    "mappableParams": "modules/list-deals-for-product/list-deals-for-product.mappable-params.iml.json",
+                    "interface": "modules/list-deals-for-product/list-deals-for-product.interface.iml.json",
+                    "samples": "modules/list-deals-for-product/list-deals-for-product.samples.iml.json",
+                    "scope": "modules/list-deals-for-product/list-deals-for-product.scope.iml.json"
+                }
+            },
+            "listDealsinOrganization": {
+                "label": "List Deals in an Organization",
+                "description": "Lists deals associated with an organization.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-dealsin-organization/list-dealsin-organization.communication.iml.json",
+                    "staticParams": "modules/list-dealsin-organization/list-dealsin-organization.static-params.iml.json",
+                    "mappableParams": "modules/list-dealsin-organization/list-dealsin-organization.mappable-params.iml.json",
+                    "interface": "modules/list-dealsin-organization/list-dealsin-organization.interface.iml.json",
+                    "samples": "modules/list-dealsin-organization/list-dealsin-organization.samples.iml.json",
+                    "scope": "modules/list-dealsin-organization/list-dealsin-organization.scope.iml.json"
+                }
+            },
+            "GetPipelineDeals": {
+                "label": "List Deals in a Pipeline",
+                "description": "Lists deals in a specific pipeline across all its stages.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/get-pipeline-deals/get-pipeline-deals.communication.iml.json",
+                    "staticParams": "modules/get-pipeline-deals/get-pipeline-deals.static-params.iml.json",
+                    "mappableParams": "modules/get-pipeline-deals/get-pipeline-deals.mappable-params.iml.json",
+                    "interface": "modules/get-pipeline-deals/get-pipeline-deals.interface.iml.json",
+                    "samples": "modules/get-pipeline-deals/get-pipeline-deals.samples.iml.json",
+                    "scope": "modules/get-pipeline-deals/get-pipeline-deals.scope.iml.json"
+                }
+            },
+            "GetStageDeals": {
+                "label": "List Deals in a Stage",
+                "description": "Lists deals in a specific stage.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/get-stage-deals/get-stage-deals.communication.iml.json",
+                    "staticParams": "modules/get-stage-deals/get-stage-deals.static-params.iml.json",
+                    "mappableParams": "modules/get-stage-deals/get-stage-deals.mappable-params.iml.json",
+                    "interface": "modules/get-stage-deals/get-stage-deals.interface.iml.json",
+                    "samples": "modules/get-stage-deals/get-stage-deals.samples.iml.json",
+                    "scope": "modules/get-stage-deals/get-stage-deals.scope.iml.json"
+                }
+            },
+            "ListDealFiles": {
+                "label": "List Files in a Deal",
+                "description": "Lists files associated with a deal.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-deal-files/list-deal-files.communication.iml.json",
+                    "staticParams": "modules/list-deal-files/list-deal-files.static-params.iml.json",
+                    "mappableParams": "modules/list-deal-files/list-deal-files.mappable-params.iml.json",
+                    "interface": "modules/list-deal-files/list-deal-files.interface.iml.json",
+                    "samples": "modules/list-deal-files/list-deal-files.samples.iml.json",
+                    "scope": "modules/list-deal-files/list-deal-files.scope.iml.json"
+                }
+            },
+            "ListFollowers": {
+                "label": "List Followers",
+                "description": "List followers of an object of selected type (deals, organizations, persons, products, users).",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-followers/list-followers.communication.iml.json",
+                    "staticParams": "modules/list-followers/list-followers.static-params.iml.json",
+                    "mappableParams": "modules/list-followers/list-followers.mappable-params.iml.json",
+                    "interface": "modules/list-followers/list-followers.interface.iml.json",
+                    "samples": "modules/list-followers/list-followers.samples.iml.json",
+                    "scope": "modules/list-followers/list-followers.scope.iml.json"
+                }
+            },
+            "listLeads": {
+                "label": "List Leads",
+                "description": "Retrieves all your leads.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-leads/list-leads.communication.iml.json",
+                    "staticParams": "modules/list-leads/list-leads.static-params.iml.json",
+                    "mappableParams": "modules/list-leads/list-leads.mappable-params.iml.json",
+                    "interface": "modules/list-leads/list-leads.interface.iml.json",
+                    "samples": "modules/list-leads/list-leads.samples.iml.json",
+                    "scope": "modules/list-leads/list-leads.scope.iml.json"
+                }
+            },
+            "ListMailThreads": {
+                "label": "List Mail Threads",
+                "description": "Returns mail threads in specified folder ordered by most recent message within.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-mail-threads/list-mail-threads.communication.iml.json",
+                    "staticParams": "modules/list-mail-threads/list-mail-threads.static-params.iml.json",
+                    "mappableParams": "modules/list-mail-threads/list-mail-threads.mappable-params.iml.json",
+                    "interface": "modules/list-mail-threads/list-mail-threads.interface.iml.json",
+                    "samples": "modules/list-mail-threads/list-mail-threads.samples.iml.json",
+                    "scope": "modules/list-mail-threads/list-mail-threads.scope.iml.json"
+                }
+            },
+            "ListMessages": {
+                "label": "List Messages in a Thread",
+                "description": "Get mail messages inside specified mail thread.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-messages/list-messages.communication.iml.json",
+                    "staticParams": "modules/list-messages/list-messages.static-params.iml.json",
+                    "mappableParams": "modules/list-messages/list-messages.mappable-params.iml.json",
+                    "interface": "modules/list-messages/list-messages.interface.iml.json",
+                    "samples": "modules/list-messages/list-messages.samples.iml.json",
+                    "scope": "modules/list-messages/list-messages.scope.iml.json"
+                }
+            },
+            "SearchForNotes": {
+                "label": "List Notes",
+                "description": "Searches for notes.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/search-for-notes/search-for-notes.communication.iml.json",
+                    "staticParams": "modules/search-for-notes/search-for-notes.static-params.iml.json",
+                    "mappableParams": "modules/search-for-notes/search-for-notes.mappable-params.iml.json",
+                    "interface": "modules/search-for-notes/search-for-notes.interface.iml.json",
+                    "samples": "modules/search-for-notes/search-for-notes.samples.iml.json",
+                    "scope": "modules/search-for-notes/search-for-notes.scope.iml.json"
+                }
+            },
+            "ListOrganizations": {
+                "label": "List Organizations",
+                "description": "Searches for organizations.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-organizations/list-organizations.communication.iml.json",
+                    "staticParams": "modules/list-organizations/list-organizations.static-params.iml.json",
+                    "mappableParams": "modules/list-organizations/list-organizations.mappable-params.iml.json",
+                    "interface": "modules/list-organizations/list-organizations.interface.iml.json",
+                    "samples": "modules/list-organizations/list-organizations.samples.iml.json",
+                    "scope": "modules/list-organizations/list-organizations.scope.iml.json"
+                }
+            },
+            "listParticipantsOfADeal": {
+                "label": "List Participants of a Deal",
+                "description": "Lists the participants associated with a deal.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-participants-of-adeal/list-participants-of-adeal.communication.iml.json",
+                    "staticParams": "modules/list-participants-of-adeal/list-participants-of-adeal.static-params.iml.json",
+                    "mappableParams": "modules/list-participants-of-adeal/list-participants-of-adeal.mappable-params.iml.json",
+                    "interface": "modules/list-participants-of-adeal/list-participants-of-adeal.interface.iml.json",
+                    "samples": "modules/list-participants-of-adeal/list-participants-of-adeal.samples.iml.json",
+                    "scope": "modules/list-participants-of-adeal/list-participants-of-adeal.scope.iml.json"
+                }
+            },
+            "listSubscriptionPayments": {
+                "label": "List Payments of a Subscription",
+                "description": "Returns all payments of an installment or recurring subscription.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-subscription-payments/list-subscription-payments.communication.iml.json",
+                    "staticParams": "modules/list-subscription-payments/list-subscription-payments.static-params.iml.json",
+                    "mappableParams": "modules/list-subscription-payments/list-subscription-payments.mappable-params.iml.json",
+                    "interface": "modules/list-subscription-payments/list-subscription-payments.interface.iml.json",
+                    "samples": "modules/list-subscription-payments/list-subscription-payments.samples.iml.json",
+                    "scope": "modules/list-subscription-payments/list-subscription-payments.scope.iml.json"
+                }
+            },
+            "GetPersons": {
+                "label": "List Persons",
+                "description": "Searches for persons.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/get-persons/get-persons.communication.iml.json",
+                    "staticParams": "modules/get-persons/get-persons.static-params.iml.json",
+                    "mappableParams": "modules/get-persons/get-persons.mappable-params.iml.json",
+                    "interface": "modules/get-persons/get-persons.interface.iml.json",
+                    "samples": "modules/get-persons/get-persons.samples.iml.json",
+                    "scope": "modules/get-persons/get-persons.scope.iml.json"
+                }
+            },
+            "ListPersonsInDeal": {
+                "label": "List Persons in a Deal",
+                "description": "Lists all persons associated with a deal, regardless of whether the person is the primary contact of the deal, or added as a participant.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-persons-in-deal/list-persons-in-deal.communication.iml.json",
+                    "staticParams": "modules/list-persons-in-deal/list-persons-in-deal.static-params.iml.json",
+                    "mappableParams": "modules/list-persons-in-deal/list-persons-in-deal.mappable-params.iml.json",
+                    "interface": "modules/list-persons-in-deal/list-persons-in-deal.interface.iml.json",
+                    "samples": "modules/list-persons-in-deal/list-persons-in-deal.samples.iml.json",
+                    "scope": "modules/list-persons-in-deal/list-persons-in-deal.scope.iml.json"
+                }
+            },
+            "ListPipelines": {
+                "label": "List Pipelines",
+                "description": "Returns data about all pipelines.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-pipelines/list-pipelines.communication.iml.json",
+                    "staticParams": "modules/list-pipelines/list-pipelines.static-params.iml.json",
+                    "mappableParams": "modules/list-pipelines/list-pipelines.mappable-params.iml.json",
+                    "interface": "modules/list-pipelines/list-pipelines.interface.iml.json",
+                    "samples": "modules/list-pipelines/list-pipelines.samples.iml.json",
+                    "scope": "modules/list-pipelines/list-pipelines.scope.iml.json"
+                }
+            },
+            "ListProducts": {
+                "label": "List Products",
+                "description": "Searches for products.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-products/list-products.communication.iml.json",
+                    "staticParams": "modules/list-products/list-products.static-params.iml.json",
+                    "mappableParams": "modules/list-products/list-products.mappable-params.iml.json",
+                    "interface": "modules/list-products/list-products.interface.iml.json",
+                    "samples": "modules/list-products/list-products.samples.iml.json",
+                    "scope": "modules/list-products/list-products.scope.iml.json"
+                }
+            },
+            "ListProductsInDeal": {
+                "label": "List Products in a Deal",
+                "description": "Lists products attached to a deal.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-products-in-deal/list-products-in-deal.communication.iml.json",
+                    "staticParams": "modules/list-products-in-deal/list-products-in-deal.static-params.iml.json",
+                    "mappableParams": "modules/list-products-in-deal/list-products-in-deal.mappable-params.iml.json",
+                    "interface": "modules/list-products-in-deal/list-products-in-deal.interface.iml.json",
+                    "samples": "modules/list-products-in-deal/list-products-in-deal.samples.iml.json",
+                    "scope": "modules/list-products-in-deal/list-products-in-deal.scope.iml.json"
+                }
+            },
+            "ListStages": {
+                "label": "List Stages",
+                "description": "Returns data about all stages.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-stages/list-stages.communication.iml.json",
+                    "staticParams": "modules/list-stages/list-stages.static-params.iml.json",
+                    "mappableParams": "modules/list-stages/list-stages.mappable-params.iml.json",
+                    "interface": "modules/list-stages/list-stages.interface.iml.json",
+                    "samples": "modules/list-stages/list-stages.samples.iml.json",
+                    "scope": "modules/list-stages/list-stages.scope.iml.json"
+                }
+            },
+            "ListUsers": {
+                "label": "List Users",
+                "description": "Returns data about all users.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/list-users/list-users.communication.iml.json",
+                    "staticParams": "modules/list-users/list-users.static-params.iml.json",
+                    "mappableParams": "modules/list-users/list-users.mappable-params.iml.json",
+                    "interface": "modules/list-users/list-users.interface.iml.json",
+                    "samples": "modules/list-users/list-users.samples.iml.json",
+                    "scope": "modules/list-users/list-users.scope.iml.json"
+                }
+            },
+            "MakeAPICall": {
+                "label": "Make an API Call",
+                "description": "Performs an arbitrary authorized API call.",
+                "moduleType": "universal",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/make-apicall/make-apicall.communication.iml.json",
+                    "staticParams": "modules/make-apicall/make-apicall.static-params.iml.json",
+                    "mappableParams": "modules/make-apicall/make-apicall.mappable-params.iml.json",
+                    "interface": "modules/make-apicall/make-apicall.interface.iml.json",
+                    "samples": "modules/make-apicall/make-apicall.samples.iml.json",
+                    "scope": "modules/make-apicall/make-apicall.scope.iml.json"
+                }
+            },
+            "NewEvent": {
+                "label": "New Activity Event",
+                "description": "Triggers when a new activity is added, updated or deleted.",
+                "moduleType": "instant_trigger",
+                "connection": null,
+                "altConnection": null,
+                "webhook": "webhook1",
+                "codeFiles": {
+                    "communication": "modules/new-event/new-event.communication.iml.json",
+                    "staticParams": "modules/new-event/new-event.static-params.iml.json",
+                    "mappableParams": "modules/new-event/new-event.mappable-params.iml.json",
+                    "interface": "modules/new-event/new-event.interface.iml.json",
+                    "samples": "modules/new-event/new-event.samples.iml.json"
+                }
+            },
+            "NewDealEvent": {
+                "label": "New Deal Event",
+                "description": "Triggers when a new deal is added, updated or deleted.",
+                "moduleType": "instant_trigger",
+                "connection": null,
+                "altConnection": null,
+                "webhook": "webhook2",
+                "codeFiles": {
+                    "communication": "modules/new-deal-event/new-deal-event.communication.iml.json",
+                    "staticParams": "modules/new-deal-event/new-deal-event.static-params.iml.json",
+                    "mappableParams": "modules/new-deal-event/new-deal-event.mappable-params.iml.json",
+                    "interface": "modules/new-deal-event/new-deal-event.interface.iml.json",
+                    "samples": "modules/new-deal-event/new-deal-event.samples.iml.json"
+                }
+            },
+            "NewNoteEvent": {
+                "label": "New Note Event",
+                "description": "Triggers when a new note is added, updated or deleted.",
+                "moduleType": "instant_trigger",
+                "connection": null,
+                "altConnection": null,
+                "webhook": "webhook4",
+                "codeFiles": {
+                    "communication": "modules/new-note-event/new-note-event.communication.iml.json",
+                    "staticParams": "modules/new-note-event/new-note-event.static-params.iml.json",
+                    "mappableParams": "modules/new-note-event/new-note-event.mappable-params.iml.json",
+                    "interface": "modules/new-note-event/new-note-event.interface.iml.json",
+                    "samples": "modules/new-note-event/new-note-event.samples.iml.json"
+                }
+            },
+            "NewOrganizationEvent": {
+                "label": "New Organization Event",
+                "description": "Triggers when a new organization is added, updated or deleted.",
+                "moduleType": "instant_trigger",
+                "connection": null,
+                "altConnection": null,
+                "webhook": "webhook5",
+                "codeFiles": {
+                    "communication": "modules/new-organization-event/new-organization-event.communication.iml.json",
+                    "staticParams": "modules/new-organization-event/new-organization-event.static-params.iml.json",
+                    "mappableParams": "modules/new-organization-event/new-organization-event.mappable-params.iml.json",
+                    "interface": "modules/new-organization-event/new-organization-event.interface.iml.json",
+                    "samples": "modules/new-organization-event/new-organization-event.samples.iml.json"
+                }
+            },
+            "NewPersonEvent": {
+                "label": "New Person Event",
+                "description": "Triggers when a new person is added, updated or deleted.",
+                "moduleType": "instant_trigger",
+                "connection": null,
+                "altConnection": null,
+                "webhook": "webhook3",
+                "codeFiles": {
+                    "communication": "modules/new-person-event/new-person-event.communication.iml.json",
+                    "staticParams": "modules/new-person-event/new-person-event.static-params.iml.json",
+                    "mappableParams": "modules/new-person-event/new-person-event.mappable-params.iml.json",
+                    "interface": "modules/new-person-event/new-person-event.interface.iml.json",
+                    "samples": "modules/new-person-event/new-person-event.samples.iml.json"
+                }
+            },
+            "NewProductEvent": {
+                "label": "New Product Event",
+                "description": "Triggers when a new product is added, updated or deleted.",
+                "moduleType": "instant_trigger",
+                "connection": null,
+                "altConnection": null,
+                "webhook": "webhook6",
+                "codeFiles": {
+                    "communication": "modules/new-product-event/new-product-event.communication.iml.json",
+                    "staticParams": "modules/new-product-event/new-product-event.static-params.iml.json",
+                    "mappableParams": "modules/new-product-event/new-product-event.mappable-params.iml.json",
+                    "interface": "modules/new-product-event/new-product-event.interface.iml.json",
+                    "samples": "modules/new-product-event/new-product-event.samples.iml.json"
+                }
+            },
+            "searchDeals": {
+                "label": "Search Deals",
+                "description": "Retrieves your deals filtered by criteria.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/search-deals/search-deals.communication.iml.json",
+                    "staticParams": "modules/search-deals/search-deals.static-params.iml.json",
+                    "mappableParams": "modules/search-deals/search-deals.mappable-params.iml.json",
+                    "interface": "modules/search-deals/search-deals.interface.iml.json",
+                    "samples": "modules/search-deals/search-deals.samples.iml.json",
+                    "scope": "modules/search-deals/search-deals.scope.iml.json"
+                }
+            },
+            "SearchOrganizations": {
+                "label": "Search for Items",
+                "description": "Performs a search from multiple item types.",
+                "moduleType": "search",
+                "connection": "pipedrive-apikey",
+                "altConnection": "pipedrive-auth",
+                "codeFiles": {
+                    "communication": "modules/search-organizations/search-organizations.communication.iml.json",
+                    "staticParams": "modules/search-organizations/search-organizations.static-params.iml.json",
+                    "mappableParams": "modules/search-organizations/search-organizations.mappable-params.iml.json",
+                    "interface": "modules/search-organizations/search-organizations.interface.iml.json",
+                    "samples": "modules/search-organizations/search-organizations.samples.iml.json",
+                    "scope": "modules/search-organizations/search-organizations.scope.iml.json"
+                }
+            },
+            "searchLeads": {
+                "label": "Search Leads",
+                "description": "Retrieves your leads filtered by criteria.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/search-leads/search-leads.communication.iml.json",
+                    "staticParams": "modules/search-leads/search-leads.static-params.iml.json",
+                    "mappableParams": "modules/search-leads/search-leads.mappable-params.iml.json",
+                    "interface": "modules/search-leads/search-leads.interface.iml.json",
+                    "samples": "modules/search-leads/search-leads.samples.iml.json",
+                    "scope": "modules/search-leads/search-leads.scope.iml.json"
+                }
+            },
+            "SearchObjectsResultAPI": {
+                "label": "Search objects (Deprecated)",
+                "description": "This API endpoint has been deprecated by Pipedrive.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/search-objects-result-api/search-objects-result-api.communication.iml.json",
+                    "staticParams": "modules/search-objects-result-api/search-objects-result-api.static-params.iml.json",
+                    "mappableParams": "modules/search-objects-result-api/search-objects-result-api.mappable-params.iml.json",
+                    "interface": "modules/search-objects-result-api/search-objects-result-api.interface.iml.json",
+                    "samples": "modules/search-objects-result-api/search-objects-result-api.samples.iml.json",
+                    "scope": "modules/search-objects-result-api/search-objects-result-api.scope.iml.json"
+                }
+            },
+            "searchOrganizations": {
+                "label": "Search Organizations",
+                "description": "Retrieves your organizations filtered by criteria.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/search-organizations2/search-organizations.communication.iml.json",
+                    "staticParams": "modules/search-organizations2/search-organizations.static-params.iml.json",
+                    "mappableParams": "modules/search-organizations2/search-organizations.mappable-params.iml.json",
+                    "interface": "modules/search-organizations2/search-organizations.interface.iml.json",
+                    "samples": "modules/search-organizations2/search-organizations.samples.iml.json",
+                    "scope": "modules/search-organizations2/search-organizations.scope.iml.json"
+                }
+            },
+            "searchPersons": {
+                "label": "Search Persons",
+                "description": "Retrieves your persons filtered by criteria.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/search-persons/search-persons.communication.iml.json",
+                    "staticParams": "modules/search-persons/search-persons.static-params.iml.json",
+                    "mappableParams": "modules/search-persons/search-persons.mappable-params.iml.json",
+                    "interface": "modules/search-persons/search-persons.interface.iml.json",
+                    "samples": "modules/search-persons/search-persons.samples.iml.json",
+                    "scope": "modules/search-persons/search-persons.scope.iml.json"
+                }
+            },
+            "searchProducts": {
+                "label": "Search Products",
+                "description": "Retrieves your products filtered by criteria.",
+                "moduleType": "search",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/search-products/search-products.communication.iml.json",
+                    "staticParams": "modules/search-products/search-products.static-params.iml.json",
+                    "mappableParams": "modules/search-products/search-products.mappable-params.iml.json",
+                    "interface": "modules/search-products/search-products.interface.iml.json",
+                    "samples": "modules/search-products/search-products.samples.iml.json",
+                    "scope": "modules/search-products/search-products.scope.iml.json"
+                }
+            },
+            "UpdateDeal": {
+                "label": "Update a Deal",
+                "description": "Updates a deal.",
+                "moduleType": "action",
+                "actionCrud": "update",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/update-deal/update-deal.communication.iml.json",
+                    "staticParams": "modules/update-deal/update-deal.static-params.iml.json",
+                    "mappableParams": "modules/update-deal/update-deal.mappable-params.iml.json",
+                    "interface": "modules/update-deal/update-deal.interface.iml.json",
+                    "samples": "modules/update-deal/update-deal.samples.iml.json",
+                    "scope": "modules/update-deal/update-deal.scope.iml.json"
+                }
+            },
+            "updateLead": {
+                "label": "Update a Lead",
+                "description": "Updates a lead.",
+                "moduleType": "action",
+                "actionCrud": "update",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/update-lead/update-lead.communication.iml.json",
+                    "staticParams": "modules/update-lead/update-lead.static-params.iml.json",
+                    "mappableParams": "modules/update-lead/update-lead.mappable-params.iml.json",
+                    "interface": "modules/update-lead/update-lead.interface.iml.json",
+                    "samples": "modules/update-lead/update-lead.samples.iml.json",
+                    "scope": "modules/update-lead/update-lead.scope.iml.json"
+                }
+            },
+            "UpdateMailThreadDetails": {
+                "label": "Update a Mail Thread Details",
+                "description": "Updates the properties of a mail thread.",
+                "moduleType": "action",
+                "actionCrud": "update",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/update-mail-thread-details/update-mail-thread-details.communication.iml.json",
+                    "staticParams": "modules/update-mail-thread-details/update-mail-thread-details.static-params.iml.json",
+                    "mappableParams": "modules/update-mail-thread-details/update-mail-thread-details.mappable-params.iml.json",
+                    "interface": "modules/update-mail-thread-details/update-mail-thread-details.interface.iml.json",
+                    "samples": "modules/update-mail-thread-details/update-mail-thread-details.samples.iml.json",
+                    "scope": "modules/update-mail-thread-details/update-mail-thread-details.scope.iml.json"
+                }
+            },
+            "UpdateActivity": {
+                "label": "Update an Activity",
+                "description": "Updates an activity.",
+                "moduleType": "action",
+                "actionCrud": "update",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/update-activity/update-activity.communication.iml.json",
+                    "staticParams": "modules/update-activity/update-activity.static-params.iml.json",
+                    "mappableParams": "modules/update-activity/update-activity.mappable-params.iml.json",
+                    "interface": "modules/update-activity/update-activity.interface.iml.json",
+                    "samples": "modules/update-activity/update-activity.samples.iml.json",
+                    "scope": "modules/update-activity/update-activity.scope.iml.json"
+                }
+            },
+            "updateInstallmentSubscription": {
+                "label": "Update an Installment Subscription",
+                "description": "Updates an installment subscription.",
+                "moduleType": "action",
+                "actionCrud": "update",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/update-installment-subscription/update-installment-subscription.communication.iml.json",
+                    "staticParams": "modules/update-installment-subscription/update-installment-subscription.static-params.iml.json",
+                    "mappableParams": "modules/update-installment-subscription/update-installment-subscription.mappable-params.iml.json",
+                    "interface": "modules/update-installment-subscription/update-installment-subscription.interface.iml.json",
+                    "samples": "modules/update-installment-subscription/update-installment-subscription.samples.iml.json",
+                    "scope": "modules/update-installment-subscription/update-installment-subscription.scope.iml.json"
+                }
+            },
+            "UpdateOrganization": {
+                "label": "Update an Organization",
+                "description": "Updates an organization.",
+                "moduleType": "action",
+                "actionCrud": "update",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/update-organization/update-organization.communication.iml.json",
+                    "staticParams": "modules/update-organization/update-organization.static-params.iml.json",
+                    "mappableParams": "modules/update-organization/update-organization.mappable-params.iml.json",
+                    "interface": "modules/update-organization/update-organization.interface.iml.json",
+                    "samples": "modules/update-organization/update-organization.samples.iml.json",
+                    "scope": "modules/update-organization/update-organization.scope.iml.json"
+                }
+            },
+            "UpdateCustomField": {
+                "label": "Update an Organization Field Value",
+                "description": "Updates an organization field value.",
+                "moduleType": "action",
+                "actionCrud": "update",
+                "connection": "pipedrive-apikey",
+                "altConnection": "pipedrive-auth",
+                "codeFiles": {
+                    "communication": "modules/update-custom-field/update-custom-field.communication.iml.json",
+                    "staticParams": "modules/update-custom-field/update-custom-field.static-params.iml.json",
+                    "mappableParams": "modules/update-custom-field/update-custom-field.mappable-params.iml.json",
+                    "interface": "modules/update-custom-field/update-custom-field.interface.iml.json",
+                    "samples": "modules/update-custom-field/update-custom-field.samples.iml.json",
+                    "scope": "modules/update-custom-field/update-custom-field.scope.iml.json"
+                }
+            },
+            "UpdateNote": {
+                "label": "Update a Note",
+                "description": "Updates a note.",
+                "moduleType": "action",
+                "actionCrud": "update",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/update-note/update-note.communication.iml.json",
+                    "staticParams": "modules/update-note/update-note.static-params.iml.json",
+                    "mappableParams": "modules/update-note/update-note.mappable-params.iml.json",
+                    "interface": "modules/update-note/update-note.interface.iml.json",
+                    "samples": "modules/update-note/update-note.samples.iml.json",
+                    "scope": "modules/update-note/update-note.scope.iml.json"
+                }
+            },
+            "UpdatePerson": {
+                "label": "Update a Person",
+                "description": "Updates a person.",
+                "moduleType": "action",
+                "actionCrud": "update",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/update-person/update-person.communication.iml.json",
+                    "staticParams": "modules/update-person/update-person.static-params.iml.json",
+                    "mappableParams": "modules/update-person/update-person.mappable-params.iml.json",
+                    "interface": "modules/update-person/update-person.interface.iml.json",
+                    "samples": "modules/update-person/update-person.samples.iml.json",
+                    "scope": "modules/update-person/update-person.scope.iml.json"
+                }
+            },
+            "UpdateProduct": {
+                "label": "Update a Product",
+                "description": "Updates a product.",
+                "moduleType": "action",
+                "actionCrud": "update",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/update-product/update-product.communication.iml.json",
+                    "staticParams": "modules/update-product/update-product.static-params.iml.json",
+                    "mappableParams": "modules/update-product/update-product.mappable-params.iml.json",
+                    "interface": "modules/update-product/update-product.interface.iml.json",
+                    "samples": "modules/update-product/update-product.samples.iml.json",
+                    "scope": "modules/update-product/update-product.scope.iml.json"
+                }
+            },
+            "updateRecurringSubscription": {
+                "label": "Update a Recurring Subscription",
+                "description": "Updates a recurring subscription.",
+                "moduleType": "action",
+                "actionCrud": "update",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/update-recurring-subscription/update-recurring-subscription.communication.iml.json",
+                    "staticParams": "modules/update-recurring-subscription/update-recurring-subscription.static-params.iml.json",
+                    "mappableParams": "modules/update-recurring-subscription/update-recurring-subscription.mappable-params.iml.json",
+                    "interface": "modules/update-recurring-subscription/update-recurring-subscription.interface.iml.json",
+                    "samples": "modules/update-recurring-subscription/update-recurring-subscription.samples.iml.json",
+                    "scope": "modules/update-recurring-subscription/update-recurring-subscription.scope.iml.json"
+                }
+            },
+            "UpdateProductAttachmentDetails": {
+                "label": "Update Product Attachment Details",
+                "description": "Updates product attachment details of the deal-product (a product already attached to a deal).",
+                "moduleType": "action",
+                "actionCrud": "update",
+                "connection": "pipedrive-apikey",
+                "altConnection": "pipedrive-auth",
+                "codeFiles": {
+                    "communication": "modules/update-product-attachment-details/update-product-attachment-details.communication.iml.json",
+                    "staticParams": "modules/update-product-attachment-details/update-product-attachment-details.static-params.iml.json",
+                    "mappableParams": "modules/update-product-attachment-details/update-product-attachment-details.mappable-params.iml.json",
+                    "interface": "modules/update-product-attachment-details/update-product-attachment-details.interface.iml.json",
+                    "samples": "modules/update-product-attachment-details/update-product-attachment-details.samples.iml.json",
+                    "scope": "modules/update-product-attachment-details/update-product-attachment-details.scope.iml.json"
+                }
+            },
+            "UploadFile": {
+                "label": "Upload a File",
+                "description": "Lets you upload a file, and associate it with a Deal, a Person, an Organization, an Activity or a Product.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/upload-file/upload-file.communication.iml.json",
+                    "staticParams": "modules/upload-file/upload-file.static-params.iml.json",
+                    "mappableParams": "modules/upload-file/upload-file.mappable-params.iml.json",
+                    "interface": "modules/upload-file/upload-file.interface.iml.json",
+                    "samples": "modules/upload-file/upload-file.samples.iml.json",
+                    "scope": "modules/upload-file/upload-file.scope.iml.json"
+                }
+            },
+            "WatchActivities": {
+                "label": "Watch Activities",
+                "description": "Triggers when a new activity is added or updated.",
+                "moduleType": "trigger",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/watch-activities/watch-activities.communication.iml.json",
+                    "epoch": "modules/watch-activities/watch-activities.epoch.iml.json",
+                    "staticParams": "modules/watch-activities/watch-activities.static-params.iml.json",
+                    "mappableParams": "modules/watch-activities/watch-activities.mappable-params.iml.json",
+                    "interface": "modules/watch-activities/watch-activities.interface.iml.json",
+                    "samples": "modules/watch-activities/watch-activities.samples.iml.json",
+                    "scope": "modules/watch-activities/watch-activities.scope.iml.json"
+                }
+            },
+            "WatchDeals": {
+                "label": "Watch Deals",
+                "description": "Triggers when a new deal is added or updated.",
+                "moduleType": "trigger",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/watch-deals/watch-deals.communication.iml.json",
+                    "epoch": "modules/watch-deals/watch-deals.epoch.iml.json",
+                    "staticParams": "modules/watch-deals/watch-deals.static-params.iml.json",
+                    "mappableParams": "modules/watch-deals/watch-deals.mappable-params.iml.json",
+                    "interface": "modules/watch-deals/watch-deals.interface.iml.json",
+                    "samples": "modules/watch-deals/watch-deals.samples.iml.json",
+                    "scope": "modules/watch-deals/watch-deals.scope.iml.json"
+                }
+            },
+            "watchEmails": {
+                "label": "Watch Emails",
+                "description": "Triggers when a new email is added to Inbox.",
+                "moduleType": "trigger",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/watch-emails/watch-emails.communication.iml.json",
+                    "epoch": "modules/watch-emails/watch-emails.epoch.iml.json",
+                    "staticParams": "modules/watch-emails/watch-emails.static-params.iml.json",
+                    "mappableParams": "modules/watch-emails/watch-emails.mappable-params.iml.json",
+                    "interface": "modules/watch-emails/watch-emails.interface.iml.json",
+                    "samples": "modules/watch-emails/watch-emails.samples.iml.json",
+                    "scope": "modules/watch-emails/watch-emails.scope.iml.json"
+                }
+            },
+            "watchLeads": {
+                "label": "Watch Leads",
+                "description": "Triggers when a new lead is added or updated.",
+                "moduleType": "trigger",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/watch-leads/watch-leads.communication.iml.json",
+                    "epoch": "modules/watch-leads/watch-leads.epoch.iml.json",
+                    "staticParams": "modules/watch-leads/watch-leads.static-params.iml.json",
+                    "mappableParams": "modules/watch-leads/watch-leads.mappable-params.iml.json",
+                    "interface": "modules/watch-leads/watch-leads.interface.iml.json",
+                    "samples": "modules/watch-leads/watch-leads.samples.iml.json",
+                    "scope": "modules/watch-leads/watch-leads.scope.iml.json"
+                }
+            },
+            "WatchNotes": {
+                "label": "Watch Notes",
+                "description": "Triggers when a new note is added or updated.",
+                "moduleType": "trigger",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/watch-notes/watch-notes.communication.iml.json",
+                    "epoch": "modules/watch-notes/watch-notes.epoch.iml.json",
+                    "staticParams": "modules/watch-notes/watch-notes.static-params.iml.json",
+                    "mappableParams": "modules/watch-notes/watch-notes.mappable-params.iml.json",
+                    "interface": "modules/watch-notes/watch-notes.interface.iml.json",
+                    "samples": "modules/watch-notes/watch-notes.samples.iml.json",
+                    "scope": "modules/watch-notes/watch-notes.scope.iml.json"
+                }
+            },
+            "WatchOrganizations": {
+                "label": "Watch Organizations",
+                "description": "Triggers when a new organization is added or updated.",
+                "moduleType": "trigger",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/watch-organizations/watch-organizations.communication.iml.json",
+                    "epoch": "modules/watch-organizations/watch-organizations.epoch.iml.json",
+                    "staticParams": "modules/watch-organizations/watch-organizations.static-params.iml.json",
+                    "mappableParams": "modules/watch-organizations/watch-organizations.mappable-params.iml.json",
+                    "interface": "modules/watch-organizations/watch-organizations.interface.iml.json",
+                    "samples": "modules/watch-organizations/watch-organizations.samples.iml.json",
+                    "scope": "modules/watch-organizations/watch-organizations.scope.iml.json"
+                }
+            },
+            "WatchPersons": {
+                "label": "Watch Persons",
+                "description": "Triggers when a new person is added or updated.",
+                "moduleType": "trigger",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/watch-persons/watch-persons.communication.iml.json",
+                    "epoch": "modules/watch-persons/watch-persons.epoch.iml.json",
+                    "staticParams": "modules/watch-persons/watch-persons.static-params.iml.json",
+                    "mappableParams": "modules/watch-persons/watch-persons.mappable-params.iml.json",
+                    "interface": "modules/watch-persons/watch-persons.interface.iml.json",
+                    "samples": "modules/watch-persons/watch-persons.samples.iml.json",
+                    "scope": "modules/watch-persons/watch-persons.scope.iml.json"
+                }
+            },
+            "WatchProducts": {
+                "label": "Watch Products",
+                "description": "Triggers when a new product is added or updated.",
+                "moduleType": "trigger",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "modules/watch-products/watch-products.communication.iml.json",
+                    "epoch": "modules/watch-products/watch-products.epoch.iml.json",
+                    "staticParams": "modules/watch-products/watch-products.static-params.iml.json",
+                    "mappableParams": "modules/watch-products/watch-products.mappable-params.iml.json",
+                    "interface": "modules/watch-products/watch-products.interface.iml.json",
+                    "samples": "modules/watch-products/watch-products.samples.iml.json",
+                    "scope": "modules/watch-products/watch-products.scope.iml.json"
+                }
+            }
+        },
+        "function": {
+            "addDiscountPercentage": {
+                "codeFiles": {
+                    "code": "functions/add-discount-percentage/add-discount-percentage.code.js",
+                    "test": "functions/add-discount-percentage/add-discount-percentage.test.js"
+                }
+            },
+            "arrToStr": {
+                "codeFiles": {
+                    "code": "functions/arr-to-str/arr-to-str.code.js",
+                    "test": "functions/arr-to-str/arr-to-str.test.js"
+                }
+            },
+            "boolToInt": {
+                "codeFiles": {
+                    "code": "functions/bool-to-int/bool-to-int.code.js",
+                    "test": "functions/bool-to-int/bool-to-int.test.js"
+                }
+            },
+            "changeProductResStruct": {
+                "codeFiles": {
+                    "code": "functions/change-product-res-struct/change-product-res-struct.code.js",
+                    "test": "functions/change-product-res-struct/change-product-res-struct.test.js"
+                }
+            },
+            "formatNestedDates": {
+                "codeFiles": {
+                    "code": "functions/format-nested-dates/format-nested-dates.code.js",
+                    "test": "functions/format-nested-dates/format-nested-dates.test.js"
+                }
+            },
+            "getApiCallBody": {
+                "codeFiles": {
+                    "code": "functions/get-api-call-body/get-api-call-body.code.js",
+                    "test": "functions/get-api-call-body/get-api-call-body.test.js"
+                }
+            },
+            "getApiURL": {
+                "codeFiles": {
+                    "code": "functions/get-api-url/get-api-url.code.js",
+                    "test": "functions/get-api-url/get-api-url.test.js"
+                }
+            },
+            "getBoolean": {
+                "codeFiles": {
+                    "code": "functions/get-boolean/get-boolean.code.js",
+                    "test": "functions/get-boolean/get-boolean.test.js"
+                }
+            },
+            "getErrors": {
+                "codeFiles": {
+                    "code": "functions/get-errors/get-errors.code.js",
+                    "test": "functions/get-errors/get-errors.test.js"
+                }
+            },
+            "getExpectCustom": {
+                "codeFiles": {
+                    "code": "functions/get-expect-custom/get-expect-custom.code.js",
+                    "test": "functions/get-expect-custom/get-expect-custom.test.js"
+                }
+            },
+            "getExpectedLeadsCustomFields": {
+                "codeFiles": {
+                    "code": "functions/get-expected-leads-custom-fields/get-expected-leads-custom-fields.code.js",
+                    "test": "functions/get-expected-leads-custom-fields/get-expected-leads-custom-fields.test.js"
+                }
+            },
+            "getExpectInput": {
+                "codeFiles": {
+                    "code": "functions/get-expect-input/get-expect-input.code.js",
+                    "test": "functions/get-expect-input/get-expect-input.test.js"
+                }
+            },
+            "getFieldValues": {
+                "codeFiles": {
+                    "code": "functions/get-field-values/get-field-values.code.js",
+                    "test": "functions/get-field-values/get-field-values.test.js"
+                }
+            },
+            "getInterface": {
+                "codeFiles": {
+                    "code": "functions/get-interface/get-interface.code.js",
+                    "test": "functions/get-interface/get-interface.test.js"
+                }
+            },
+            "getResponseOutput": {
+                "codeFiles": {
+                    "code": "functions/get-response-output/get-response-output.code.js",
+                    "test": "functions/get-response-output/get-response-output.test.js"
+                }
+            },
+            "objectToFlatArray": {
+                "codeFiles": {
+                    "code": "functions/object-to-flat-array/object-to-flat-array.code.js",
+                    "test": "functions/object-to-flat-array/object-to-flat-array.test.js"
+                }
+            },
+            "parseDates": {
+                "codeFiles": {
+                    "code": "functions/parse-dates/parse-dates.code.js",
+                    "test": "functions/parse-dates/parse-dates.test.js"
+                }
+            }
+        },
+        "rpc": {
+            "ActivityTypes": {
+                "label": "Activity Types",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/activity-types/activity-types.communication.iml.json",
+                    "params": "rpcs/activity-types/activity-types.params.iml.json"
+                }
+            },
+            "ExpectActivitiesCustom": {
+                "label": "Expect Activities Custom",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/expect-activities-custom/expect-activities-custom.communication.iml.json",
+                    "params": "rpcs/expect-activities-custom/expect-activities-custom.params.iml.json"
+                }
+            },
+            "ExpectDealsCustom": {
+                "label": "Expect Deals Custom",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/expect-deals-custom/expect-deals-custom.communication.iml.json",
+                    "params": "rpcs/expect-deals-custom/expect-deals-custom.params.iml.json"
+                }
+            },
+            "ExpectNotesCustom": {
+                "label": "Expect Notes Custom",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/expect-notes-custom/expect-notes-custom.communication.iml.json",
+                    "params": "rpcs/expect-notes-custom/expect-notes-custom.params.iml.json"
+                }
+            },
+            "ExpectOrganizationsCustom": {
+                "label": "Expect Organizations Custom",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/expect-organizations-custom/expect-organizations-custom.communication.iml.json",
+                    "params": "rpcs/expect-organizations-custom/expect-organizations-custom.params.iml.json"
+                }
+            },
+            "ExpectPersonsCustom": {
+                "label": "Expect Persons Custom",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/expect-persons-custom/expect-persons-custom.communication.iml.json",
+                    "params": "rpcs/expect-persons-custom/expect-persons-custom.params.iml.json"
+                }
+            },
+            "ExpectProductsCustom": {
+                "label": "Expect Products Custom",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/expect-products-custom/expect-products-custom.communication.iml.json",
+                    "params": "rpcs/expect-products-custom/expect-products-custom.params.iml.json"
+                }
+            },
+            "FilterActivities": {
+                "label": "Filter Activities",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/filter-activities/filter-activities.communication.iml.json",
+                    "params": "rpcs/filter-activities/filter-activities.params.iml.json"
+                }
+            },
+            "FilterDeals": {
+                "label": "Filter Deals",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/filter-deals/filter-deals.communication.iml.json",
+                    "params": "rpcs/filter-deals/filter-deals.params.iml.json"
+                }
+            },
+            "FilterOrganizations": {
+                "label": "Filter Organizations",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/filter-organizations/filter-organizations.communication.iml.json",
+                    "params": "rpcs/filter-organizations/filter-organizations.params.iml.json"
+                }
+            },
+            "FilterPersons": {
+                "label": "Filter Persons",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/filter-persons/filter-persons.communication.iml.json",
+                    "params": "rpcs/filter-persons/filter-persons.params.iml.json"
+                }
+            },
+            "FilterProducts": {
+                "label": "Filter Products",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/filter-products/filter-products.communication.iml.json",
+                    "params": "rpcs/filter-products/filter-products.params.iml.json"
+                }
+            },
+            "Filters": {
+                "label": "Filters",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/filters/filters.communication.iml.json",
+                    "params": "rpcs/filters/filters.params.iml.json"
+                }
+            },
+            "getUniversalParam": {
+                "label": "Get Universal Param",
+                "connection": null,
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "rpcs/get-universal-param/get-universal-param.communication.iml.json",
+                    "params": "rpcs/get-universal-param/get-universal-param.params.iml.json"
+                }
+            },
+            "getVisibilityOptions": {
+                "label": "getVisibilityOptions",
+                "connection": null,
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "rpcs/get-visibility-options/get-visibility-options.communication.iml.json",
+                    "params": "rpcs/get-visibility-options/get-visibility-options.params.iml.json"
+                }
+            },
+            "InterfaceActivities": {
+                "label": "Interface Activities",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/interface-activities/interface-activities.communication.iml.json",
+                    "params": "rpcs/interface-activities/interface-activities.params.iml.json"
+                }
+            },
+            "InterfaceDeals": {
+                "label": "Interface Deals",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/interface-deals/interface-deals.communication.iml.json",
+                    "params": "rpcs/interface-deals/interface-deals.params.iml.json"
+                }
+            },
+            "InterfaceNotes": {
+                "label": "Interface Notes",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/interface-notes/interface-notes.communication.iml.json",
+                    "params": "rpcs/interface-notes/interface-notes.params.iml.json"
+                }
+            },
+            "InterfaceOrganizations": {
+                "label": "Interface Organizations",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/interface-organizations/interface-organizations.communication.iml.json",
+                    "params": "rpcs/interface-organizations/interface-organizations.params.iml.json"
+                }
+            },
+            "InterfacePersons": {
+                "label": "Interface Persons",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/interface-persons/interface-persons.communication.iml.json",
+                    "params": "rpcs/interface-persons/interface-persons.params.iml.json"
+                }
+            },
+            "InterfaceProducts": {
+                "label": "Interface Products",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/interface-products/interface-products.communication.iml.json",
+                    "params": "rpcs/interface-products/interface-products.params.iml.json"
+                }
+            },
+            "InterfaceWebhookActivities": {
+                "label": "Interface Webhook Activities",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/interface-webhook-activities/interface-webhook-activities.communication.iml.json",
+                    "params": "rpcs/interface-webhook-activities/interface-webhook-activities.params.iml.json"
+                }
+            },
+            "InterfaceWebhookDeals": {
+                "label": "Interface Webhook Deals",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/interface-webhook-deals/interface-webhook-deals.communication.iml.json",
+                    "params": "rpcs/interface-webhook-deals/interface-webhook-deals.params.iml.json"
+                }
+            },
+            "InterfaceWebhookNotes": {
+                "label": "Interface Webhook Notes",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/interface-webhook-notes/interface-webhook-notes.communication.iml.json",
+                    "params": "rpcs/interface-webhook-notes/interface-webhook-notes.params.iml.json"
+                }
+            },
+            "InterfaceWebhookOrganizations": {
+                "label": "Interface Webhook Organizations",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/interface-webhook-organizations/interface-webhook-organizations.communication.iml.json",
+                    "params": "rpcs/interface-webhook-organizations/interface-webhook-organizations.params.iml.json"
+                }
+            },
+            "InterfaceWebhookPersons": {
+                "label": "Interface Webhook Persons",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/interface-webhook-persons/interface-webhook-persons.communication.iml.json",
+                    "params": "rpcs/interface-webhook-persons/interface-webhook-persons.params.iml.json"
+                }
+            },
+            "InterfaceWebhookProducts": {
+                "label": "Interface Webhook Products",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/interface-webhook-products/interface-webhook-products.communication.iml.json",
+                    "params": "rpcs/interface-webhook-products/interface-webhook-products.params.iml.json"
+                }
+            },
+            "listProducts": {
+                "label": "List Products",
+                "connection": "pipedrive-auth",
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "rpcs/list-products/list-products.communication.iml.json",
+                    "params": "rpcs/list-products/list-products.params.iml.json"
+                }
+            },
+            "optionsForDeleteFollowers": {
+                "label": "Options for Delete Followers - please delete",
+                "connection": null,
+                "altConnection": null,
+                "codeFiles": {
+                    "communication": "rpcs/options-for-delete-followers/options-for-delete-followers.communication.iml.json",
+                    "params": "rpcs/options-for-delete-followers/options-for-delete-followers.params.iml.json"
+                }
+            },
+            "Organizations": {
+                "label": "Organizations",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/organizations/organizations.communication.iml.json",
+                    "params": "rpcs/organizations/organizations.params.iml.json"
+                }
+            },
+            "Persons": {
+                "label": "Persons",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/persons/persons.communication.iml.json",
+                    "params": "rpcs/persons/persons.params.iml.json"
+                }
+            },
+            "Pipelines": {
+                "label": "Pipelines",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/pipelines/pipelines.communication.iml.json",
+                    "params": "rpcs/pipelines/pipelines.params.iml.json"
+                }
+            },
+            "SearchOrganizations": {
+                "label": "Search Organizations",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/search-organizations/search-organizations.communication.iml.json",
+                    "params": "rpcs/search-organizations/search-organizations.params.iml.json"
+                }
+            },
+            "SearchOrganizationsByName": {
+                "label": "Search Organizations By Name",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/search-organizations-by-name/search-organizations-by-name.communication.iml.json",
+                    "params": "rpcs/search-organizations-by-name/search-organizations-by-name.params.iml.json"
+                }
+            },
+            "SearchPersonsByName": {
+                "label": "Search Persons By Name",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/search-persons-by-name/search-persons-by-name.communication.iml.json",
+                    "params": "rpcs/search-persons-by-name/search-persons-by-name.params.iml.json"
+                }
+            },
+            "SearchUsers": {
+                "label": "Search Users",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/search-users/search-users.communication.iml.json",
+                    "params": "rpcs/search-users/search-users.params.iml.json"
+                }
+            },
+            "Stages": {
+                "label": "Stages",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/stages/stages.communication.iml.json",
+                    "params": "rpcs/stages/stages.params.iml.json"
+                }
+            },
+            "Users": {
+                "label": "Users",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "rpcs/users/users.communication.iml.json",
+                    "params": "rpcs/users/users.params.iml.json"
+                }
+            }
+        },
+        "webhook": {
+            "webhook1": {
+                "label": "Activity",
+                "webhookType": "web",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "webhooks/webhook1/webhook1.communication.iml.json",
+                    "params": "webhooks/webhook1/webhook1.params.iml.json",
+                    "attach": "webhooks/webhook1/webhook1.attach.iml.json",
+                    "detach": "webhooks/webhook1/webhook1.detach.iml.json",
+                    "update": "webhooks/webhook1/webhook1.update.iml.json",
+                    "requiredScope": "webhooks/webhook1/webhook1.required-scope.iml.json"
+                }
+            },
+            "webhook2": {
+                "label": "Deal",
+                "webhookType": "web",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "webhooks/webhook2/webhook2.communication.iml.json",
+                    "params": "webhooks/webhook2/webhook2.params.iml.json",
+                    "attach": "webhooks/webhook2/webhook2.attach.iml.json",
+                    "detach": "webhooks/webhook2/webhook2.detach.iml.json",
+                    "update": "webhooks/webhook2/webhook2.update.iml.json",
+                    "requiredScope": "webhooks/webhook2/webhook2.required-scope.iml.json"
+                }
+            },
+            "webhook4": {
+                "label": "Note",
+                "webhookType": "web",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "webhooks/webhook4/webhook4.communication.iml.json",
+                    "params": "webhooks/webhook4/webhook4.params.iml.json",
+                    "attach": "webhooks/webhook4/webhook4.attach.iml.json",
+                    "detach": "webhooks/webhook4/webhook4.detach.iml.json",
+                    "update": "webhooks/webhook4/webhook4.update.iml.json",
+                    "requiredScope": "webhooks/webhook4/webhook4.required-scope.iml.json"
+                }
+            },
+            "webhook5": {
+                "label": "Organization",
+                "webhookType": "web",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "webhooks/webhook5/webhook5.communication.iml.json",
+                    "params": "webhooks/webhook5/webhook5.params.iml.json",
+                    "attach": "webhooks/webhook5/webhook5.attach.iml.json",
+                    "detach": "webhooks/webhook5/webhook5.detach.iml.json",
+                    "update": "webhooks/webhook5/webhook5.update.iml.json",
+                    "requiredScope": "webhooks/webhook5/webhook5.required-scope.iml.json"
+                }
+            },
+            "webhook3": {
+                "label": "Person",
+                "webhookType": "web",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "webhooks/webhook3/webhook3.communication.iml.json",
+                    "params": "webhooks/webhook3/webhook3.params.iml.json",
+                    "attach": "webhooks/webhook3/webhook3.attach.iml.json",
+                    "detach": "webhooks/webhook3/webhook3.detach.iml.json",
+                    "update": "webhooks/webhook3/webhook3.update.iml.json",
+                    "requiredScope": "webhooks/webhook3/webhook3.required-scope.iml.json"
+                }
+            },
+            "webhook6": {
+                "label": "Product",
+                "webhookType": "web",
+                "connection": "pipedrive-auth",
+                "altConnection": "pipedrive-apikey",
+                "codeFiles": {
+                    "communication": "webhooks/webhook6/webhook6.communication.iml.json",
+                    "params": "webhooks/webhook6/webhook6.params.iml.json",
+                    "attach": "webhooks/webhook6/webhook6.attach.iml.json",
+                    "detach": "webhooks/webhook6/webhook6.detach.iml.json",
+                    "update": "webhooks/webhook6/webhook6.update.iml.json",
+                    "requiredScope": "webhooks/webhook6/webhook6.required-scope.iml.json"
+                }
+            }
+        }
+    },
+    "origins": [
+        {
+            "label": "Development Pipedrive",
+            "appId": "pipedrive-oppy-dev-hifz32",
+            "baseUrl": "https://we.make.com/api",
+            "appVersion": 1,
+            "apikeyFile": "../.secrets/apikey",
+            "idMapping": {
+                "connection": [
+                    {
+                        "local": "pipedrive-apikey",
+                        "remote": "pipedrive-oppy-dev-hifz32"
+                    },
+                    {
+                        "local": "pipedrive-auth",
+                        "remote": "pipedrive-oppy-dev-hifz322"
+                    }
+                ],
+                "module": [
+                    {
+                        "local": "AddFollower",
+                        "remote": "AddFollower"
+                    },
+                    {
+                        "local": "addInstallmentSubscription",
+                        "remote": "addInstallmentSubscription"
+                    },
+                    {
+                        "local": "AddParticipantToDeal",
+                        "remote": "AddParticipantToDeal"
+                    },
+                    {
+                        "local": "AddProductToDeal",
+                        "remote": "AddProductToDeal"
+                    },
+                    {
+                        "local": "addRecurringSubscription",
+                        "remote": "addRecurringSubscription"
+                    },
+                    {
+                        "local": "cancelRecurringSubscription",
+                        "remote": "cancelRecurringSubscription"
+                    },
+                    {
+                        "local": "CreateObject",
+                        "remote": "CreateObject"
+                    },
+                    {
+                        "local": "createLead",
+                        "remote": "createLead"
+                    },
+                    {
+                        "local": "CreateActivity",
+                        "remote": "CreateActivity"
+                    },
+                    {
+                        "local": "CreateOrganization",
+                        "remote": "CreateOrganization"
+                    },
+                    {
+                        "local": "CreateNote",
+                        "remote": "CreateNote"
+                    },
+                    {
+                        "local": "CreatePerson",
+                        "remote": "CreatePerson"
+                    },
+                    {
+                        "local": "CreateProduct",
+                        "remote": "CreateProduct"
+                    },
+                    {
+                        "local": "DeleteDeal",
+                        "remote": "DeleteDeal"
+                    },
+                    {
+                        "local": "DeleteFollower",
+                        "remote": "DeleteFollower"
+                    },
+                    {
+                        "local": "deleteLead",
+                        "remote": "deleteLead"
+                    },
+                    {
+                        "local": "DeleteMailThread",
+                        "remote": "DeleteMailThread"
+                    },
+                    {
+                        "local": "DeleteActivity",
+                        "remote": "DeleteActivity"
+                    },
+                    {
+                        "local": "DeleteAttachedProduct",
+                        "remote": "DeleteAttachedProduct"
+                    },
+                    {
+                        "local": "DeleteOrganization",
+                        "remote": "DeleteOrganization"
+                    },
+                    {
+                        "local": "DeleteNote",
+                        "remote": "DeleteNote"
+                    },
+                    {
+                        "local": "DeletePerson",
+                        "remote": "DeletePerson"
+                    },
+                    {
+                        "local": "DeleteProduct",
+                        "remote": "DeleteProduct"
+                    },
+                    {
+                        "local": "deleteSubscription",
+                        "remote": "deleteSubscription"
+                    },
+                    {
+                        "local": "DownloadFile",
+                        "remote": "DownloadFile"
+                    },
+                    {
+                        "local": "FindPersonByName",
+                        "remote": "FindPersonByName"
+                    },
+                    {
+                        "local": "findSubscriptionByDeal",
+                        "remote": "findSubscriptionByDeal"
+                    },
+                    {
+                        "local": "GetDeal",
+                        "remote": "GetDeal"
+                    },
+                    {
+                        "local": "getLead",
+                        "remote": "getLead"
+                    },
+                    {
+                        "local": "GetMailThread",
+                        "remote": "GetMailThread"
+                    },
+                    {
+                        "local": "GetMessage",
+                        "remote": "GetMessage"
+                    },
+                    {
+                        "local": "GetActivity",
+                        "remote": "GetActivity"
+                    },
+                    {
+                        "local": "GetOrganization",
+                        "remote": "GetOrganization"
+                    },
+                    {
+                        "local": "GetNote",
+                        "remote": "GetNote"
+                    },
+                    {
+                        "local": "GetPerson",
+                        "remote": "GetPerson"
+                    },
+                    {
+                        "local": "GetProduct",
+                        "remote": "GetProduct"
+                    },
+                    {
+                        "local": "getSubscription",
+                        "remote": "getSubscription"
+                    },
+                    {
+                        "local": "GetUser",
+                        "remote": "GetUser"
+                    },
+                    {
+                        "local": "SearchForActivity",
+                        "remote": "SearchForActivity"
+                    },
+                    {
+                        "local": "ListActivityDeals",
+                        "remote": "ListActivityDeals"
+                    },
+                    {
+                        "local": "ListDeals",
+                        "remote": "ListDeals"
+                    },
+                    {
+                        "local": "listDealsForPerson",
+                        "remote": "listDealsForPerson"
+                    },
+                    {
+                        "local": "listDealsForProduct",
+                        "remote": "listDealsForProduct"
+                    },
+                    {
+                        "local": "listDealsinOrganization",
+                        "remote": "listDealsinOrganization"
+                    },
+                    {
+                        "local": "GetPipelineDeals",
+                        "remote": "GetPipelineDeals"
+                    },
+                    {
+                        "local": "GetStageDeals",
+                        "remote": "GetStageDeals"
+                    },
+                    {
+                        "local": "ListDealFiles",
+                        "remote": "ListDealFiles"
+                    },
+                    {
+                        "local": "ListFollowers",
+                        "remote": "ListFollowers"
+                    },
+                    {
+                        "local": "listLeads",
+                        "remote": "listLeads"
+                    },
+                    {
+                        "local": "ListMailThreads",
+                        "remote": "ListMailThreads"
+                    },
+                    {
+                        "local": "ListMessages",
+                        "remote": "ListMessages"
+                    },
+                    {
+                        "local": "SearchForNotes",
+                        "remote": "SearchForNotes"
+                    },
+                    {
+                        "local": "ListOrganizations",
+                        "remote": "ListOrganizations"
+                    },
+                    {
+                        "local": "listParticipantsOfADeal",
+                        "remote": "listParticipantsOfADeal"
+                    },
+                    {
+                        "local": "listSubscriptionPayments",
+                        "remote": "listSubscriptionPayments"
+                    },
+                    {
+                        "local": "GetPersons",
+                        "remote": "GetPersons"
+                    },
+                    {
+                        "local": "ListPersonsInDeal",
+                        "remote": "ListPersonsInDeal"
+                    },
+                    {
+                        "local": "ListPipelines",
+                        "remote": "ListPipelines"
+                    },
+                    {
+                        "local": "ListProducts",
+                        "remote": "ListProducts"
+                    },
+                    {
+                        "local": "ListProductsInDeal",
+                        "remote": "ListProductsInDeal"
+                    },
+                    {
+                        "local": "ListStages",
+                        "remote": "ListStages"
+                    },
+                    {
+                        "local": "ListUsers",
+                        "remote": "ListUsers"
+                    },
+                    {
+                        "local": "MakeAPICall",
+                        "remote": "MakeAPICall"
+                    },
+                    {
+                        "local": "NewEvent",
+                        "remote": "NewEvent"
+                    },
+                    {
+                        "local": "NewDealEvent",
+                        "remote": "NewDealEvent"
+                    },
+                    {
+                        "local": "NewNoteEvent",
+                        "remote": "NewNoteEvent"
+                    },
+                    {
+                        "local": "NewOrganizationEvent",
+                        "remote": "NewOrganizationEvent"
+                    },
+                    {
+                        "local": "NewPersonEvent",
+                        "remote": "NewPersonEvent"
+                    },
+                    {
+                        "local": "NewProductEvent",
+                        "remote": "NewProductEvent"
+                    },
+                    {
+                        "local": "searchDeals",
+                        "remote": "searchDeals"
+                    },
+                    {
+                        "local": "SearchOrganizations",
+                        "remote": "SearchOrganizations"
+                    },
+                    {
+                        "local": "searchLeads",
+                        "remote": "searchLeads"
+                    },
+                    {
+                        "local": "SearchObjectsResultAPI",
+                        "remote": "SearchObjectsResultAPI"
+                    },
+                    {
+                        "local": "searchOrganizations",
+                        "remote": "searchOrganizations"
+                    },
+                    {
+                        "local": "searchPersons",
+                        "remote": "searchPersons"
+                    },
+                    {
+                        "local": "searchProducts",
+                        "remote": "searchProducts"
+                    },
+                    {
+                        "local": "UpdateDeal",
+                        "remote": "UpdateDeal"
+                    },
+                    {
+                        "local": "updateLead",
+                        "remote": "updateLead"
+                    },
+                    {
+                        "local": "UpdateMailThreadDetails",
+                        "remote": "UpdateMailThreadDetails"
+                    },
+                    {
+                        "local": "UpdateActivity",
+                        "remote": "UpdateActivity"
+                    },
+                    {
+                        "local": "updateInstallmentSubscription",
+                        "remote": "updateInstallmentSubscription"
+                    },
+                    {
+                        "local": "UpdateOrganization",
+                        "remote": "UpdateOrganization"
+                    },
+                    {
+                        "local": "UpdateCustomField",
+                        "remote": "UpdateCustomField"
+                    },
+                    {
+                        "local": "UpdateNote",
+                        "remote": "UpdateNote"
+                    },
+                    {
+                        "local": "UpdatePerson",
+                        "remote": "UpdatePerson"
+                    },
+                    {
+                        "local": "UpdateProduct",
+                        "remote": "UpdateProduct"
+                    },
+                    {
+                        "local": "updateRecurringSubscription",
+                        "remote": "updateRecurringSubscription"
+                    },
+                    {
+                        "local": "UpdateProductAttachmentDetails",
+                        "remote": "UpdateProductAttachmentDetails"
+                    },
+                    {
+                        "local": "UploadFile",
+                        "remote": "UploadFile"
+                    },
+                    {
+                        "local": "WatchActivities",
+                        "remote": "WatchActivities"
+                    },
+                    {
+                        "local": "WatchDeals",
+                        "remote": "WatchDeals"
+                    },
+                    {
+                        "local": "watchEmails",
+                        "remote": "watchEmails"
+                    },
+                    {
+                        "local": "watchLeads",
+                        "remote": "watchLeads"
+                    },
+                    {
+                        "local": "WatchNotes",
+                        "remote": "WatchNotes"
+                    },
+                    {
+                        "local": "WatchOrganizations",
+                        "remote": "WatchOrganizations"
+                    },
+                    {
+                        "local": "WatchPersons",
+                        "remote": "WatchPersons"
+                    },
+                    {
+                        "local": "WatchProducts",
+                        "remote": "WatchProducts"
+                    }
+                ],
+                "function": [
+                    {
+                        "local": "addDiscountPercentage",
+                        "remote": "addDiscountPercentage"
+                    },
+                    {
+                        "local": "arrToStr",
+                        "remote": "arrToStr"
+                    },
+                    {
+                        "local": "boolToInt",
+                        "remote": "boolToInt"
+                    },
+                    {
+                        "local": "changeProductResStruct",
+                        "remote": "changeProductResStruct"
+                    },
+                    {
+                        "local": "formatNestedDates",
+                        "remote": "formatNestedDates"
+                    },
+                    {
+                        "local": "getApiCallBody",
+                        "remote": "getApiCallBody"
+                    },
+                    {
+                        "local": "getApiURL",
+                        "remote": "getApiURL"
+                    },
+                    {
+                        "local": "getBoolean",
+                        "remote": "getBoolean"
+                    },
+                    {
+                        "local": "getErrors",
+                        "remote": "getErrors"
+                    },
+                    {
+                        "local": "getExpectCustom",
+                        "remote": "getExpectCustom"
+                    },
+                    {
+                        "local": "getExpectedLeadsCustomFields",
+                        "remote": "getExpectedLeadsCustomFields"
+                    },
+                    {
+                        "local": "getExpectInput",
+                        "remote": "getExpectInput"
+                    },
+                    {
+                        "local": "getFieldValues",
+                        "remote": "getFieldValues"
+                    },
+                    {
+                        "local": "getInterface",
+                        "remote": "getInterface"
+                    },
+                    {
+                        "local": "getResponseOutput",
+                        "remote": "getResponseOutput"
+                    },
+                    {
+                        "local": "objectToFlatArray",
+                        "remote": "objectToFlatArray"
+                    },
+                    {
+                        "local": "parseDates",
+                        "remote": "parseDates"
+                    }
+                ],
+                "rpc": [
+                    {
+                        "local": "ActivityTypes",
+                        "remote": "ActivityTypes"
+                    },
+                    {
+                        "local": "ExpectActivitiesCustom",
+                        "remote": "ExpectActivitiesCustom"
+                    },
+                    {
+                        "local": "ExpectDealsCustom",
+                        "remote": "ExpectDealsCustom"
+                    },
+                    {
+                        "local": "ExpectNotesCustom",
+                        "remote": "ExpectNotesCustom"
+                    },
+                    {
+                        "local": "ExpectOrganizationsCustom",
+                        "remote": "ExpectOrganizationsCustom"
+                    },
+                    {
+                        "local": "ExpectPersonsCustom",
+                        "remote": "ExpectPersonsCustom"
+                    },
+                    {
+                        "local": "ExpectProductsCustom",
+                        "remote": "ExpectProductsCustom"
+                    },
+                    {
+                        "local": "FilterActivities",
+                        "remote": "FilterActivities"
+                    },
+                    {
+                        "local": "FilterDeals",
+                        "remote": "FilterDeals"
+                    },
+                    {
+                        "local": "FilterOrganizations",
+                        "remote": "FilterOrganizations"
+                    },
+                    {
+                        "local": "FilterPersons",
+                        "remote": "FilterPersons"
+                    },
+                    {
+                        "local": "FilterProducts",
+                        "remote": "FilterProducts"
+                    },
+                    {
+                        "local": "Filters",
+                        "remote": "Filters"
+                    },
+                    {
+                        "local": "getUniversalParam",
+                        "remote": "getUniversalParam"
+                    },
+                    {
+                        "local": "getVisibilityOptions",
+                        "remote": "getVisibilityOptions"
+                    },
+                    {
+                        "local": "InterfaceActivities",
+                        "remote": "InterfaceActivities"
+                    },
+                    {
+                        "local": "InterfaceDeals",
+                        "remote": "InterfaceDeals"
+                    },
+                    {
+                        "local": "InterfaceNotes",
+                        "remote": "InterfaceNotes"
+                    },
+                    {
+                        "local": "InterfaceOrganizations",
+                        "remote": "InterfaceOrganizations"
+                    },
+                    {
+                        "local": "InterfacePersons",
+                        "remote": "InterfacePersons"
+                    },
+                    {
+                        "local": "InterfaceProducts",
+                        "remote": "InterfaceProducts"
+                    },
+                    {
+                        "local": "InterfaceWebhookActivities",
+                        "remote": "InterfaceWebhookActivities"
+                    },
+                    {
+                        "local": "InterfaceWebhookDeals",
+                        "remote": "InterfaceWebhookDeals"
+                    },
+                    {
+                        "local": "InterfaceWebhookNotes",
+                        "remote": "InterfaceWebhookNotes"
+                    },
+                    {
+                        "local": "InterfaceWebhookOrganizations",
+                        "remote": "InterfaceWebhookOrganizations"
+                    },
+                    {
+                        "local": "InterfaceWebhookPersons",
+                        "remote": "InterfaceWebhookPersons"
+                    },
+                    {
+                        "local": "InterfaceWebhookProducts",
+                        "remote": "InterfaceWebhookProducts"
+                    },
+                    {
+                        "local": "listProducts",
+                        "remote": "listProducts"
+                    },
+                    {
+                        "local": "optionsForDeleteFollowers",
+                        "remote": "optionsForDeleteFollowers"
+                    },
+                    {
+                        "local": "Organizations",
+                        "remote": "Organizations"
+                    },
+                    {
+                        "local": "Persons",
+                        "remote": "Persons"
+                    },
+                    {
+                        "local": "Pipelines",
+                        "remote": "Pipelines"
+                    },
+                    {
+                        "local": "SearchOrganizations",
+                        "remote": "SearchOrganizations"
+                    },
+                    {
+                        "local": "SearchOrganizationsByName",
+                        "remote": "SearchOrganizationsByName"
+                    },
+                    {
+                        "local": "SearchPersonsByName",
+                        "remote": "SearchPersonsByName"
+                    },
+                    {
+                        "local": "SearchUsers",
+                        "remote": "SearchUsers"
+                    },
+                    {
+                        "local": "Stages",
+                        "remote": "Stages"
+                    },
+                    {
+                        "local": "Users",
+                        "remote": "Users"
+                    }
+                ],
+                "webhook": [
+                    {
+                        "local": "webhook1",
+                        "remote": "pipedrive-oppy-dev-hifz32"
+                    },
+                    {
+                        "local": "webhook2",
+                        "remote": "pipedrive-oppy-dev-hifz322"
+                    },
+                    {
+                        "local": "webhook4",
+                        "remote": "pipedrive-oppy-dev-hifz323"
+                    },
+                    {
+                        "local": "webhook5",
+                        "remote": "pipedrive-oppy-dev-hifz324"
+                    },
+                    {
+                        "local": "webhook3",
+                        "remote": "pipedrive-oppy-dev-hifz325"
+                    },
+                    {
+                        "local": "webhook6",
+                        "remote": "pipedrive-oppy-dev-hifz326"
+                    }
+                ]
+            }
+        },
+        {
+            "label": "Production Pipedrive",
+            "appId": "pipedrive-oppy-prod-awk1n9",
+            "baseUrl": "https://we.make.com/api",
+            "appVersion": 1,
+            "apikeyFile": "../.secrets/apikey",
+            "idMapping": {
+                "connection": [
+                    {
+                        "local": "pipedrive-apikey",
+                        "remote": "pipedrive-oppy-prod-awk1n9"
+                    },
+                    {
+                        "local": "pipedrive-auth",
+                        "remote": "pipedrive-oppy-prod-awk1n92"
+                    }
+                ],
+                "module": [
+                    {
+                        "local": "AddFollower",
+                        "remote": "AddFollower"
+                    },
+                    {
+                        "local": "addInstallmentSubscription",
+                        "remote": "addInstallmentSubscription"
+                    },
+                    {
+                        "local": "AddParticipantToDeal",
+                        "remote": "AddParticipantToDeal"
+                    },
+                    {
+                        "local": "AddProductToDeal",
+                        "remote": "AddProductToDeal"
+                    },
+                    {
+                        "local": "addRecurringSubscription",
+                        "remote": "addRecurringSubscription"
+                    },
+                    {
+                        "local": "cancelRecurringSubscription",
+                        "remote": "cancelRecurringSubscription"
+                    },
+                    {
+                        "local": "CreateObject",
+                        "remote": "CreateObject"
+                    },
+                    {
+                        "local": "createLead",
+                        "remote": "createLead"
+                    },
+                    {
+                        "local": "CreateActivity",
+                        "remote": "CreateActivity"
+                    },
+                    {
+                        "local": "CreateOrganization",
+                        "remote": "CreateOrganization"
+                    },
+                    {
+                        "local": "CreateNote",
+                        "remote": "CreateNote"
+                    },
+                    {
+                        "local": "CreatePerson",
+                        "remote": "CreatePerson"
+                    },
+                    {
+                        "local": "CreateProduct",
+                        "remote": "CreateProduct"
+                    },
+                    {
+                        "local": "DeleteDeal",
+                        "remote": "DeleteDeal"
+                    },
+                    {
+                        "local": "DeleteFollower",
+                        "remote": "DeleteFollower"
+                    },
+                    {
+                        "local": "deleteLead",
+                        "remote": "deleteLead"
+                    },
+                    {
+                        "local": "DeleteMailThread",
+                        "remote": "DeleteMailThread"
+                    },
+                    {
+                        "local": "DeleteActivity",
+                        "remote": "DeleteActivity"
+                    },
+                    {
+                        "local": "DeleteAttachedProduct",
+                        "remote": "DeleteAttachedProduct"
+                    },
+                    {
+                        "local": "DeleteOrganization",
+                        "remote": "DeleteOrganization"
+                    },
+                    {
+                        "local": "DeleteNote",
+                        "remote": "DeleteNote"
+                    },
+                    {
+                        "local": "DeletePerson",
+                        "remote": "DeletePerson"
+                    },
+                    {
+                        "local": "DeleteProduct",
+                        "remote": "DeleteProduct"
+                    },
+                    {
+                        "local": "deleteSubscription",
+                        "remote": "deleteSubscription"
+                    },
+                    {
+                        "local": "DownloadFile",
+                        "remote": "DownloadFile"
+                    },
+                    {
+                        "local": "FindPersonByName",
+                        "remote": "FindPersonByName"
+                    },
+                    {
+                        "local": "findSubscriptionByDeal",
+                        "remote": "findSubscriptionByDeal"
+                    },
+                    {
+                        "local": "GetDeal",
+                        "remote": "GetDeal"
+                    },
+                    {
+                        "local": "getLead",
+                        "remote": "getLead"
+                    },
+                    {
+                        "local": "GetMailThread",
+                        "remote": "GetMailThread"
+                    },
+                    {
+                        "local": "GetMessage",
+                        "remote": "GetMessage"
+                    },
+                    {
+                        "local": "GetActivity",
+                        "remote": "GetActivity"
+                    },
+                    {
+                        "local": "GetOrganization",
+                        "remote": "GetOrganization"
+                    },
+                    {
+                        "local": "GetNote",
+                        "remote": "GetNote"
+                    },
+                    {
+                        "local": "GetPerson",
+                        "remote": "GetPerson"
+                    },
+                    {
+                        "local": "GetProduct",
+                        "remote": "GetProduct"
+                    },
+                    {
+                        "local": "getSubscription",
+                        "remote": "getSubscription"
+                    },
+                    {
+                        "local": "GetUser",
+                        "remote": "GetUser"
+                    },
+                    {
+                        "local": "SearchForActivity",
+                        "remote": "SearchForActivity"
+                    },
+                    {
+                        "local": "ListActivityDeals",
+                        "remote": "ListActivityDeals"
+                    },
+                    {
+                        "local": "ListDeals",
+                        "remote": "ListDeals"
+                    },
+                    {
+                        "local": "listDealsForPerson",
+                        "remote": "listDealsForPerson"
+                    },
+                    {
+                        "local": "listDealsForProduct",
+                        "remote": "listDealsForProduct"
+                    },
+                    {
+                        "local": "listDealsinOrganization",
+                        "remote": "listDealsinOrganization"
+                    },
+                    {
+                        "local": "GetPipelineDeals",
+                        "remote": "GetPipelineDeals"
+                    },
+                    {
+                        "local": "GetStageDeals",
+                        "remote": "GetStageDeals"
+                    },
+                    {
+                        "local": "ListDealFiles",
+                        "remote": "ListDealFiles"
+                    },
+                    {
+                        "local": "ListFollowers",
+                        "remote": "ListFollowers"
+                    },
+                    {
+                        "local": "listLeads",
+                        "remote": "listLeads"
+                    },
+                    {
+                        "local": "ListMailThreads",
+                        "remote": "ListMailThreads"
+                    },
+                    {
+                        "local": "ListMessages",
+                        "remote": "ListMessages"
+                    },
+                    {
+                        "local": "SearchForNotes",
+                        "remote": "SearchForNotes"
+                    },
+                    {
+                        "local": "ListOrganizations",
+                        "remote": "ListOrganizations"
+                    },
+                    {
+                        "local": "listParticipantsOfADeal",
+                        "remote": "listParticipantsOfADeal"
+                    },
+                    {
+                        "local": "listSubscriptionPayments",
+                        "remote": "listSubscriptionPayments"
+                    },
+                    {
+                        "local": "GetPersons",
+                        "remote": "GetPersons"
+                    },
+                    {
+                        "local": "ListPersonsInDeal",
+                        "remote": "ListPersonsInDeal"
+                    },
+                    {
+                        "local": "ListPipelines",
+                        "remote": "ListPipelines"
+                    },
+                    {
+                        "local": "ListProducts",
+                        "remote": "ListProducts"
+                    },
+                    {
+                        "local": "ListProductsInDeal",
+                        "remote": "ListProductsInDeal"
+                    },
+                    {
+                        "local": "ListStages",
+                        "remote": "ListStages"
+                    },
+                    {
+                        "local": "ListUsers",
+                        "remote": "ListUsers"
+                    },
+                    {
+                        "local": "MakeAPICall",
+                        "remote": "MakeAPICall"
+                    },
+                    {
+                        "local": "NewEvent",
+                        "remote": "NewEvent"
+                    },
+                    {
+                        "local": "NewDealEvent",
+                        "remote": "NewDealEvent"
+                    },
+                    {
+                        "local": "NewNoteEvent",
+                        "remote": "NewNoteEvent"
+                    },
+                    {
+                        "local": "NewOrganizationEvent",
+                        "remote": "NewOrganizationEvent"
+                    },
+                    {
+                        "local": "NewPersonEvent",
+                        "remote": "NewPersonEvent"
+                    },
+                    {
+                        "local": "NewProductEvent",
+                        "remote": "NewProductEvent"
+                    },
+                    {
+                        "local": "searchDeals",
+                        "remote": "searchDeals"
+                    },
+                    {
+                        "local": "SearchOrganizations",
+                        "remote": "SearchOrganizations"
+                    },
+                    {
+                        "local": "searchLeads",
+                        "remote": "searchLeads"
+                    },
+                    {
+                        "local": "SearchObjectsResultAPI",
+                        "remote": "SearchObjectsResultAPI"
+                    },
+                    {
+                        "local": "searchOrganizations",
+                        "remote": "searchOrganizations"
+                    },
+                    {
+                        "local": "searchPersons",
+                        "remote": "searchPersons"
+                    },
+                    {
+                        "local": "searchProducts",
+                        "remote": "searchProducts"
+                    },
+                    {
+                        "local": "UpdateDeal",
+                        "remote": "UpdateDeal"
+                    },
+                    {
+                        "local": "updateLead",
+                        "remote": "updateLead"
+                    },
+                    {
+                        "local": "UpdateMailThreadDetails",
+                        "remote": "UpdateMailThreadDetails"
+                    },
+                    {
+                        "local": "UpdateActivity",
+                        "remote": "UpdateActivity"
+                    },
+                    {
+                        "local": "updateInstallmentSubscription",
+                        "remote": "updateInstallmentSubscription"
+                    },
+                    {
+                        "local": "UpdateOrganization",
+                        "remote": "UpdateOrganization"
+                    },
+                    {
+                        "local": "UpdateCustomField",
+                        "remote": "UpdateCustomField"
+                    },
+                    {
+                        "local": "UpdateNote",
+                        "remote": "UpdateNote"
+                    },
+                    {
+                        "local": "UpdatePerson",
+                        "remote": "UpdatePerson"
+                    },
+                    {
+                        "local": "UpdateProduct",
+                        "remote": "UpdateProduct"
+                    },
+                    {
+                        "local": "updateRecurringSubscription",
+                        "remote": "updateRecurringSubscription"
+                    },
+                    {
+                        "local": "UpdateProductAttachmentDetails",
+                        "remote": "UpdateProductAttachmentDetails"
+                    },
+                    {
+                        "local": "UploadFile",
+                        "remote": "UploadFile"
+                    },
+                    {
+                        "local": "WatchActivities",
+                        "remote": "WatchActivities"
+                    },
+                    {
+                        "local": "WatchDeals",
+                        "remote": "WatchDeals"
+                    },
+                    {
+                        "local": "watchEmails",
+                        "remote": "watchEmails"
+                    },
+                    {
+                        "local": "watchLeads",
+                        "remote": "watchLeads"
+                    },
+                    {
+                        "local": "WatchNotes",
+                        "remote": "WatchNotes"
+                    },
+                    {
+                        "local": "WatchOrganizations",
+                        "remote": "WatchOrganizations"
+                    },
+                    {
+                        "local": "WatchPersons",
+                        "remote": "WatchPersons"
+                    },
+                    {
+                        "local": "WatchProducts",
+                        "remote": "WatchProducts"
+                    }
+                ],
+                "function": [
+                    {
+                        "local": "addDiscountPercentage",
+                        "remote": "addDiscountPercentage"
+                    },
+                    {
+                        "local": "arrToStr",
+                        "remote": "arrToStr"
+                    },
+                    {
+                        "local": "boolToInt",
+                        "remote": "boolToInt"
+                    },
+                    {
+                        "local": "changeProductResStruct",
+                        "remote": "changeProductResStruct"
+                    },
+                    {
+                        "local": "formatNestedDates",
+                        "remote": "formatNestedDates"
+                    },
+                    {
+                        "local": "getApiCallBody",
+                        "remote": "getApiCallBody"
+                    },
+                    {
+                        "local": "getApiURL",
+                        "remote": "getApiURL"
+                    },
+                    {
+                        "local": "getBoolean",
+                        "remote": "getBoolean"
+                    },
+                    {
+                        "local": "getErrors",
+                        "remote": "getErrors"
+                    },
+                    {
+                        "local": "getExpectCustom",
+                        "remote": "getExpectCustom"
+                    },
+                    {
+                        "local": "getExpectedLeadsCustomFields",
+                        "remote": "getExpectedLeadsCustomFields"
+                    },
+                    {
+                        "local": "getExpectInput",
+                        "remote": "getExpectInput"
+                    },
+                    {
+                        "local": "getFieldValues",
+                        "remote": "getFieldValues"
+                    },
+                    {
+                        "local": "getInterface",
+                        "remote": "getInterface"
+                    },
+                    {
+                        "local": "getResponseOutput",
+                        "remote": "getResponseOutput"
+                    },
+                    {
+                        "local": "objectToFlatArray",
+                        "remote": "objectToFlatArray"
+                    },
+                    {
+                        "local": "parseDates",
+                        "remote": "parseDates"
+                    }
+                ],
+                "rpc": [
+                    {
+                        "local": "ActivityTypes",
+                        "remote": "ActivityTypes"
+                    },
+                    {
+                        "local": "ExpectActivitiesCustom",
+                        "remote": "ExpectActivitiesCustom"
+                    },
+                    {
+                        "local": "ExpectDealsCustom",
+                        "remote": "ExpectDealsCustom"
+                    },
+                    {
+                        "local": "ExpectNotesCustom",
+                        "remote": "ExpectNotesCustom"
+                    },
+                    {
+                        "local": "ExpectOrganizationsCustom",
+                        "remote": "ExpectOrganizationsCustom"
+                    },
+                    {
+                        "local": "ExpectPersonsCustom",
+                        "remote": "ExpectPersonsCustom"
+                    },
+                    {
+                        "local": "ExpectProductsCustom",
+                        "remote": "ExpectProductsCustom"
+                    },
+                    {
+                        "local": "FilterActivities",
+                        "remote": "FilterActivities"
+                    },
+                    {
+                        "local": "FilterDeals",
+                        "remote": "FilterDeals"
+                    },
+                    {
+                        "local": "FilterOrganizations",
+                        "remote": "FilterOrganizations"
+                    },
+                    {
+                        "local": "FilterPersons",
+                        "remote": "FilterPersons"
+                    },
+                    {
+                        "local": "FilterProducts",
+                        "remote": "FilterProducts"
+                    },
+                    {
+                        "local": "Filters",
+                        "remote": "Filters"
+                    },
+                    {
+                        "local": "getUniversalParam",
+                        "remote": "getUniversalParam"
+                    },
+                    {
+                        "local": "getVisibilityOptions",
+                        "remote": "getVisibilityOptions"
+                    },
+                    {
+                        "local": "InterfaceActivities",
+                        "remote": "InterfaceActivities"
+                    },
+                    {
+                        "local": "InterfaceDeals",
+                        "remote": "InterfaceDeals"
+                    },
+                    {
+                        "local": "InterfaceNotes",
+                        "remote": "InterfaceNotes"
+                    },
+                    {
+                        "local": "InterfaceOrganizations",
+                        "remote": "InterfaceOrganizations"
+                    },
+                    {
+                        "local": "InterfacePersons",
+                        "remote": "InterfacePersons"
+                    },
+                    {
+                        "local": "InterfaceProducts",
+                        "remote": "InterfaceProducts"
+                    },
+                    {
+                        "local": "InterfaceWebhookActivities",
+                        "remote": "InterfaceWebhookActivities"
+                    },
+                    {
+                        "local": "InterfaceWebhookDeals",
+                        "remote": "InterfaceWebhookDeals"
+                    },
+                    {
+                        "local": "InterfaceWebhookNotes",
+                        "remote": "InterfaceWebhookNotes"
+                    },
+                    {
+                        "local": "InterfaceWebhookOrganizations",
+                        "remote": "InterfaceWebhookOrganizations"
+                    },
+                    {
+                        "local": "InterfaceWebhookPersons",
+                        "remote": "InterfaceWebhookPersons"
+                    },
+                    {
+                        "local": "InterfaceWebhookProducts",
+                        "remote": "InterfaceWebhookProducts"
+                    },
+                    {
+                        "local": "listProducts",
+                        "remote": "listProducts"
+                    },
+                    {
+                        "local": "optionsForDeleteFollowers",
+                        "remote": "optionsForDeleteFollowers"
+                    },
+                    {
+                        "local": "Organizations",
+                        "remote": "Organizations"
+                    },
+                    {
+                        "local": "Persons",
+                        "remote": "Persons"
+                    },
+                    {
+                        "local": "Pipelines",
+                        "remote": "Pipelines"
+                    },
+                    {
+                        "local": "SearchOrganizations",
+                        "remote": "SearchOrganizations"
+                    },
+                    {
+                        "local": "SearchOrganizationsByName",
+                        "remote": "SearchOrganizationsByName"
+                    },
+                    {
+                        "local": "SearchPersonsByName",
+                        "remote": "SearchPersonsByName"
+                    },
+                    {
+                        "local": "SearchUsers",
+                        "remote": "SearchUsers"
+                    },
+                    {
+                        "local": "Stages",
+                        "remote": "Stages"
+                    },
+                    {
+                        "local": "Users",
+                        "remote": "Users"
+                    }
+                ],
+                "webhook": [
+                    {
+                        "local": "webhook1",
+                        "remote": "pipedrive-oppy-prod-awk1n9"
+                    },
+                    {
+                        "local": "webhook2",
+                        "remote": "pipedrive-oppy-prod-awk1n92"
+                    },
+                    {
+                        "local": "webhook4",
+                        "remote": "pipedrive-oppy-prod-awk1n93"
+                    },
+                    {
+                        "local": "webhook5",
+                        "remote": "pipedrive-oppy-prod-awk1n94"
+                    },
+                    {
+                        "local": "webhook3",
+                        "remote": "pipedrive-oppy-prod-awk1n95"
+                    },
+                    {
+                        "local": "webhook6",
+                        "remote": "pipedrive-oppy-prod-awk1n96"
+                    }
+                ]
+            }
+        },
+        {
+            "label": "Origin",
+            "baseUrl": "https://eu1.make.com/api",
+            "appId": "pipedrive",
+            "appVersion": 2,
+            "idMapping": {
+                "connection": [
+                    {
+                        "local": "pipedrive-apikey",
+                        "remote": "pipedrive-apikey"
+                    },
+                    {
+                        "local": "pipedrive-auth",
+                        "remote": "pipedrive-auth"
+                    }
+                ],
+                "module": [
+                    {
+                        "local": "AddFollower",
+                        "remote": "AddFollower"
+                    },
+                    {
+                        "local": "addInstallmentSubscription",
+                        "remote": "addInstallmentSubscription"
+                    },
+                    {
+                        "local": "AddParticipantToDeal",
+                        "remote": "AddParticipantToDeal"
+                    },
+                    {
+                        "local": "AddProductToDeal",
+                        "remote": "AddProductToDeal"
+                    },
+                    {
+                        "local": "addRecurringSubscription",
+                        "remote": "addRecurringSubscription"
+                    },
+                    {
+                        "local": "cancelRecurringSubscription",
+                        "remote": "cancelRecurringSubscription"
+                    },
+                    {
+                        "local": "CreateObject",
+                        "remote": "CreateObject"
+                    },
+                    {
+                        "local": "createLead",
+                        "remote": "createLead"
+                    },
+                    {
+                        "local": "CreateActivity",
+                        "remote": "CreateActivity"
+                    },
+                    {
+                        "local": "CreateOrganization",
+                        "remote": "CreateOrganization"
+                    },
+                    {
+                        "local": "CreateNote",
+                        "remote": "CreateNote"
+                    },
+                    {
+                        "local": "CreatePerson",
+                        "remote": "CreatePerson"
+                    },
+                    {
+                        "local": "CreateProduct",
+                        "remote": "CreateProduct"
+                    },
+                    {
+                        "local": "DeleteDeal",
+                        "remote": "DeleteDeal"
+                    },
+                    {
+                        "local": "DeleteFollower",
+                        "remote": "DeleteFollower"
+                    },
+                    {
+                        "local": "deleteLead",
+                        "remote": "deleteLead"
+                    },
+                    {
+                        "local": "DeleteMailThread",
+                        "remote": "DeleteMailThread"
+                    },
+                    {
+                        "local": "DeleteActivity",
+                        "remote": "DeleteActivity"
+                    },
+                    {
+                        "local": "DeleteAttachedProduct",
+                        "remote": "DeleteAttachedProduct"
+                    },
+                    {
+                        "local": "DeleteOrganization",
+                        "remote": "DeleteOrganization"
+                    },
+                    {
+                        "local": "DeleteNote",
+                        "remote": "DeleteNote"
+                    },
+                    {
+                        "local": "DeletePerson",
+                        "remote": "DeletePerson"
+                    },
+                    {
+                        "local": "DeleteProduct",
+                        "remote": "DeleteProduct"
+                    },
+                    {
+                        "local": "deleteSubscription",
+                        "remote": "deleteSubscription"
+                    },
+                    {
+                        "local": "DownloadFile",
+                        "remote": "DownloadFile"
+                    },
+                    {
+                        "local": "FindPersonByName",
+                        "remote": "FindPersonByName"
+                    },
+                    {
+                        "local": "findSubscriptionByDeal",
+                        "remote": "findSubscriptionByDeal"
+                    },
+                    {
+                        "local": "GetDeal",
+                        "remote": "GetDeal"
+                    },
+                    {
+                        "local": "getLead",
+                        "remote": "getLead"
+                    },
+                    {
+                        "local": "GetMailThread",
+                        "remote": "GetMailThread"
+                    },
+                    {
+                        "local": "GetMessage",
+                        "remote": "GetMessage"
+                    },
+                    {
+                        "local": "GetActivity",
+                        "remote": "GetActivity"
+                    },
+                    {
+                        "local": "GetOrganization",
+                        "remote": "GetOrganization"
+                    },
+                    {
+                        "local": "GetNote",
+                        "remote": "GetNote"
+                    },
+                    {
+                        "local": "GetPerson",
+                        "remote": "GetPerson"
+                    },
+                    {
+                        "local": "GetProduct",
+                        "remote": "GetProduct"
+                    },
+                    {
+                        "local": "getSubscription",
+                        "remote": "getSubscription"
+                    },
+                    {
+                        "local": "GetUser",
+                        "remote": "GetUser"
+                    },
+                    {
+                        "local": "SearchForActivity",
+                        "remote": "SearchForActivity"
+                    },
+                    {
+                        "local": "ListActivityDeals",
+                        "remote": "ListActivityDeals"
+                    },
+                    {
+                        "local": "ListDeals",
+                        "remote": "ListDeals"
+                    },
+                    {
+                        "local": "listDealsForPerson",
+                        "remote": "listDealsForPerson"
+                    },
+                    {
+                        "local": "listDealsForProduct",
+                        "remote": "listDealsForProduct"
+                    },
+                    {
+                        "local": "listDealsinOrganization",
+                        "remote": "listDealsinOrganization"
+                    },
+                    {
+                        "local": "GetPipelineDeals",
+                        "remote": "GetPipelineDeals"
+                    },
+                    {
+                        "local": "GetStageDeals",
+                        "remote": "GetStageDeals"
+                    },
+                    {
+                        "local": "ListDealFiles",
+                        "remote": "ListDealFiles"
+                    },
+                    {
+                        "local": "ListFollowers",
+                        "remote": "ListFollowers"
+                    },
+                    {
+                        "local": "listLeads",
+                        "remote": "listLeads"
+                    },
+                    {
+                        "local": "ListMailThreads",
+                        "remote": "ListMailThreads"
+                    },
+                    {
+                        "local": "ListMessages",
+                        "remote": "ListMessages"
+                    },
+                    {
+                        "local": "SearchForNotes",
+                        "remote": "SearchForNotes"
+                    },
+                    {
+                        "local": "ListOrganizations",
+                        "remote": "ListOrganizations"
+                    },
+                    {
+                        "local": "listParticipantsOfADeal",
+                        "remote": "listParticipantsOfADeal"
+                    },
+                    {
+                        "local": "listSubscriptionPayments",
+                        "remote": "listSubscriptionPayments"
+                    },
+                    {
+                        "local": "GetPersons",
+                        "remote": "GetPersons"
+                    },
+                    {
+                        "local": "ListPersonsInDeal",
+                        "remote": "ListPersonsInDeal"
+                    },
+                    {
+                        "local": "ListPipelines",
+                        "remote": "ListPipelines"
+                    },
+                    {
+                        "local": "ListProducts",
+                        "remote": "ListProducts"
+                    },
+                    {
+                        "local": "ListProductsInDeal",
+                        "remote": "ListProductsInDeal"
+                    },
+                    {
+                        "local": "ListStages",
+                        "remote": "ListStages"
+                    },
+                    {
+                        "local": "ListUsers",
+                        "remote": "ListUsers"
+                    },
+                    {
+                        "local": "MakeAPICall",
+                        "remote": "MakeAPICall"
+                    },
+                    {
+                        "local": "NewEvent",
+                        "remote": "NewEvent"
+                    },
+                    {
+                        "local": "NewDealEvent",
+                        "remote": "NewDealEvent"
+                    },
+                    {
+                        "local": "NewNoteEvent",
+                        "remote": "NewNoteEvent"
+                    },
+                    {
+                        "local": "NewOrganizationEvent",
+                        "remote": "NewOrganizationEvent"
+                    },
+                    {
+                        "local": "NewPersonEvent",
+                        "remote": "NewPersonEvent"
+                    },
+                    {
+                        "local": "NewProductEvent",
+                        "remote": "NewProductEvent"
+                    },
+                    {
+                        "local": "searchDeals",
+                        "remote": "searchDeals"
+                    },
+                    {
+                        "local": "SearchOrganizations",
+                        "remote": "SearchOrganizations"
+                    },
+                    {
+                        "local": "searchLeads",
+                        "remote": "searchLeads"
+                    },
+                    {
+                        "local": "SearchObjectsResultAPI",
+                        "remote": "SearchObjectsResultAPI"
+                    },
+                    {
+                        "local": "searchOrganizations",
+                        "remote": "searchOrganizations"
+                    },
+                    {
+                        "local": "searchPersons",
+                        "remote": "searchPersons"
+                    },
+                    {
+                        "local": "searchProducts",
+                        "remote": "searchProducts"
+                    },
+                    {
+                        "local": "UpdateDeal",
+                        "remote": "UpdateDeal"
+                    },
+                    {
+                        "local": "updateLead",
+                        "remote": "updateLead"
+                    },
+                    {
+                        "local": "UpdateMailThreadDetails",
+                        "remote": "UpdateMailThreadDetails"
+                    },
+                    {
+                        "local": "UpdateActivity",
+                        "remote": "UpdateActivity"
+                    },
+                    {
+                        "local": "updateInstallmentSubscription",
+                        "remote": "updateInstallmentSubscription"
+                    },
+                    {
+                        "local": "UpdateOrganization",
+                        "remote": "UpdateOrganization"
+                    },
+                    {
+                        "local": "UpdateCustomField",
+                        "remote": "UpdateCustomField"
+                    },
+                    {
+                        "local": "UpdateNote",
+                        "remote": "UpdateNote"
+                    },
+                    {
+                        "local": "UpdatePerson",
+                        "remote": "UpdatePerson"
+                    },
+                    {
+                        "local": "UpdateProduct",
+                        "remote": "UpdateProduct"
+                    },
+                    {
+                        "local": "updateRecurringSubscription",
+                        "remote": "updateRecurringSubscription"
+                    },
+                    {
+                        "local": "UpdateProductAttachmentDetails",
+                        "remote": "UpdateProductAttachmentDetails"
+                    },
+                    {
+                        "local": "UploadFile",
+                        "remote": "UploadFile"
+                    },
+                    {
+                        "local": "WatchActivities",
+                        "remote": "WatchActivities"
+                    },
+                    {
+                        "local": "WatchDeals",
+                        "remote": "WatchDeals"
+                    },
+                    {
+                        "local": "watchEmails",
+                        "remote": "watchEmails"
+                    },
+                    {
+                        "local": "watchLeads",
+                        "remote": "watchLeads"
+                    },
+                    {
+                        "local": "WatchNotes",
+                        "remote": "WatchNotes"
+                    },
+                    {
+                        "local": "WatchOrganizations",
+                        "remote": "WatchOrganizations"
+                    },
+                    {
+                        "local": "WatchPersons",
+                        "remote": "WatchPersons"
+                    },
+                    {
+                        "local": "WatchProducts",
+                        "remote": "WatchProducts"
+                    }
+                ],
+                "function": [
+                    {
+                        "local": "addDiscountPercentage",
+                        "remote": "addDiscountPercentage"
+                    },
+                    {
+                        "local": "arrToStr",
+                        "remote": "arrToStr"
+                    },
+                    {
+                        "local": "boolToInt",
+                        "remote": "boolToInt"
+                    },
+                    {
+                        "local": "changeProductResStruct",
+                        "remote": "changeProductResStruct"
+                    },
+                    {
+                        "local": "formatNestedDates",
+                        "remote": "formatNestedDates"
+                    },
+                    {
+                        "local": "getApiCallBody",
+                        "remote": "getApiCallBody"
+                    },
+                    {
+                        "local": "getApiURL",
+                        "remote": "getApiURL"
+                    },
+                    {
+                        "local": "getBoolean",
+                        "remote": "getBoolean"
+                    },
+                    {
+                        "local": "getErrors",
+                        "remote": "getErrors"
+                    },
+                    {
+                        "local": "getExpectCustom",
+                        "remote": "getExpectCustom"
+                    },
+                    {
+                        "local": "getExpectedLeadsCustomFields",
+                        "remote": "getExpectedLeadsCustomFields"
+                    },
+                    {
+                        "local": "getExpectInput",
+                        "remote": "getExpectInput"
+                    },
+                    {
+                        "local": "getFieldValues",
+                        "remote": "getFieldValues"
+                    },
+                    {
+                        "local": "getInterface",
+                        "remote": "getInterface"
+                    },
+                    {
+                        "local": "getResponseOutput",
+                        "remote": "getResponseOutput"
+                    },
+                    {
+                        "local": "objectToFlatArray",
+                        "remote": "objectToFlatArray"
+                    },
+                    {
+                        "local": "parseDates",
+                        "remote": "parseDates"
+                    }
+                ],
+                "rpc": [
+                    {
+                        "local": "ActivityTypes",
+                        "remote": "ActivityTypes"
+                    },
+                    {
+                        "local": "ExpectActivitiesCustom",
+                        "remote": "ExpectActivitiesCustom"
+                    },
+                    {
+                        "local": "ExpectDealsCustom",
+                        "remote": "ExpectDealsCustom"
+                    },
+                    {
+                        "local": "ExpectNotesCustom",
+                        "remote": "ExpectNotesCustom"
+                    },
+                    {
+                        "local": "ExpectOrganizationsCustom",
+                        "remote": "ExpectOrganizationsCustom"
+                    },
+                    {
+                        "local": "ExpectPersonsCustom",
+                        "remote": "ExpectPersonsCustom"
+                    },
+                    {
+                        "local": "ExpectProductsCustom",
+                        "remote": "ExpectProductsCustom"
+                    },
+                    {
+                        "local": "FilterActivities",
+                        "remote": "FilterActivities"
+                    },
+                    {
+                        "local": "FilterDeals",
+                        "remote": "FilterDeals"
+                    },
+                    {
+                        "local": "FilterOrganizations",
+                        "remote": "FilterOrganizations"
+                    },
+                    {
+                        "local": "FilterPersons",
+                        "remote": "FilterPersons"
+                    },
+                    {
+                        "local": "FilterProducts",
+                        "remote": "FilterProducts"
+                    },
+                    {
+                        "local": "Filters",
+                        "remote": "Filters"
+                    },
+                    {
+                        "local": "getUniversalParam",
+                        "remote": "getUniversalParam"
+                    },
+                    {
+                        "local": "getVisibilityOptions",
+                        "remote": "getVisibilityOptions"
+                    },
+                    {
+                        "local": "InterfaceActivities",
+                        "remote": "InterfaceActivities"
+                    },
+                    {
+                        "local": "InterfaceDeals",
+                        "remote": "InterfaceDeals"
+                    },
+                    {
+                        "local": "InterfaceNotes",
+                        "remote": "InterfaceNotes"
+                    },
+                    {
+                        "local": "InterfaceOrganizations",
+                        "remote": "InterfaceOrganizations"
+                    },
+                    {
+                        "local": "InterfacePersons",
+                        "remote": "InterfacePersons"
+                    },
+                    {
+                        "local": "InterfaceProducts",
+                        "remote": "InterfaceProducts"
+                    },
+                    {
+                        "local": "InterfaceWebhookActivities",
+                        "remote": "InterfaceWebhookActivities"
+                    },
+                    {
+                        "local": "InterfaceWebhookDeals",
+                        "remote": "InterfaceWebhookDeals"
+                    },
+                    {
+                        "local": "InterfaceWebhookNotes",
+                        "remote": "InterfaceWebhookNotes"
+                    },
+                    {
+                        "local": "InterfaceWebhookOrganizations",
+                        "remote": "InterfaceWebhookOrganizations"
+                    },
+                    {
+                        "local": "InterfaceWebhookPersons",
+                        "remote": "InterfaceWebhookPersons"
+                    },
+                    {
+                        "local": "InterfaceWebhookProducts",
+                        "remote": "InterfaceWebhookProducts"
+                    },
+                    {
+                        "local": "listProducts",
+                        "remote": "listProducts"
+                    },
+                    {
+                        "local": "optionsForDeleteFollowers",
+                        "remote": "optionsForDeleteFollowers"
+                    },
+                    {
+                        "local": "Organizations",
+                        "remote": "Organizations"
+                    },
+                    {
+                        "local": "Persons",
+                        "remote": "Persons"
+                    },
+                    {
+                        "local": "Pipelines",
+                        "remote": "Pipelines"
+                    },
+                    {
+                        "local": "SearchOrganizations",
+                        "remote": "SearchOrganizations"
+                    },
+                    {
+                        "local": "SearchOrganizationsByName",
+                        "remote": "SearchOrganizationsByName"
+                    },
+                    {
+                        "local": "SearchPersonsByName",
+                        "remote": "SearchPersonsByName"
+                    },
+                    {
+                        "local": "SearchUsers",
+                        "remote": "SearchUsers"
+                    },
+                    {
+                        "local": "Stages",
+                        "remote": "Stages"
+                    },
+                    {
+                        "local": "Users",
+                        "remote": "Users"
+                    }
+                ],
+                "webhook": [
+                    {
+                        "local": "webhook1",
+                        "remote": "pipedrive"
+                    },
+                    {
+                        "local": "webhook2",
+                        "remote": "pipedrive2"
+                    },
+                    {
+                        "local": "webhook4",
+                        "remote": "pipedrive4"
+                    },
+                    {
+                        "local": "webhook5",
+                        "remote": "pipedrive5"
+                    },
+                    {
+                        "local": "webhook3",
+                        "remote": "pipedrive3"
+                    },
+                    {
+                        "local": "webhook6",
+                        "remote": "pipedrive6"
+                    }
+                ]
+            },
+            "apikeyFile": "../.secrets/apikey"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "url": "/deals/{{parameters.id}}/products/{{parameters.deal_product_id}}",
+    "method": "PUT",
+    "qs": {},
+    "body": {
+        "{{...}}":"{{omit(parameters,'discount_percentage', 'discount', 'discount_type')}}",
+        "discount":"{{if(parameters.discount === undefined && parameters.discount_type === undefined, parameters.discount_percentage, parameters.discount)}}",
+        "discount_type":  "{{if(parameters.discount === undefined && parameters.discount_type === undefined && parameters.discount_percentage !== undefined, 'percentage', parameters.discount_type)}}"
+    },
+    "headers": {},
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": "{{addDiscountPercentage(getResponseOutput(body.data, environment.timezone, metadata.interface))}}"
+    }
+}

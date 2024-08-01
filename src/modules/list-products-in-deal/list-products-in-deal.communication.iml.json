@@ -1,0 +1,25 @@
+{
+	"url": "/deals/{{parameters.id}}/products",
+	"qs": {
+		"limit": "{{if(parameters.limit > 500, 500, parameters.limit)}}",
+		"include_product_data": "{{if(parameters.include_product_data,1,0)}}"
+	},
+	"method": "GET",
+	"body": {},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": "{{addDiscountPercentage(getResponseOutput(item, environment.timezone, metadata.interface))}}",
+		"iterate": "{{body.data}}",
+		"limit": "{{parameters.limit}}"
+	},
+	"pagination": {
+		"condition": "{{body.additional_data.pagination.more_items_in_collection}}",
+		"qs": {
+			"start": "{{body.additional_data.pagination.next_start}}"
+		}
+	}
+}

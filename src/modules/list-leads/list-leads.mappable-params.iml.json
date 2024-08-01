@@ -1,0 +1,28 @@
+[
+    {
+        "name": "archivedStatus",
+        "type": "select",
+        "label": "Archived",
+        "options": [
+            {
+                "label": "All",
+                "value": "all"
+            },
+            {
+                "label": "Archived",
+                "value": "archived"
+            },
+            {
+                "label": "Not Archived",
+                "value": "not_archived"
+            }
+        ]
+    },
+    {
+        "help": "The maximum number of results to be worked with during one execution cycle.",
+        "name": "limit",
+        "type": "uinteger",
+        "label": "Limit",
+        "default": 2
+    }
+]

@@ -1,0 +1,153 @@
+[
+    {
+        "name": "title",
+        "label": "Title",
+        "required": true,
+        "type": "text"
+    },
+    {
+        "name": "value",
+        "label": "Value",
+        "required": false,
+        "type": "text"
+    },
+    {
+        "name": "currency",
+        "label": "Currency",
+        "required": false,
+        "type": "text",
+        "validate": {
+            "min": 3,
+            "max": 3
+        }
+    },
+    {
+        "name": "user_id",
+        "label": "User",
+        "required": false,
+        "type": "select",
+        "help": "Must be an Id.",
+        "options": "rpc://Users"
+    },
+    {
+        "name": "person_id",
+        "label": "Person",
+        "required": false,
+        "help": "Must be an Id. This field is **required** if the Organization field is left empty.",
+        "type": "number",
+        "rpc": {
+            "label": "Search",
+            "url": "rpc://SearchPersonsByName",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "Query",
+                    "help": "Search Persons. Cannot be empty",
+                    "type": "text",
+                    "required": true
+                },
+                {
+                    "name": "search_by_email",
+                    "label": "Search by email",
+                    "type": "boolean",
+                    "help": "If false, persons will be searched by name. If true, persons will be searched by email",
+                    "default": false,
+                    "required": true
+                }
+            ]
+        }
+    },
+    {
+        "name": "org_id",
+        "label": "Organization",
+        "help": "Must be an Id. This field is **required** if the Person field is left empty.",
+        "required": false,
+        "type": "number",
+        "rpc": {
+            "label": "Search",
+            "url": "rpc://SearchOrganizationsByName",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "Query",
+                    "help": "Search Organizations. Cannot be empty",
+                    "type": "text",
+                    "required": true
+                }
+            ]
+        }
+    },
+    {
+        "name": "stage_id",
+        "label": "Stage",
+        "required": false,
+        "type": "select",
+        "options": "rpc://Stages"
+    },
+    {
+        "name": "status",
+        "label": "Status",
+        "required": false,
+        "type": "select",
+        "options": [
+            {
+                "label": "Open",
+                "value": "open"
+            },
+            {
+                "label": "Won",
+                "value": "won"
+            },
+            {
+                "label": "Lost",
+                "value": "lost"
+            },
+            {
+                "label": "Deleted",
+                "value": "deleted"
+            }
+        ]
+    },
+    {
+        "name": "expected_close_date",
+        "label": "Expected close date",
+        "required": false,
+        "type": "date",
+        "time": false
+    },
+    {
+        "name": "probability",
+        "label": "Probability",
+        "required": false,
+        "type": "number"
+    },
+    {
+        "name": "lost_reason",
+        "label": "Lost reason",
+        "required": false,
+        "type": "text"
+    },
+    {
+        "name": "add_time",
+        "label": "Add time",
+        "required": false,
+        "type": "date"
+    },
+    {
+        "name": "visible_to",
+        "label": "Visible to",
+        "required": false,
+        "type": "select",
+        "options": [
+            {
+                "label": "Owner & followers (private)",
+                "value": "1"
+            },
+            {
+                "label": "Entire company (shared)",
+                "value": "3"
+            }
+        ]
+    },
+    "rpc://ExpectDealsCustom"
+]

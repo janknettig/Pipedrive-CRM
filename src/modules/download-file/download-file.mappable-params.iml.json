@@ -1,0 +1,8 @@
+[
+	{
+		"name": "id",
+		"type": "text",
+		"label": "File ID",
+		"required": true
+	}
+]

@@ -1,0 +1,346 @@
+[
+    {
+        "response": {
+            "temp": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "number",
+                        "label": "Person ID"
+                    },
+                    {
+                        "name": "org_id",
+                        "type": "number",
+                        "label": "Organization ID"
+                    },
+                    {
+                        "name": "owner_id",
+                        "type": "collection",
+                        "label": "Owner ID"
+                    },
+                    {
+                        "name": "company_id",
+                        "type": "number",
+                        "label": "Company ID"
+                    },
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "label": "Name"
+                    },
+                    {
+                        "name": "first_name",
+                        "type": "text",
+                        "label": "First name"
+                    },
+                    {
+                        "name": "last_name",
+                        "type": "text",
+                        "label": "Last name"
+                    },
+                    {
+                        "name": "open_deals_count",
+                        "type": "number",
+                        "label": "Open deals count"
+                    },
+                    {
+                        "name": "related_open_deals_count",
+                        "type": "number",
+                        "label": "Related open deals count"
+                    },
+                    {
+                        "name": "closed_deals_count",
+                        "type": "number",
+                        "label": "Closed deals count"
+                    },
+                    {
+                        "name": "related_closed_deals_count",
+                        "type": "number",
+                        "label": "Related closed deals count"
+                    },
+                    {
+                        "name": "participant_open_deals_count",
+                        "type": "number",
+                        "label": "Participant open deals count"
+                    },
+                    {
+                        "name": "participant_closed_deals_count",
+                        "type": "number",
+                        "label": "Participant closed deals count"
+                    },
+                    {
+                        "name": "email_messages_count",
+                        "type": "number",
+                        "label": "Email messages count"
+                    },
+                    {
+                        "name": "activities_count",
+                        "type": "number",
+                        "label": "Activities count"
+                    },
+                    {
+                        "name": "done_activities_count",
+                        "type": "number",
+                        "label": "Done activities count"
+                    },
+                    {
+                        "name": "undone_activities_count",
+                        "type": "number",
+                        "label": "Undone activities count"
+                    },
+                    {
+                        "name": "reference_activities_count",
+                        "type": "number",
+                        "label": "Reference activities count"
+                    },
+                    {
+                        "name": "files_count",
+                        "type": "number",
+                        "label": "Files count"
+                    },
+                    {
+                        "name": "notes_count",
+                        "type": "number",
+                        "label": "Notes count"
+                    },
+                    {
+                        "name": "followers_count",
+                        "type": "number",
+                        "label": "Followers count"
+                    },
+                    {
+                        "name": "won_deals_count",
+                        "type": "number",
+                        "label": "Won deals count"
+                    },
+                    {
+                        "name": "related_won_deals_count",
+                        "type": "number",
+                        "label": "Related won deals count"
+                    },
+                    {
+                        "name": "lost_deals_count",
+                        "type": "number",
+                        "label": "Lost deals count"
+                    },
+                    {
+                        "name": "related_lost_deals_count",
+                        "type": "number",
+                        "label": "Related lost deals count"
+                    },
+                    {
+                        "name": "active_flag",
+                        "type": "boolean",
+                        "label": "Active flag"
+                    },
+                    {
+                        "name": "phone",
+                        "type": "array",
+                        "spec": {
+                            "type": "collection",
+                            "spec": [
+                                {
+                                    "name": "value",
+                                    "type": "text",
+                                    "label": "Value"
+                                },
+                                {
+                                    "name": "primary",
+                                    "type": "boolean",
+                                    "label": "Primary"
+                                }
+                            ]
+                        },
+                        "label": "Phone"
+                    },
+                    {
+                        "name": "email",
+                        "type": "array",
+                        "spec": {
+                            "type": "collection",
+                            "spec": [
+                                {
+                                    "name": "value",
+                                    "type": "text",
+                                    "label": "Value"
+                                },
+                                {
+                                    "name": "primary",
+                                    "type": "boolean",
+                                    "label": "Primary"
+                                }
+                            ]
+                        },
+                        "label": "Email"
+                    },
+                    {
+                        "name": "first_char",
+                        "type": "text",
+                        "label": "First char"
+                    },
+                    {
+                        "name": "update_time",
+                        "type": "text",
+                        "label": "Update time"
+                    },
+                    {
+                        "name": "add_time",
+                        "type": "text",
+                        "label": "Add time"
+                    },
+                    {
+                        "name": "visible_to",
+                        "type": "text",
+                        "label": "Visible to"
+                    },
+                    {
+                        "name": "picture_id",
+                        "type": "collection",
+                        "label": "Picture",
+                        "spec": [
+                            {
+                                "name": "item_type",
+                                "type": "text",
+                                "labe": "Item type"
+                            },
+                            {
+                                "name": "item_id",
+                                "type": "number",
+                                "labe": "Item ID"
+                            },
+                            {
+                                "name": "active_flag",
+                                "type": "boolean",
+                                "labe": "Active flag"
+                            },
+                            {
+                                "name": "add_time",
+                                "type": "date",
+                                "labe": "Add time"
+                            },
+                            {
+                                "name": "update_time",
+                                "type": "date",
+                                "labe": "Update time"
+                            },
+                            {
+                                "name": "added_by_user_id",
+                                "type": "number",
+                                "labe": "Added by user ID"
+                            },
+                            {
+                                "name": "pictures",
+                                "type": "collection",
+                                "labe": "Pictures",
+                                "spec": [
+                                    {
+                                        "name": "128",
+                                        "type": "text",
+                                        "labe": "128"
+                                    },
+                                    {
+                                        "name": "512",
+                                        "type": "text",
+                                        "labe": "512"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "value",
+                                "type": "number",
+                                "labe": "Value"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "next_activity_date",
+                        "type": "text",
+                        "label": "Next activity date"
+                    },
+                    {
+                        "name": "next_activity_date-raw",
+                        "type": "text",
+                        "label": "Next activity date (raw)"
+                    },
+                    {
+                        "name": "next_activity_time",
+                        "type": "text",
+                        "label": "Next activity time"
+                    },
+                    {
+                        "name": "next_activity_id",
+                        "type": "text",
+                        "label": "Next activity ID"
+                    },
+                    {
+                        "name": "last_activity_id",
+                        "type": "text",
+                        "label": "Last activity ID"
+                    },
+                    {
+                        "name": "last_activity_date",
+                        "type": "text",
+                        "label": "Last activity date"
+                    },
+                    {
+                        "name": "last_activity_date-raw",
+                        "type": "text",
+                        "label": "Last activity date (raw)"
+                    },
+                    {
+                        "name": "last_incoming_mail_time",
+                        "type": "text",
+                        "label": "Last incoming mail time"
+                    },
+                    {
+                        "name": "last_outgoing_mail_time",
+                        "type": "text",
+                        "label": "Last outgoing mail time"
+                    },
+                    {
+                        "name": "label",
+                        "type": "text",
+                        "label": "Label"
+                    },
+                    {
+                        "name": "org_name",
+                        "type": "text",
+                        "label": "Org name"
+                    },
+                    {
+                        "name": "cc_email",
+                        "type": "text",
+                        "label": "Cc email"
+                    },
+                    {
+                        "name": "owner_name",
+                        "type": "text",
+                        "label": "Owner name"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "url": "/personFields",
+        "method": "GET",
+        "qs": {
+            "limit": 500
+        },
+        "body": { },
+        "headers": { },
+        "response": {
+            "error": {
+                "type": "DataError",
+                "message": "{{getErrors(body, statusCode)}}"
+            },
+            "output": "{{getInterface(body, 'webhook', temp.fields)}}"
+        },
+        "pagination": {
+            "condition": "{{body.additional_data.pagination.more_items_in_collection}}",
+            "qs": {
+                "start": "{{body.additional_data.pagination.next_start}}"
+            }
+        }
+    }
+]

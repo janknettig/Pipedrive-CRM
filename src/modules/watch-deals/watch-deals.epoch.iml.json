@@ -1,0 +1,9 @@
+{
+	"response": {
+		"limit": 100,
+		"output": {
+			"date": "{{parseDate(get(item, parameters.triggerOn), 'YYYY-MM-DD HH:mm:ss', 'UTC')}}",
+			"label": "{{item.title}}"
+		}
+	}
+}

@@ -1,0 +1,82 @@
+[
+    {
+        "name": "term",
+        "type": "text",
+        "label": "Term",
+        "required": true,
+        "help": "The search term to look for. Minimum 2 characters (or 1 if using `Exact Match`)."
+    },
+    {
+        "name": "fields",
+        "type": "select",
+        "label": "Fields",
+        "multiple": true,
+        "help": "The fields to perform the search from. Defaults to all of them.",
+        "options": [
+            {
+                "label": "Custom Fields",
+                "value": "custom_fields"
+            },
+            {
+                "label": "Notes",
+                "value": "notes"
+            },
+            {
+                "label": "Title",
+                "value": "title"
+            }
+        ]
+    },
+    {
+        "name": "exact_match",
+        "type": "boolean",
+        "label": "Exact Match",
+        "help": "When enabled, only full exact matches against the given term are returned. It is __not__ case sensitive."
+    },
+    {
+        "name": "person_id",
+        "type": "select",
+        "label": "Person ID",
+        "spec": {
+            "type": "integer"
+        },
+        "options": "rpc://Persons",
+        "help": "Will filter leads by the provided person ID. The upper limit of found leads associated with the person is 2000."
+    },
+    {
+        "name": "organization_id",
+        "type": "select",
+        "label": "Organization ID",
+        "spec": {
+            "type": "integer"
+        },
+        "options": "rpc://Organizations",
+        "help": "Will filter leads by the provided organization ID. The upper limit of found leads associated with the organization is 2000."
+    },
+	{
+		"name": "status",
+		"label": "Status",
+		"type": "select",
+		"options": [
+			{
+				"value": "open",
+				"label": "Open"
+			},
+			{
+				"value": "won",
+				"label": "Won"
+			},
+			{
+				"value": "lost",
+				"label": "Lost"
+			}
+		]
+	},
+    {
+        "help": "The maximum number of results to be worked with during one execution cycle.",
+        "name": "limit",
+        "type": "uinteger",
+        "label": "Limit",
+        "default": 2
+    }
+]

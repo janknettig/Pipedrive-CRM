@@ -1,0 +1,17 @@
+{
+    "url": "/subscriptions/{{parameters.id}}/payments",
+    "qs": {
+    },
+    "method": "GET",
+    "body": {},
+    "headers": {},
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": "{{getResponseOutput(item, environment.timezone, metadata.interface)}}",
+        "iterate": "{{body.data}}",
+        "limit": "{{parameters.limit}}"
+    } 
+}

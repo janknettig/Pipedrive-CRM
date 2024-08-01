@@ -1,0 +1,13 @@
+{
+    "url": "/subscriptions/find/{{parameters.dealId}}",
+    "method": "GET",
+    "body": {},
+    "headers": {},
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": "{{getResponseOutput(body.data, environment.timezone, metadata.interface)}}"
+    }
+}

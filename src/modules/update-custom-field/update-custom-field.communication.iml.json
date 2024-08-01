@@ -1,0 +1,11 @@
+{
+    "url": "/organizations/{{parameters.orgId}}",
+    "method": "PUT",
+    "qs": {},
+    "type": "urlencoded",
+    "body": "{{getFieldValues(parameters.fields)}}",
+    "headers": {},
+    "response": {
+        "output": null
+    }
+}

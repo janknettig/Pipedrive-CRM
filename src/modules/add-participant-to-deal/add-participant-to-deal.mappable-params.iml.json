@@ -1,0 +1,36 @@
+[
+	{
+		"name": "deal_id",
+		"type": "number",
+		"label": "Deal ID",
+		"required": true
+	},
+	{
+		"name": "person_id",
+		"label": "Person",
+		"required": true,
+		"help": "Must be an Id.",
+		"type": "number",
+		"rpc": {
+			"label": "Search",
+			"url": "rpc://SearchPersonsByName",
+			"parameters": [
+				{
+					"name": "q",
+					"label": "Query",
+					"help": "Search Persons. Cannot be empty",
+					"type": "text",
+					"required": true
+				},
+				{
+					"name": "search_by_email",
+					"label": "Search by email",
+					"type": "boolean",
+					"help": "If false, persons will be searched by name. If true, persons will be searched by email",
+					"default": false,
+					"required": true
+				}
+			]
+		}
+	}
+]

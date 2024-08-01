@@ -1,0 +1,11 @@
+{
+    "url": "/leads/{{parameters.id}}",
+    "method": "DELETE",
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": null
+    }
+}

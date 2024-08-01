@@ -1,0 +1,121 @@
+[
+    {
+        "name": "term",
+        "type": "text",
+        "label": "Term",
+        "required": true,
+        "help": "The search term to look for. Minimum 2 characters (or 1 if using Exact match)."
+    },
+    {
+        "name": "item_types",
+        "type": "select",
+        "label": "Item types",
+        "help": "The type of items to perform the search from. Defaults to all.",
+        "multiple": true,
+        "required": false,
+        "options": [
+            {
+                "label": "Deal",
+                "value": "deal"
+            },
+            {
+                "label": "Person",
+                "value": "person"
+            },
+            {
+                "label": "Organization",
+                "value": "organization"
+            },
+            {
+                "label": "Product",
+                "value": "product"
+            },
+            {
+                "label": "Lead",
+                "value": "lead"
+            },
+            {
+                "label": "File",
+                "value": "file"
+            },
+            {
+                "label": "Mail attachment",
+                "value": "mail_attachment"
+            }
+        ]
+    },
+    {
+        "name": "fields",
+        "type": "select",
+        "label": "Fields",
+        "help": "The fields to perform the search from. Defaults to all of them.\n**Deal** - custom fields, notes, title\n**Person** - custom fields, email, name, notes, phone\n**Organization** - address, custom fields, name, notes\n**Product** - code, custom fields, name\n**Lead** - email, organization name, person name, phone, title\n**File** - name\n**Mail attachment** - name",
+        "multiple": true,
+        "required": false,
+        "options": [
+            {
+                "label": "Custom fields",
+                "value": "custom_fields"
+            },
+            {
+                "label": "Email",
+                "value": "email"
+            },
+            {
+                "label": "Name",
+                "value": "name"
+            },
+            {
+                "label": "Notes",
+                "value": "notes"
+            },
+            {
+                "label": "Phone",
+                "value": "phone"
+            },
+            {
+                "label": "Title",
+                "value": "title"
+            },
+            {
+                "label": "Address",
+                "value": "address"
+            },
+            {
+                "label": "Code",
+                "value": "code"
+            },
+            {
+                "label": "Organization name",
+                "value": "organization_name"
+            },
+            {
+                "label": "Person name",
+                "value": "person_name"
+            }
+        ]
+    },
+    /*
+	{
+		"name": "search_for_related_items",
+		"type": "boolean",
+		"label": "Search for related items",
+		"required": false,
+		"help": "When enabled, the response will include up to 100 newest related Deals for each found Person and Organization and up to 100 newest related Persons for each found Organization."
+	},
+	*/
+    {
+        "name": "exact_match",
+        "type": "boolean",
+        "label": "Exact match",
+        "required": false,
+        "help": "When enabled, only full exact matches against the given term are returned. It is not case sensitive."
+    },
+    {
+        "help": "The maximum number of results to be worked with during one execution cycle.",
+        "name": "limit",
+        "type": "uinteger",
+        "label": "Limit",
+        "default": 2,
+        "required": true
+    }
+]

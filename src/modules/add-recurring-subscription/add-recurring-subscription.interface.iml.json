@@ -1,0 +1,92 @@
+[
+    {
+        "name": "id",
+        "type": "number",
+        "label": "ID"
+    },
+    {
+        "name": "user_id",
+        "type": "number",
+        "label": "User ID"
+    },
+    {
+        "name": "deal_id",
+        "type": "number",
+        "label": "Deal ID"
+    },
+    {
+        "name": "is_active",
+        "type": "boolean",
+        "label": "Is Active"
+    },
+    {
+        "name": "cycle_amount",
+        "type": "number",
+        "label": "Cycle Amount"
+    },
+    {
+        "name": "cycles_count",
+        "type": "number",
+        "label": "Cycles Count"
+    },
+    {
+        "name": "infinite",
+        "type": "boolean",
+        "label": "Infinite"
+    },
+    {
+        "name": "currency",
+        "type": "text",
+        "label": "Currency"
+    },
+    {
+        "name": "start_date",
+        "type": "date",
+        "label": "Start Date"
+    },
+    {
+        "name": "start_date-raw",
+        "type": "date",
+        "label": "Start Date (Raw)"
+    },
+    {
+        "name": "end_date",
+        "type": "date",
+        "label": "End Date"
+    },
+    {
+        "name": "end_date-raw",
+        "type": "date",
+        "label": "End Date (Raw)"
+    },
+    {
+        "name": "description",
+        "type": "text",
+        "label": "Description"
+    },
+    {
+        "name": "add_time",
+        "type": "text",
+        "label": "Add Time"
+    },
+    {
+        "name": "update_time",
+        "type": "text",
+        "label": "Update Time"
+    },
+    {
+        "name": "lifetime_value",
+        "type": "number",
+        "label": "Lifetime Value"
+    },
+    {
+        "name": "cadence_type",
+        "type": "text",
+        "label": "Cadence Type"
+    },
+    {
+        "name": "final_status",
+        "type": "text",
+        "label": "Final Status"
+    }
+]

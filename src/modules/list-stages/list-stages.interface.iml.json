@@ -1,0 +1,62 @@
+[
+	{
+		"name": "id",
+		"label": "Stage ID",
+		"type": "number"
+	},
+	{
+		"name": "order_nr",
+		"label": "Order nr",
+		"type": "number"
+	},
+	{
+		"name": "name",
+		"label": "Name",
+		"type": "text"
+	},
+	{
+		"name": "active_flag",
+		"label": "Active flag",
+		"type": "boolean"
+	},
+	{
+		"name": "deal_probability",
+		"label": "Deal probability",
+		"type": "number"
+	},
+	{
+		"name": "pipeline_id",
+		"label": "Pipeline ID",
+		"type": "number"
+	},
+	{
+		"name": "rotten_flag",
+		"label": "Rotten flag",
+		"type": "boolean"
+	},
+	{
+		"name": "rotten_days",
+		"label": "Rotten days",
+		"type": "text"
+	},
+	{
+		"name": "add_time",
+		"label": "Add time",
+		"type": "date"
+	},
+	{
+		"name": "update_time",
+		"label": "Update time",
+		"type": "date"
+	},
+	{
+		"name": "pipeline_name",
+		"label": "Pipeline name",
+		"type": "text"
+	},
+	{
+		"name": "pipeline_deal_probability",
+		"label": "Pipeline deal name",
+		"type": "boolean"
+	}
+]

@@ -1,0 +1,15 @@
+{
+	"url": "/mailbox/mailMessages/{{parameters.id}}",
+	"method": "GET",
+	"qs": {
+		"include_body": 0
+	},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": "{{getResponseOutput(body.data, environment.timezone, metadata.interface)}}"
+	}
+}

@@ -1,0 +1,15 @@
+{
+    "baseUrl": "{{getApiURL(connection.accessToken, connection.customDomain, connection.apiDomain)}}",
+    "headers": {
+        "authorization": "{{if(connection.accessToken, 'Bearer '+ connection.accessToken, undefined)}}"
+    },
+    "qs": {
+        "api_token": "{{connection.apiKey}}"
+    },
+    "log": {
+        "sanitize": [
+            "request.headers.authorization",
+            "request.qs.api_token"
+        ]
+    }
+}

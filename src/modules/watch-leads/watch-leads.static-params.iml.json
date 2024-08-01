@@ -1,0 +1,46 @@
+[
+    {
+        "name": "archivedStatus",
+        "type": "select",
+        "label": "Archived",
+        "options": [
+            {
+                "label": "All",
+                "value": "all"
+            },
+            {
+                "label": "Archived",
+                "value": "archived"
+            },
+            {
+                "label": "Not Archived",
+                "value": "not_archived"
+            }
+        ]
+    },
+    {
+        "name": "triggerOn",
+        "label": "Trigger when",
+        "type": "select",
+        "required": true,
+        "options": [
+            {
+                "label": "Object created",
+                "value": "add_time",
+                "default": true
+            },
+            {
+                "label": "Object updated",
+                "value": "update_time"
+            }
+        ]
+    },
+    {
+        "help": "The maximum number of results to be worked with during one execution cycle.",
+        "name": "limit",
+        "type": "uinteger",
+        "label": "Limit",
+        "required": true,
+        "default": 2
+    }
+]

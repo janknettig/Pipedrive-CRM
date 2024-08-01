@@ -1,0 +1,7 @@
+{
+	"output": {
+		"event": "{{body.event}}",
+		"current": "{{body.current}}",
+		"previous": "{{body.previous}}" 
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"url": "/persons",
+	"qs": {
+		"first_char": "{{parameters.first_char}}",
+		"user_id": "{{parameters.user_id}}",
+		"filter_id": "{{parameters.filter_id}}",
+		"limit": "{{if(parameters.limit > 500, 500, parameters.limit)}}"
+	},
+	"method": "GET",
+	"body": {},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": "{{getResponseOutput(item, environment.timezone, metadata.interface)}}",
+		"iterate": "{{body.data}}",
+		"limit": "{{parameters.limit}}"
+	},
+	"pagination": {
+		"condition": "{{body.additional_data.pagination.more_items_in_collection}}",
+		"qs": {
+			"start": "{{body.additional_data.pagination.next_start}}"
+		}
+	}
+}

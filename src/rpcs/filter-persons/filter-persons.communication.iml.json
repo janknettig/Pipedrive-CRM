@@ -1,0 +1,20 @@
+{
+	"url": "/filters",
+	"method": "GET",
+	"qs": {
+		"type": "people"
+	},
+	"body": {},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"iterate": "{{body.data}}",
+		"output": {
+			"label": "{{item.name}}",
+			"value": "{{item.id}}"
+		}
+	}
+}

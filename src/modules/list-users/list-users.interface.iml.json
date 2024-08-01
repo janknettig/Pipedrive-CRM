@@ -1,0 +1,131 @@
+[
+    {
+        "name": "id",
+        "label": "User ID",
+        "type": "number"
+    },
+    {
+        "name": "name",
+        "label": "Name",
+        "type": "text"
+    },
+    {
+        "name": "default_currency",
+        "label": "Default currency",
+        "type": "text"
+    },
+    {
+        "name": "locale",
+        "label": "Locale",
+        "type": "text"
+    },
+    {
+        "name": "lang",
+        "label": "Lang",
+        "type": "number"
+    },
+    {
+        "name": "email",
+        "label": "Email",
+        "type": "email"
+    },
+    {
+        "name": "activated",
+        "label": "Activated",
+        "type": "boolean"
+    },
+    {
+        "name": "last_login",
+        "label": "Last login",
+        "type": "date"
+    },
+    {
+        "name": "created",
+        "label": "Created",
+        "type": "date"
+    },
+    /* 
+    // pipedrive removes these fields from February 9, 2023
+    {
+        "name": "phone",
+        "label": "Phone",
+        "type": "text"
+    },
+    {
+        "name": "modified",
+        "label": "Modified",
+        "type": "date"
+    },
+    {
+        "name": "signup_flow_variation",
+        "label": "Signup flow variation",
+        "type": "text"
+    }, */
+    {
+        "name": "has_created_company",
+        "label": "Has created company",
+        "type": "boolean"
+    },
+    // `is_admin` will be removed on August 9, 2023.
+    {
+        "name": "is_admin",
+        "label": "Is admin",
+        "type": "number"
+    },
+    // it's recommended using the new `access` response field instead, as it includes additional information about the user’s access rights.
+    {
+        "name": "access",
+        "type": "array",
+        "spec": {
+            "type": "collection",
+            "spec": [
+                {
+                    "name": "app",
+                    "type": "text",
+                    "label": "App"
+                },
+                {
+                    "name": "admin",
+                    "type": "boolean",
+                    "label": "Admin"
+                },
+                {
+                    "name": "permission_set_id",
+                    "type": "text",
+                    "label": "Permission Set ID"
+                }
+            ]
+        },
+        "label": "Access"
+    },
+    {
+        "name": "timezone_name",
+        "label": "Timezone name",
+        "type": "text"
+    },
+    {
+        "name": "timezone_offset",
+        "label": "Timezone offset",
+        "type": "text"
+    },
+    {
+        "name": "active_flag",
+        "label": "Active flag",
+        "type": "boolean"
+    },
+    {
+        "name": "role_id",
+        "label": "Role Id",
+        "type": "number"
+    },
+    {
+        "name": "icon_url",
+        "label": "Icon url",
+        "type": "url"
+    },
+    {
+        "name": "is_you",
+        "label": "Is you",
+        "type": "boolean"
+    }
+]

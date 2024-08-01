@@ -1,0 +1,305 @@
+[
+	{
+		"name": "id",
+		"type": "number",
+		"label": "Organization ID"
+	},
+	{
+		"name": "company_id",
+		"type": "number",
+		"label": "Company ID"
+	},
+	{
+		"name": "owner_id",
+		"type": "collection",
+		"spec": [
+			{
+				"name": "id",
+				"type": "number",
+				"label": "User ID"
+			},
+			{
+				"name": "name",
+				"type": "text",
+				"label": "Name"
+			},
+			{
+				"name": "email",
+				"type": "email",
+				"label": "Email"
+			},
+			{
+				"name": "has_pic",
+				"type": "boolean",
+				"label": "Has pic"
+			},
+			{
+				"name": "pic_hash",
+				"type": "text",
+				"label": "Pic hash"
+			},
+			{
+				"name": "active_flag",
+				"type": "boolean",
+				"label": "Active flag"
+			},
+			{
+				"name": "value",
+				"type": "number",
+				"label": "Value"
+			}
+		],
+		"label": "Owner"
+	},
+	{
+		"name": "name",
+		"type": "text",
+		"label": "Name"
+	},
+	{
+		"name": "open_deals_count",
+		"type": "number",
+		"label": "Open deals count"
+	},
+	{
+		"name": "related_open_deals_count",
+		"type": "number",
+		"label": "Related open deals count"
+	},
+	{
+		"name": "closed_deals_count",
+		"type": "number",
+		"label": "Closed deals count"
+	},
+	{
+		"name": "related_closed_deals_count",
+		"type": "number",
+		"label": "Related closed deals count"
+	},
+	{
+		"name": "email_messages_count",
+		"type": "number",
+		"label": "Email messages count"
+	},
+	{
+		"name": "people_count",
+		"type": "number",
+		"label": "People count"
+	},
+	{
+		"name": "activities_count",
+		"type": "number",
+		"label": "Activities count"
+	},
+	{
+		"name": "done_activities_count",
+		"type": "number",
+		"label": "Done activities count"
+	},
+	{
+		"name": "undone_activities_count",
+		"type": "number",
+		"label": "Undone activities count"
+	},
+	{
+		"name": "reference_activities_count",
+		"type": "number",
+		"label": "Reference activities count"
+	},
+	{
+		"name": "files_count",
+		"type": "number",
+		"label": "Files count"
+	},
+	{
+		"name": "notes_count",
+		"type": "number",
+		"label": "Notes count"
+	},
+	{
+		"name": "followers_count",
+		"type": "number",
+		"label": "Followers count"
+	},
+	{
+		"name": "won_deals_count",
+		"type": "number",
+		"label": "Won deals count"
+	},
+	{
+		"name": "related_won_deals_count",
+		"type": "number",
+		"label": "Related won deals count"
+	},
+	{
+		"name": "lost_deals_count",
+		"type": "number",
+		"label": "Lost deals count"
+	},
+	{
+		"name": "related_lost_deals_count",
+		"type": "number",
+		"label": "Related lost deals count"
+	},
+	{
+		"name": "active_flag",
+		"type": "boolean",
+		"label": "Active flag"
+	},
+	{
+		"name": "category_id",
+		"type": "text",
+		"label": "Category ID"
+	},
+	{
+		"name": "picture_id",
+		"type": "text",
+		"label": "Picture ID"
+	},
+	{
+		"name": "country_code",
+		"type": "text",
+		"label": "Country code"
+	},
+	{
+		"name": "first_char",
+		"type": "text",
+		"label": "First char"
+	},
+	{
+		"name": "update_time",
+		"type": "date",
+		"label": "Update time"
+	},
+	{
+		"name": "add_time",
+		"type": "date",
+		"label": "Add time"
+	},
+	{
+		"name": "visible_to",
+		"type": "text",
+		"label": "Visible to"
+	},
+	{
+		"name": "next_activity_date",
+		"type": "date",
+		"label": "Next activity date"
+	},
+	{
+		"name": "next_activity_date-raw",
+		"type": "text",
+		"label": "Next activity date (raw)"
+	},
+	{
+		"name": "next_activity_time",
+		"type": "time",
+		"label": "Next activity time"
+	},
+	{
+		"name": "next_activity_id",
+		"type": "number",
+		"label": "Next activity ID"
+	},
+	{
+		"name": "last_activity_id",
+		"type": "number",
+		"label": "Last activity ID"
+	},
+	{
+		"name": "last_activity_date",
+		"type": "date",
+		"label": "Last activity date"
+	},
+	{
+		"name": "last_activity_date-raw",
+		"type": "text",
+		"label": "Last activity date (raw)"
+	},
+	{
+		"name": "label",
+		"type": "text",
+		"label": "Label"
+	},
+	{
+		"name": "address",
+		"type": "text",
+		"label": "Address"
+	},
+	{
+		"name": "address_subpremise",
+		"type": "text",
+		"label": "Address subpremise"
+	},
+	{
+		"name": "address_street_number",
+		"type": "text",
+		"label": "Address street number"
+	},
+	{
+		"name": "address_route",
+		"type": "text",
+		"label": "Address route"
+	},
+	{
+		"name": "address_sublocality",
+		"type": "text",
+		"label": "Address sublocality"
+	},
+	{
+		"name": "address_locality",
+		"type": "text",
+		"label": "Address locality"
+	},
+	{
+		"name": "address_admin_area_level_1",
+		"type": "text",
+		"label": "Address admin area level 1"
+	},
+	{
+		"name": "address_admin_area_level_2",
+		"type": "text",
+		"label": "Address admin area level 2"
+	},
+	{
+		"name": "address_country",
+		"type": "text",
+		"label": "Address country"
+	},
+	{
+		"name": "address_postal_code",
+		"type": "text",
+		"label": "Address postal code"
+	},
+	{
+		"name": "address_formatted_address",
+		"type": "text",
+		"label": "Address formatted address"
+	},
+	{
+		"name": "cc_email",
+		"type": "email",
+		"label": "Cc email"
+	},
+	{
+		"name": "owner_name",
+		"type": "text",
+		"label": "Owner name"
+	},
+	{
+		"name": "edit_name",
+		"type": "boolean",
+		"label": "Edit name"
+	},
+	{
+		"name": "last_activity",
+		"type": "text",
+		"label": "Last activity"
+	},
+	{
+		"name": "next_activity",
+		"type": "text",
+		"label": "Next activity"
+	},
+	"rpc://InterfaceOrganizations"
+]

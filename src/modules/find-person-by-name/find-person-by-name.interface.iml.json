@@ -1,0 +1,64 @@
+[
+    {
+        "name": "id",
+        "type": "number",
+		"label": "Person ID"
+    },
+    {
+        "name": "name",
+        "type": "text",
+		"label": "Name"
+    },
+    {
+        "name": "email",
+        "type": "email",
+		"label": "Email"
+    },
+    {
+        "name": "phone",
+        "type": "text",
+		"label": "Phone"
+    },
+    {
+        "name": "org_id",
+        "type": "number",
+		"label": "Organization ID"
+    },
+    {
+        "name": "org_name",
+        "type": "text",
+		"label": "Organization name"
+    },
+    {
+        "name": "visible_to",
+        "type": "text",
+		"label": "Visible to"
+    },
+    {
+        "name": "picture",
+        "type": "collection",
+		"label": "Picture",
+        "spec": [
+            {
+                "name": "id",
+                "type": "number",
+				"label": "ID"
+            },
+            {
+                "name": "url",
+                "type": "url",
+				"label": "URL"
+            },
+            {
+                "name": "width",
+                "type": "number",
+				"label": "Width"
+            },
+            {
+                "name": "height",
+                "type": "number",
+				"label": "Height"
+            }
+        ]
+    }
+]

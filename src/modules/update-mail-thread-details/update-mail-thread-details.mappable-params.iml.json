@@ -1,0 +1,35 @@
+[
+	{
+		"name": "thread_id",
+		"type": "number",
+		"label": "Mail thread ID",
+		"required": true
+	},
+	{
+		"name": "deal_id",
+		"type": "number",
+		"label": "Deal ID",
+		"required": false
+	},
+	{
+		"name": "shared_flag",
+		"type": "boolean",
+		"label": "Shared flag",
+		"required": false,
+		"help": "Whether this thread is shared with other users in your company."
+	},
+	{
+		"name": "read_flag",
+		"type": "boolean",
+		"label": "Read flag",
+		"required": false,
+		"help": "Whether this thread read or unread."
+	},
+	{
+		"name": "archived_flag",
+		"type": "boolean",
+		"label": "Archived flag",
+		"required": false,
+		"help": "Whether this thread is archived or not."
+	}
+]

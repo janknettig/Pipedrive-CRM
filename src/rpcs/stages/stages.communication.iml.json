@@ -1,0 +1,19 @@
+{
+    "url": "/stages",
+    "method": "GET",
+    "qs": {},
+    "body": {},
+    "headers": {},
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "limit": 500,
+        "iterate": "{{body.data}}",
+        "output": {
+            "label": "{{item.name}} ({{item.pipeline_name}}, {{item.id}})",
+            "value": "{{item.id}}"
+        }
+    }
+}

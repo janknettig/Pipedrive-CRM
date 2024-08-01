@@ -1,0 +1,22 @@
+{
+	"response": {
+		"output": [
+			{
+				"label": "Owner & followers (private)",
+				"value": "1"
+			},
+			{
+				"label": "Owner's visibility group",
+				"value": "3"
+			},
+			{
+				"label": "Owner's group and sub-groups",
+				"value": "5"
+			},
+			{
+				"label": "Entire company (shared)",
+				"value": "7"
+			}
+		]
+	}
+}

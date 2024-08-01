@@ -1,0 +1,24 @@
+{
+    "url": "/stages",
+    "qs": {
+        "pipeline_id": "{{parameters.pipeline_id}}",
+        "limit": "{{min(parameters.limit, 500)}}"
+    },
+    "method": "GET",
+    "body": {},
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "limit": "{{parameters.limit}}",
+        "output": "{{getResponseOutput(item, environment.timezone, metadata.interface)}}",
+        "iterate": "{{body.data}}"
+    },
+    "pagination": {
+        "condition": "{{body.additional_data.pagination.more_items_in_collection}}",
+        "qs": {
+            "start": "{{body.additional_data.pagination.next_start}}"
+        }
+    }
+}

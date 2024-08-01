@@ -1,0 +1,26 @@
+{
+    "url": "/products",
+    "method": "GET",
+    "qs": {
+        "limit": 500
+    },
+    "body": {},
+    "headers": {},
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "iterate": "{{body.data}}",
+        "output": {
+            "label": "{{item.name}}",
+            "value": "{{item.id}}"
+        }
+    },
+    "pagination": {
+        "condition": "{{body.additional_data.pagination.more_items_in_collection}}",
+        "qs": {
+            "start": "{{body.additional_data.pagination.next_start}}"
+        }
+    }
+}

@@ -1,0 +1,157 @@
+[
+	{
+		"name": "id",
+		"type": "number",
+		"label": "File ID"
+	},
+	{
+		"name": "user_id",
+		"type": "number",
+		"label": "User ID"
+	},
+	{
+		"name": "deal_id",
+		"type": "number",
+		"label": "Deal ID"
+	},
+	{
+		"name": "person_id",
+		"type": "number",
+		"label": "Person ID"
+	},
+	{
+		"name": "org_id",
+		"type": "number",
+		"label": "Org ID"
+	},
+	{
+		"name": "product_id",
+		"type": "text",
+		"label": "Product ID"
+	},
+	{
+		"name": "email_message_id",
+		"type": "text",
+		"label": "Email message ID"
+	},
+	{
+		"name": "activity_id",
+		"type": "text",
+		"label": "Activity ID"
+	},
+	{
+		"name": "note_id",
+		"type": "text",
+		"label": "Note ID"
+	},
+	{
+		"name": "log_id",
+		"type": "text",
+		"label": "Log ID"
+	},
+	{
+		"name": "add_time",
+		"type": "date",
+		"label": "Add time"
+	},
+	{
+		"name": "update_time",
+		"type": "text",
+		"label": "Update time"
+	},
+	{
+		"name": "file_name",
+		"type": "text",
+		"label": "File name"
+	},
+	{
+		"name": "file_type",
+		"type": "text",
+		"label": "File type"
+	},
+	{
+		"name": "file_size",
+		"type": "number",
+		"label": "File size"
+	},
+	{
+		"name": "active_flag",
+		"type": "boolean",
+		"label": "Active flag"
+	},
+	{
+		"name": "inline_flag",
+		"type": "boolean",
+		"label": "Inline flag"
+	},
+	{
+		"name": "remote_location",
+		"type": "text",
+		"label": "Remote location"
+	},
+	{
+		"name": "remote_id",
+		"type": "text",
+		"label": "Remote ID"
+	},
+	{
+		"name": "cid",
+		"type": "text",
+		"label": "Cid"
+	},
+	{
+		"name": "s3_bucket",
+		"type": "text",
+		"label": "S3 bucket"
+	},
+	{
+		"name": "mail_message_id",
+		"type": "text",
+		"label": "Mail message ID"
+	},
+	{
+		"name": "deal_name",
+		"type": "text",
+		"label": "Deal name"
+	},
+	{
+		"name": "person_name",
+		"type": "text",
+		"label": "Person name"
+	},
+	{
+		"name": "people_name",
+		"type": "text",
+		"label": "People name"
+	},
+	{
+		"name": "org_name",
+		"type": "text",
+		"label": "Org name"
+	},
+	{
+		"name": "product_name",
+		"type": "text",
+		"label": "Product name"
+	},
+	{
+		"name": "url",
+		"type": "url",
+		"label": "URL"
+	},
+	{
+		"name": "name",
+		"type": "text",
+		"label": "Name"
+	},
+	{
+		"name": "description",
+		"type": "text",
+		"label": "Description"
+	},
+	{
+		"name": "mail_template_id",
+		"type": "number",
+		"label": "Mail template ID"
+	}
+]

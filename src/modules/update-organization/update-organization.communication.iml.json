@@ -1,0 +1,14 @@
+{
+    "url": "/organizations/{{parameters.id}}",
+    "method": "PUT",
+    "qs": {},
+    "body": "{{getExpectInput(parameters, environment.timezone)}}",
+    "headers": {},
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": null
+    }
+}

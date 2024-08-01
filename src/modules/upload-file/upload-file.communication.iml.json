@@ -1,0 +1,29 @@
+{
+	"url": "/files",
+	"method": "POST",
+	"qs": {},
+	"type": "multipart/form-data",
+	"body": {
+        "file": {
+            "value": "{{parameters.data}}",
+            "options": {
+                "filename": "{{parameters.fileName}}"
+            }
+        },
+		"deal_id": "{{parameters.deal_id}}",
+		"person_id": "{{parameters.person_id}}",
+		"org_id": "{{parameters.org_id}}",
+		"product_id": "{{parameters.product_id}}",
+		"activity_id": "{{parameters.activity_id}}"
+    },
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": {
+			"id": "{{body.data.id}}"
+		}
+	}
+}

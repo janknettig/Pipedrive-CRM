@@ -1,0 +1,92 @@
+[
+    {
+        "name": "id",
+        "type": "integer",
+        "label": "Product ID"
+    },
+    {
+        "name": "type",
+        "type": "text",
+        "label": "Type"
+    },
+    {
+        "name": "name",
+        "type": "text",
+        "label": "Name"
+    },
+    {
+        "name": "code",
+        "type": "text",
+        "label": "Code"
+    },
+    {
+        "name": "tax",
+        "type": "number",
+        "label": "Tax"
+    },
+    {
+        "name": "visible_to",
+        "type": "number",
+        "label": "Visible to"
+    },
+    {
+        "name": "owner",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "id",
+                "type": "integer",
+                "label": "Owner ID"
+            }
+        ],
+        "label": "Owner"
+    },
+    {
+        "name": "custom_fields",
+        "type": "array",
+        "spec": {
+            "type": "text"
+        },
+        "label": "Custom Fields"
+    },
+    {
+        "name": "prices",
+        "type": "array",
+        "spec": {
+            "type": "collection",
+            "spec": [
+                {
+                    "name": "id",
+                    "type": "number",
+                    "label": "Price ID"
+                },
+                {
+                    "name": "cost",
+                    "type": "number",
+                    "label": "Cost"
+                },
+                {
+                    "name": "price",
+                    "type": "number",
+                    "label": "Price"
+                },
+                {
+                    "name": "currency",
+                    "type": "text",
+                    "label": "Currency"
+                },
+                {
+                    "name": "overhead_cost",
+                    "type": "text",
+                    "label": "Overhead Cost"
+                }
+            ]
+        },
+        "label": "Prices"
+    },
+    {
+        "name": "result_score",
+        "type": "number",
+        "label": "Result Score"
+    }
+]

@@ -1,0 +1,21 @@
+{
+	"url": "/organizations",
+	"method": "GET",
+	"qs": {},
+	"body": {},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"iterate": {
+            "container": "{{body.data}}",
+            "condition": "{{contains(item.name, parameters.q)}}"
+        },
+		"output": {
+			"label": "{{item.name}}",
+			"value": "{{item.id}}"
+		}
+	}
+}

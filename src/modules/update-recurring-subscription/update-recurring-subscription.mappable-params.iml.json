@@ -1,0 +1,64 @@
+[
+    {
+        "name": "id",
+        "type": "uinteger",
+        "label": "Subscription ID",
+        "required": true
+    },
+    {
+        "name": "effective_date",
+        "type": "date",
+        "label": "Effective Date",
+        "help": "All payments after that date will be affected. Format: `YYYY-MM-DD`.",
+        "required": true
+    }, 
+    {
+        "name": "cycle_amount",
+        "type": "number",
+        "label": "Cycle Amount",
+        "help": "The amount of each payment.",
+        "required": false
+    }, 
+    {
+        "name": "payments",
+        "type": "array",
+        "help": "Array of additional payments.",
+        "required": false,
+        "spec": [
+            {
+                "name": "amount",
+                "type": "number",
+                "label": "Amount",
+                "required": true
+            },
+            {
+                "name": "description",
+                "type": "text",
+                "label": "Description",
+                "required": true
+            },
+            {
+                "name": "due_at",
+                "type": "date",
+                "help": "Payment date, format: `YYYY-MM-DD`.",
+                "label": "Due At",
+                "required": true
+            }
+        ],
+        "label": "Payments"
+    },
+    {
+        "name": "description",
+        "type": "text",
+        "help": "The description of the recurring subscription.",
+        "label": "Description"
+    },
+    {
+        "name": "update_deal_value",
+        "type": "boolean",
+        "help": "Indicates that the deal value must be set to recurring subscription's MRR value.",
+        "label": "Update Deal Value",
+        "default": false,
+        "required": true
+    }
+]

@@ -1,0 +1,30 @@
+{
+	"url": "/itemSearch",
+	"qs": {
+		"term": "{{parameters.term}}",
+		"item_types": "{{ifempty(join(parameters.item_types, ','), undefined)}}",
+		"fields": "{{ifempty(join(parameters.fields, ','), undefined)}}",
+		"exact_match": "{{parameters.exact_match}}",
+		// "search_for_related_items": "{{parameters.search_for_related_items}}",
+		"include_fields": "deal.cc_email,person.picture,product.price",
+		"limit": "{{if(parameters.limit > 100, 100, parameters.limit)}}"
+	},
+	"method": "GET",
+	"body": {},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": "{{getResponseOutput(item, environment.timezone, metadata.interface)}}",
+		"iterate": "{{body.data.items}}",
+		"limit": "{{parameters.limit}}"
+	},
+	"pagination": {
+		"condition": "{{body.additional_data.pagination.more_items_in_collection}}",
+		"qs": {
+			"start": "{{body.additional_data.pagination.next_start}}"
+		}
+	}
+}

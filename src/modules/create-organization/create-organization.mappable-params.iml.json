@@ -1,0 +1,44 @@
+[
+	{
+		"name": "name",
+		"label": "Name",
+		"required": true,
+		"type": "text"
+	},
+	{
+		"name": "owner_id",
+		"label": "Owner",
+		"required": false,
+		"type": "number",
+		"help": "Must be an Id.",
+		"rpc": {
+			"label": "Search",
+			"url": "rpc://SearchUsers",
+			"parameters": [
+				{
+					"name": "q",
+					"label": "Query",
+					"help": "Search Users. If empty, will list all users",
+					"type": "text"
+				}
+			]
+		}
+	},
+	{
+		"name": "visible_to",
+		"label": "Visible to",
+		"required": false,
+		"type": "select",
+		"options": [
+			{"label": "Owner & followers (private)", "value": "1"},
+			{"label": "Entire company (shared)", "value": "3"}
+		]
+	},
+	{
+		"name": "add_time",
+		"label": "Add time",
+		"required": false,
+		"type": "date"
+	},
+	"rpc://ExpectOrganizationsCustom"
+]

@@ -1,0 +1,43 @@
+[
+{
+		"name": "fileName",
+		"label": "File name",
+		"help": "File name, including the ending, e.g. invoice.xml",
+		"type": "filename",
+		"required": true,
+		"semantic": "file:name"
+	},
+	{
+		"name": "data",
+		"label": "Data",
+		"help": "Binary or text data to be uploaded. [More information about working with files](kb://files.html).",
+		"type": "buffer",
+		"required": true,
+		"semantic": "file:data"
+	},
+	{
+		"name": "deal_id",
+		"label": "Deal ID",
+		"type": "number"
+	},
+	{
+		"name": "person_id",
+		"label": "Person ID",
+		"type": "number"
+	},
+	{
+		"name": "org_id",
+		"label": "Organization ID",
+		"type": "number"
+	},
+	{
+		"name": "product_id",
+		"label": "Product ID",
+		"type": "number"
+	},
+	{
+		"name": "activity_id",
+		"label": "Activity ID",
+		"type": "number"
+	}
+]

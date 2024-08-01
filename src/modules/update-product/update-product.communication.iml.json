@@ -1,0 +1,15 @@
+{
+    "url": "/products/{{parameters.id}}",
+    "method": "PUT",
+    "qs": {},
+    "body": "{{getExpectInput(parameters, environment.timezone, 'boolean')}}",
+    "headers": {},
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": null
+        //"output": "{{getResponseOutput(changeProductResStruct(body.data), environment.timezone, metadata.interface)}}"
+    }
+}

@@ -1,0 +1,109 @@
+[
+    {
+        "name": "deal_id",
+        "type": "uinteger",
+        "label": "Deal ID",
+        "required": true
+    },
+    {
+        "name": "currency",
+        "type": "text",
+        "label": "Currency",
+        "help": "The currency of the recurring subscription. Accepts a 3-character currency code.",
+        "required": true
+    },
+    {
+        "name": "cadence_type",
+        "type": "select",
+        "help": "The interval between payments.",
+        "options": [
+            {
+                "value": "weekly",
+                "label": "Weekly"
+            },
+            {
+                "value": "monthly",
+                "label": "Monthly",
+                "default": true
+            },
+            {
+                "value": "quarterly",
+                "label": "Quarterly"
+            },
+            {
+                "value": "yearly",
+                "label": "Yearly"
+            }
+        ],
+        "label": "Cadence Type",
+        "required": true
+    },
+    {
+        "name": "cycle_amount",
+        "type": "number",
+        "label": "Cycle Amount",
+        "help": "The amount of each payment.",
+        "required": true
+    },
+    {
+        "name": "start_date",
+        "type": "date",
+        "help": "The start date of the recurring subscription. Format: `YYYY-MM-DD`.",
+        "label": "Start Date",
+        "required": true
+    },
+    {
+        "name": "description",
+        "type": "text",
+        "help": "The description of the recurring subscription.",
+        "label": "Description"
+    },
+    {
+        "name": "cycles_count",
+        "type": "uinteger",
+        "help": "Shows how many payments the subscription has.\nNote that one field must be set: `cycles_count` or `infinite`.",
+        "label": "Cycles Count"
+    },
+    {
+        "name": "infinite",
+        "type": "boolean",
+        "help": "This indicates that the recurring subscription will last until it's manually canceled or deleted.\nNote that only one field must be set: `cycles_count` or `infinite`.",
+        "label": "Infinite",
+        "required": true,
+        "default": true
+    },
+    {
+        "name": "payments",
+        "type": "array",
+        "help": "Array of additional payments.",
+        "spec": [
+            {
+                "name": "amount",
+                "type": "number",
+                "label": "Amount",
+                "required": true
+            },
+            {
+                "name": "description",
+                "type": "text",
+                "label": "Description",
+                "required": true
+            },
+            {
+                "name": "due_at",
+                "type": "date",
+                "help": "Payment date, format: `YYYY-MM-DD`.",
+                "label": "Due At",
+                "required": true
+            }
+        ],
+        "label": "Payments"
+    },
+    {
+        "name": "update_deal_value",
+        "type": "boolean",
+        "help": "Indicates that the deal value must be set to recurring subscription's MRR value.",
+        "label": "Update Deal Value",
+        "required": true
+    }
+]

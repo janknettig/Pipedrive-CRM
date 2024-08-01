@@ -1,0 +1,35 @@
+[
+	{
+		"name": "folder",
+		"type": "select",
+		"label": "Folder",
+		"required": true,
+		"options": [
+			{
+				"label": "Inbox",
+				"value": "inbox",
+				"default": true
+			},
+			{
+				"label": "Drafts",
+				"value": "drafts"
+			},
+			{
+				"label": "Sent",
+				"value": "sent"
+			},
+			{
+				"label": "Archive",
+				"value": "archive"
+			}
+		]
+	},
+	{
+		"help": "The maximum number of results to be worked with during one execution cycle.",
+		"name": "limit",
+		"type": "uinteger",
+		"label": "Limit",
+		"default": 2,
+		"required": true
+	}
+]

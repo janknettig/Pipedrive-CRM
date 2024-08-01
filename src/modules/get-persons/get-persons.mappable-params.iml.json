@@ -1,0 +1,32 @@
+[
+	{
+		"name": "filter_id",
+		"type": "select",
+		"label": "Filter",
+		"required": false,
+		"options": "rpc://FilterPersons"
+	},
+	{
+		"name": "user_id",
+		"type": "select",
+		"label": "User",
+		"required": false,
+		"options": "rpc://Users",
+		"help": "If supplied, only persons owned by the given user will be returned."
+	},
+	{
+		"name": "first_char",
+		"type": "text",
+		"label": "First char",
+		"required": false,
+		"help": "If supplied, only persons whose name starts with the specified letter will be returned (case insensitive)."
+	},
+	{
+		"help": "The maximum number of results to be worked with during one execution cycle.",
+		"name": "limit",
+		"type": "uinteger",
+		"label": "Limit",
+		"default": 2,
+		"required": true
+	}
+]

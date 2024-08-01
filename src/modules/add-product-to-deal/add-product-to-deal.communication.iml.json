@@ -1,0 +1,19 @@
+{
+    "url": "/deals/{{parameters.deal_id}}/products",
+    "method": "POST",
+    "qs": {},
+    "body": {
+        "{{...}}":"{{omit(parameters,'discount_percentage', 'discount')}}",
+        "discount":"{{if(parameters.discount === undefined && parameters.discount_type !== 'amount', parameters.discount_percentage, parameters.discount)}}"
+    },
+    "headers": {},
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": {
+            "id": "{{body.data.id}}"
+        }
+    }
+}

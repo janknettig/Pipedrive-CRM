@@ -1,0 +1,13 @@
+{
+	"url": "/products/{{parameters.id}}",
+	"method": "GET",
+	"qs": {},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": "{{getResponseOutput(body.data, environment.timezone, metadata.interface)}}"
+	}
+}

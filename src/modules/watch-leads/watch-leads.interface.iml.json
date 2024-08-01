@@ -1,0 +1,104 @@
+[
+    {
+        "name": "id",
+        "type": "text",
+        "label": "ID"
+    },
+    {
+        "name": "title",
+        "type": "text",
+        "label": "Title"
+    },
+    {
+        "name": "owner_id",
+        "type": "number",
+        "label": "Owner ID"
+    },
+    {
+        "name": "creator_id",
+        "type": "number",
+        "label": "Creator ID"
+    },
+    {
+        "name": "label_ids",
+        "type": "array",
+        "label": "Label IDs"
+    },
+    {
+        "name": "value",
+        "type": "collection",
+        "label": "Value",
+        "spec": [
+            {
+                "name": "amount",
+                "type": "number",
+                "label": "Amount"
+            },
+            {
+                "name": "currency",
+                "type": "text",
+                "label": "Currency"
+            }
+        ]
+    },
+    {
+        "name": "expected_close_date",
+        "type": "date",
+        "label": "Expected Close Date"
+    },
+    {
+		"name": "expected_close_date-raw",
+		"type": "text",
+		"label": "Expected Close Date (raw)"
+	},
+    {
+        "name": "person_id",
+        "type": "number",
+        "label": "Person ID"
+    },
+    {
+        "name": "organization_id",
+        "type": "number",
+        "label": "Organization ID"
+    },
+    {
+        "name": "is_archived",
+        "type": "boolean",
+        "label": "Is Archived"
+    },
+    {
+        "name": "source_name",
+        "type": "text",
+        "label": "Source Name"
+    },
+    {
+        "name": "was_seen",
+        "type": "boolean",
+        "label": "Was Seen"
+    },
+    {
+        "name": "next_activity_id",
+        "type": "text",
+        "label": "Next Activity ID"
+    },
+    {
+        "name": "add_time",
+        "type": "date",
+        "label": "Add Time"
+    },
+    {
+        "name": "update_time",
+        "type": "date",
+        "label": "Update Time"
+    },
+    {
+        "name": "visible_to",
+        "type": "text",
+        "label": "Visible To"
+    },
+    {
+        "name": "cc_email",
+        "type": "text",
+        "label": "CC Email"
+    }
+]

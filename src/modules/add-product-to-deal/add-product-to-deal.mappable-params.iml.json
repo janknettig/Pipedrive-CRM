@@ -1,0 +1,108 @@
+[
+	{
+		"name": "deal_id",
+		"type": "number",
+		"label": "Deal ID",
+		"required": true
+	},
+	{
+		"name": "product_id",
+		"label": "Product ID",
+		"type": "uinteger",
+		"required": true
+	},
+	{
+		"name": "item_price",
+		"label": "Item price",
+		"type": "number",
+		"required": true
+	},
+	{
+		"name": "quantity",
+		"label": "Quantity",
+		"type": "number",
+		"required": true
+	},
+	{
+		"name": "discount_percentage",
+		"label": "Discount percentage (deprecated)",
+		"type": "number",
+		"help":"This parameter has been deprecated by Pipedrive. Please use __Discount__ instead.\nIf __Discount__ is empty and __Discount Type__ is `percentage`, the __Discount percentage__ value will be sent instead of __Discount.__"
+	},
+	{
+		"name": "discount",
+		"label": "Discount",
+		"type": "number",
+		"required": false
+	},
+	{
+		"name": "discount_type",
+		"label": "Discount Type",
+		"type": "select",
+		"default":"percentage",
+		"options": [
+			{
+				"label": "Percentage",
+				"value": "percentage"
+			},
+			{
+				"label": "Amount",
+				"value": "amount"
+			}
+		]
+	},
+	{
+		"name": "duration",
+		"label": "Duration of the product",
+		"help": "When product durations are not enabled for the company or if omitted, defaults to 1.",
+		"type": "number",
+		"default": 1,
+		"required": false
+	},
+	{
+		"name": "product_variation_id",
+		"label": "Product variant ID",
+		"type": "uinteger",
+		"required": false
+	},
+	{
+		"name": "comments",
+		"label": "Comments",
+		"help": "Any textual comment associated with this product-deal attachment. Visible and editable in the application UI.",
+		"type": "text",
+		"required": false
+	},
+	{
+		"name": "enabled_flag",
+		"label": "Enabled flag",
+		"help": "Whether the product is enabled on the deal or not.",
+		"type": "boolean",
+		"required": false
+	},
+	{
+		"name": "tax",
+		"label": "Tax",
+		"type": "number",
+		"help": "The tax percentage."
+	},
+	{
+		"name": "tax_method",
+		"label": "Tax Method",
+		"type": "select",
+		"help":"Changing this in one product affects the rest of the products attached to the deal. By default, the user setting value for tax options will be used. 'Inclusive` = the tax percentage will already be included in the price.",
+		"options": [
+			{
+				"label": "Exclusive",
+				"value": "exclusive"
+			},
+			{
+				"label": "Inclusive",
+				"value": "inclusive"
+			},
+			{
+				"label": "none",
+				"value": "none"
+			}
+		]
+	}
+]

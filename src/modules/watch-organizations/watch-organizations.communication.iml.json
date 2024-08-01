@@ -1,0 +1,33 @@
+{
+	"url": "/organizations",
+	"method": "GET",
+	"qs": {
+		"filter_id": "{{parameters.filter_id}}",
+		"user_id": "{{parameters.user_id}}",
+		"sort": "{{parameters.triggerOn}} DESC",
+		"limit": 500
+	},
+	"body": {},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"iterate": "{{body.data}}",
+		"trigger": {
+			"id": "{{item.id}}",
+			"date": "{{parseDate(get(item, parameters.triggerOn), 'YYYY-MM-DD HH:mm:ss', 'UTC')}}",
+			"type": "date",
+			"order": "desc"
+		},
+		"output": "{{getResponseOutput(item, environment.timezone, metadata.interface)}}",
+		"limit": "{{parameters.limit}}"
+	},
+	"pagination": {
+		"condition": "{{body.additional_data.pagination.more_items_in_collection}}",
+		"qs": {
+			"start": "{{body.additional_data.pagination.next_start}}"
+		}
+	}
+}

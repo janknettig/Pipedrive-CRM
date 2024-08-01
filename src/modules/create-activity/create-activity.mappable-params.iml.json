@@ -1,0 +1,128 @@
+[
+	{
+		"name": "subject",
+		"label": "Subject",
+		"required": true,
+		"type": "text"
+	},
+	{
+		"name": "done",
+		"label": "Done",
+		"required": false,
+		"type": "boolean"
+	},
+	{
+		"name": "type",
+		"label": "Type",
+		"required": true,
+		"type": "select",
+		"options": "rpc://ActivityTypes"
+	},
+	{
+		"name": "due_d_t",
+		"label": "Due date and time",
+		"required": false,
+		"type": "date"
+	},
+	{
+		"name": "duration",
+		"label": "Duration",
+		"required": false,
+		"type": "time"
+	},
+	{
+		"name": "user_id",
+		"label": "User",
+		"required": false,
+		"type": "select",
+		"help": "Must be an Id.",
+		"options": "rpc://Users"
+	},
+	{
+		"name": "deal_id",
+		"label": "Deal",
+		"required": false,
+		"type": "number",
+		"help": "Must be an Id."
+	},
+	{
+		"name": "location",
+		"label": "Location",
+		"required": false,
+		"type": "text"
+	},
+	{
+		"name": "person_id",
+		"label": "Person",
+		"required": false,
+		"help": "Must be an Id.",
+		"type": "number",
+		"rpc": {
+			"label": "Search",
+			"url": "rpc://SearchPersonsByName",
+			"parameters": [
+				{
+					"name": "q",
+					"label": "Query",
+					"help": "Search Persons. Cannot be empty",
+					"type": "text",
+					"required": true
+				},
+				{
+					"name": "search_by_email",
+					"label": "Search by email",
+					"type": "boolean",
+					"help": "If false, persons will be searched by name. If true, persons will be searched by email",
+					"default": false,
+					"required": true
+				}
+			]
+		}
+	},
+	{
+		"name": "org_id",
+		"label": "Organization",
+		"help": "Must be an Id.",
+		"required": false,
+		"type": "number",
+		"rpc": {
+			"label": "Search",
+			"url": "rpc://SearchOrganizationsByName",
+			"parameters": [
+				{
+					"name": "q",
+					"label": "Query",
+					"help": "Search Organizations. Cannot be empty",
+					"type": "text",
+					"required": true
+				}
+			]
+		}
+	},
+	{
+		"name": "note",
+		"label": "Note",
+		"required": false,
+		"type": "text"
+	},
+	{
+		"name": "participants",
+		"label": "Participants",
+		"required": false,
+		"type": "array",
+		"spec": [
+			{
+				"name": "person_id",
+				"label": "Person ID",
+				"required": true,
+				"type": "number"
+			},
+			{
+				"name": "primary_flag",
+				"label": "Primary",
+				"required": false,
+				"type": "boolean"
+			}
+		]
+	}
+]

@@ -1,0 +1,23 @@
+{
+    "url": "/leads/{{parameters.id}}",
+    "method": "PATCH",
+    "body": {
+        "title": "{{parameters.title}}",
+        "owner_id": "{{parameters.owner_id}}",
+        "person_id": "{{parameters.person_id}}",
+        "organization_id": "{{parameters.organization_id}}",
+        "value": "{{if(parameters.value.amount, parameters.value, undefined)}}",
+        "expected_close_date": "{{formatDate(parameters.expected_close_date, 'YYYY-MM-DD')}}",
+        "visible_to": "{{parameters.visible_to}}",
+        "was_seen": "{{parameters.was_seen}}",
+        "label_ids": "{{objectToFlatArray(parameters.label_ids, 'label_id')}}",
+        "{{...}}": "{{getExpectedLeadsCustomFields(omit(parameters, 'id', 'title', 'owner_id', 'person_id', 'organization_id', 'value', 'expected_close_date', 'visible_to', 'was_seen', 'label_ids'))}}"
+    },
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": "{{getResponseOutput(body.data, environment.timezone, metadata.interface)}}"
+    }
+}

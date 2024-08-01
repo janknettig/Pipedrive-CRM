@@ -1,0 +1,113 @@
+[
+    {
+        "name": "id",
+        "type": "uinteger",
+        "label": "Deal ID",
+        "required": true
+    },
+    {
+        "name": "deal_product_id",
+        "type": "number",
+        "label": "Product Attachment ID",
+        "required": true,
+        "help": "ID from the `List Products in a Deal` module."
+    },
+    {
+        "name": "product_id",
+        "type": "number",
+        "label": "Product ID",
+        "required": true
+    },
+    {
+        "name": "billing_frequency",
+        "label": "billing_frequency",
+        "type": "text"
+    },
+    {
+        "name": "item_price",
+        "type": "number",
+        "label": "Item price"
+    },
+    {
+        "name": "quantity",
+        "type": "number",
+        "label": "Quantity"
+    },
+	{
+		"name": "discount_percentage",
+		"label": "Discount percentage (Deprecated)",
+		"type": "number",
+		"help":"This parameter has been deprecated by Pipedrive. Please use __Discount__ instead.\nIf __Discount__ and __Discount Type__ are empty, the __Discount percentage__ value will be sent instead of __Discount.__ Otherwise this field will be ignored."
+	},
+	{
+		"name": "discount",
+		"label": "Discount",
+		"type": "number",
+		"required": false
+	},
+	{
+		"name": "discount_type",
+		"label": "Discount Type",
+		"type": "select",
+		"options": [
+			{
+				"label": "Percentage",
+				"value": "percentage"
+			},
+			{
+				"label": "Amount",
+				"value": "amount"
+			}
+		]
+	},
+    {
+        "name": "duration",
+        "type": "number",
+        "label": "Duration",
+        "required": false
+    },
+    {
+        "name": "product_variation_id",
+        "type": "number",
+        "label": "Product variation ID",
+        "required": false
+    },
+    {
+        "name": "comments",
+        "type": "text",
+        "label": "Comments",
+        "required": false
+    },
+    {
+        "name": "enabled_flag",
+        "type": "boolean",
+        "label": "Enabled flag",
+        "required": false
+    },
+	{
+		"name": "tax",
+		"label": "Tax",
+		"type": "number",
+		"help": "The tax percentage."
+	},
+	{
+		"name": "tax_method",
+		"label": "Tax Method",
+		"type": "select",
+		"help":"Changing this in one product affects the rest of the products attached to the deal. By default, the user setting value for tax options will be used. 'Inclusive` = the tax percentage will already be included in the price.",
+		"options": [
+			{
+				"label": "Exclusive",
+				"value": "exclusive"
+			},
+			{
+				"label": "Inclusive",
+				"value": "inclusive"
+			},
+			{
+				"label": "none",
+				"value": "none"
+			}
+		]
+	}
+]

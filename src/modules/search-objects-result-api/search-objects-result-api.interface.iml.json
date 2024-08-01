@@ -1,0 +1,76 @@
+[
+    {
+        "name": "type",
+        "type": "text",
+        "label": "Type"
+    },
+    {
+        "name": "id",
+        "type": "number",
+        "label": "ID"
+    },
+    {
+        "name": "source",
+        "type": "text",
+        "label": "Source"
+    },
+    {
+        "name": "result_score",
+        "type": "number",
+        "label": "Result score"
+    },
+    {
+        "name": "notes",
+        "type": "collection",
+        "label": "Notes",
+        "spec": [
+            {
+                "name": "count",
+                "type": "number",
+        		"label": "Count"
+            },
+            {
+                "name": "content",
+                "type": "array",
+        		"label": "Content"
+            }
+        ]
+    },
+    {
+        "name": "fields",
+        "type": "collection",
+        "label": "Fields",
+        "spec": [
+            {
+                "name": "count",
+                "type": "number",
+       		 	"label": "Count"
+            },
+            {
+                "name": "names",
+                "type": "array",
+       		 	"label": "Names"
+            }
+        ]
+    },
+    {
+        "name": "title",
+        "type": "text",
+        "label": "Title"
+    },
+    {
+        "name": "details",
+        "type": "collection",
+        "label": "Details"
+    },
+    {
+        "name": "url",
+        "type": "url",
+        "label": "URL"
+    },
+    {
+        "name": "file_type",
+        "type": "text",
+        "label": "File type"
+    }
+]

@@ -1,0 +1,54 @@
+[
+    {
+        "name": "id",
+        "type": "integer",
+        "label": "Organization ID"
+    },
+    {
+        "name": "type",
+        "type": "text",
+        "label": "Type"
+    },
+    {
+        "name": "name",
+        "type": "text",
+        "label": "Name"
+    },
+    {
+        "name": "address",
+        "type": "text",
+        "label": "Address"
+    },
+    {
+        "name": "visible_to",
+        "type": "number",
+        "label": "Visible to"
+    },
+    {
+        "name": "owner",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "id",
+                "type": "integer",
+                "label": "ID"
+            }
+        ],
+        "label": "Owner"
+    },
+    {
+        "name": "custom_fields",
+        "type": "array",
+        "label": "Custom Fields"
+    },
+    {
+        "name": "notes",
+        "type": "array",
+        "label": "Notes"
+    },
+    {
+        "name": "result_score",
+        "type": "number",
+        "label": "Result Score"
+    }
+]

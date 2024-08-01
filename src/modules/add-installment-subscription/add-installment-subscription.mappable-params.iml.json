@@ -1,0 +1,51 @@
+[
+    {
+        "name": "deal_id",
+        "type": "uinteger",
+        "label": "Deal ID",
+        "required": true
+    },
+    {
+        "name": "currency",
+        "type": "text",
+        "label": "Currency",
+        "help": "The currency of the installment subscription. Accepts a 3-character currency code.",
+        "required": true
+    },
+    {
+        "name": "payments",
+        "type": "array",
+        "help": "Array of additional payments.",
+        "required": true,
+        "spec": [
+            {
+                "name": "amount",
+                "type": "number",
+                "label": "Amount",
+                "required": true
+            },
+            {
+                "name": "description",
+                "type": "text",
+                "label": "Description",
+                "required": true
+            },
+            {
+                "name": "due_at",
+                "type": "date",
+                "help": "Payment date, format: `YYYY-MM-DD`.",
+                "label": "Due At",
+                "required": true
+            }
+        ],
+        "label": "Payments"
+    },
+    {
+        "name": "update_deal_value",
+        "type": "boolean",
+        "help": "Indicates that the deal value must be set to the installment subscription's total value.",
+        "label": "Update Deal Value",
+        "default": false,
+        "required": true
+    }
+]

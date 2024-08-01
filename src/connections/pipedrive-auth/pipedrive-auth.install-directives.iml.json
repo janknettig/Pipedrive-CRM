@@ -1,0 +1,6 @@
+{
+	"common": {
+		"clientId": "{{parameters.clientId}}",
+		"clientSecret": "{{parameters.clientSecret}}"
+	}
+}

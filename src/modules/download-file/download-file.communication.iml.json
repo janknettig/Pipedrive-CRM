@@ -1,0 +1,13 @@
+{
+	"url": "/files/{{parameters.id}}/download",
+	"method": "GET",
+	"qs": {},
+	"body": {},
+	"headers": {},
+	"response": {
+		"type": "binary",
+		"output": {
+			"data": "{{body}}"
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"url": "/notes/{{parameters.id}}",
+	"method": "DELETE",
+	"qs": {},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": null
+	}
+}

@@ -1,0 +1,585 @@
+[
+	{
+		"name": "id",
+		"type": "number",
+		"label": "Deal ID"
+	},
+	{
+		"name": "creator_user_id",
+		"type": "collection",
+		"spec": [
+			{
+				"name": "id",
+				"type": "number",
+				"label": "User ID"
+			},
+			{
+				"name": "name",
+				"type": "text",
+				"label": "Name"
+			},
+			{
+				"name": "email",
+				"type": "email",
+				"label": "Email"
+			},
+			{
+				"name": "has_pic",
+				"type": "boolean",
+				"label": "Has pic"
+			},
+			{
+				"name": "pic_hash",
+				"type": "text",
+				"label": "Pic hash"
+			},
+			{
+				"name": "active_flag",
+				"type": "boolean",
+				"label": "Active flag"
+			},
+			{
+				"name": "value",
+				"type": "number",
+				"label": "Value"
+			}
+		],
+		"label": "Creator user"
+	},
+	{
+		"name": "user_id",
+		"type": "collection",
+		"spec": [
+			{
+				"name": "id",
+				"type": "number",
+				"label": "User ID"
+			},
+			{
+				"name": "name",
+				"type": "text",
+				"label": "Name"
+			},
+			{
+				"name": "email",
+				"type": "email",
+				"label": "Email"
+			},
+			{
+				"name": "has_pic",
+				"type": "boolean",
+				"label": "Has pic"
+			},
+			{
+				"name": "pic_hash",
+				"type": "text",
+				"label": "Pic hash"
+			},
+			{
+				"name": "active_flag",
+				"type": "boolean",
+				"label": "Active flag"
+			},
+			{
+				"name": "value",
+				"type": "number",
+				"label": "Value"
+			}
+		],
+		"label": "User"
+	},
+	{
+		"name": "person_id",
+		"type": "collection",
+		"spec": [
+			{
+				"name": "name",
+				"type": "text",
+				"label": "Name"
+			},
+			{
+				"name": "email",
+				"type": "array",
+				"spec": {
+					"type": "collection",
+					"spec": [
+						{
+							"name": "value",
+							"type": "email",
+							"label": "Value"
+						},
+						{
+							"name": "primary",
+							"type": "boolean",
+							"label": "Primary"
+						}
+					]
+				},
+				"label": "Email"
+			},
+			{
+				"name": "phone",
+				"type": "array",
+				"spec": {
+					"type": "collection",
+					"spec": [
+						{
+							"name": "value",
+							"type": "text",
+							"label": "Value"
+						},
+						{
+							"name": "primary",
+							"type": "boolean",
+							"label": "Primary"
+						}
+					]
+				},
+				"label": "Phone"
+			},
+			{
+				"name": "value",
+				"type": "number",
+				"label": "Value"
+			}
+		],
+		"label": "Person"
+	},
+	{
+		"name": "org_id",
+		"type": "collection",
+		"label": "Organization",
+		"spec": [
+			{
+				"name": "name",
+				"type": "text",
+				"label": "Name"
+			},
+			{
+				"name": "people_count",
+				"type": "number",
+				"label": "People count"
+			},
+			{
+				"name": "owner_id",
+				"type": "number",
+				"label": "Owner ID"
+			},
+			{
+				"name": "address",
+				"type": "text",
+				"label": "Address"
+			},
+			{
+				"name": "cc_email",
+				"type": "email",
+				"label": "CC email"
+			},
+			{
+				"name": "value",
+				"type": "number",
+				"label": "Value"
+			}
+		]
+	},
+	{
+		"name": "stage_id",
+		"type": "number",
+		"label": "Stage ID"
+	},
+	{
+		"name": "title",
+		"type": "text",
+		"label": "Title"
+	},
+	{
+		"name": "value",
+		"type": "number",
+		"label": "Value"
+	},
+	{
+		"name": "currency",
+		"type": "text",
+		"label": "Currency"
+	},
+	{
+		"name": "add_time",
+		"type": "date",
+		"label": "Add time"
+	},
+	{
+		"name": "update_time",
+		"type": "date",
+		"label": "Update time"
+	},
+	{
+		"name": "stage_change_time",
+		"type": "date",
+		"label": "Stage change time"
+	},
+	{
+		"name": "active",
+		"type": "boolean",
+		"label": "Active"
+	},
+	{
+		"name": "deleted",
+		"type": "boolean",
+		"label": "Deleted"
+	},
+	{
+		"name": "status",
+		"type": "text",
+		"label": "Status"
+	},
+	{
+		"name": "probability",
+		"type": "text",
+		"label": "Probability"
+	},
+	{
+		"name": "next_activity_date",
+		"type": "date",
+		"label": "Next activity date"
+	},
+    {
+		"name": "next_activity_date-raw",
+		"type": "text",
+		"label": "Next activity date (raw)"
+	},
+	{
+		"name": "next_activity_time",
+		"type": "date",
+		"label": "Next activity time"
+	},
+	{
+		"name": "next_activity_id",
+		"type": "number",
+		"label": "Next activity ID"
+	},
+	{
+		"name": "last_activity_id",
+		"type": "number",
+		"label": "Last activity ID"
+	},
+	{
+		"name": "last_activity_date",
+		"type": "date",
+		"label": "Last activity date"
+	},
+    {
+		"name": "last_activity_date-raw",
+		"type": "text",
+		"label": "Last activity date (raw)"
+	},
+	{
+		"name": "lost_reason",
+		"type": "text",
+		"label": "Lost reason"
+	},
+	{
+		"name": "visible_to",
+		"type": "text",
+		"label": "Visible to"
+	},
+	{
+		"name": "close_time",
+		"type": "date",
+		"label": "Close time"
+	},
+    {
+        "name": "close_time-raw",
+        "type": "text",
+        "label": "Close time (raw)"
+    },
+	{
+		"name": "pipeline_id",
+		"type": "number",
+		"label": "Pipeline ID"
+	},
+	{
+		"name": "won_time",
+		"type": "date",
+		"label": "Won time"
+	},
+    {
+        "name": "won_time-raw",
+        "type": "text",
+        "label": "Won time (raw)"
+    },
+	{
+		"name": "first_won_time",
+		"type": "date",
+		"label": "First won time"
+	},
+    {
+        "name": "first_won_time-raw",
+        "type": "text",
+        "label": "First won time (raw)"
+    },
+	{
+		"name": "lost_time",
+		"type": "date",
+		"label": "Lost time"
+	},
+    {
+        "name": "lost_time-raw",
+        "type": "text",
+        "label": "Lost time (raw)"
+    },
+	{
+		"name": "products_count",
+		"type": "number",
+		"label": "Products count"
+	},
+	{
+		"name": "files_count",
+		"type": "number",
+		"label": "Files count"
+	},
+	{
+		"name": "notes_count",
+		"type": "number",
+		"label": "Notes count"
+	},
+	{
+		"name": "followers_count",
+		"type": "number",
+		"label": "Followers count"
+	},
+	{
+		"name": "email_messages_count",
+		"type": "number",
+		"label": "Email messages count"
+	},
+	{
+		"name": "activities_count",
+		"type": "number",
+		"label": "Activities count"
+	},
+	{
+		"name": "done_activities_count",
+		"type": "number",
+		"label": "Done activities count"
+	},
+	{
+		"name": "undone_activities_count",
+		"type": "number",
+		"label": "Undone activities count"
+	},
+	{
+		"name": "reference_activities_count",
+		"type": "number",
+		"label": "Reference activities count"
+	},
+	{
+		"name": "participants_count",
+		"type": "number",
+		"label": "Participants count"
+	},
+	{
+		"name": "expected_close_date",
+		"type": "text",
+		"label": "Expected close date"
+	},
+	{
+		"name": "expected_close_date-raw",
+		"type": "text",
+		"label": "Expected close date (raw)"
+	},
+	{
+		"name": "last_incoming_mail_time",
+		"type": "date",
+		"label": "Last incoming mail time"
+	},
+	{
+		"name": "last_outgoing_mail_time",
+		"type": "date",
+		"label": "Last outgoing mail time"
+	},
+	{
+		"name": "stage_order_nr",
+		"type": "number",
+		"label": "Stage order nr"
+	},
+	{
+		"name": "person_name",
+		"type": "text",
+		"label": "Person name"
+	},
+	{
+		"name": "org_name",
+		"type": "text",
+		"label": "Org name"
+	},
+	{
+		"name": "next_activity_subject",
+		"type": "text",
+		"label": "Next activity subject"
+	},
+	{
+		"name": "next_activity_type",
+		"type": "text",
+		"label": "Next activity type"
+	},
+	{
+		"name": "next_activity_duration",
+		"type": "text",
+		"label": "Next activity duration"
+	},
+	{
+		"name": "next_activity_note",
+		"type": "text",
+		"label": "Next activity note"
+	},
+	{
+		"name": "formatted_value",
+		"type": "text",
+		"label": "Formatted value"
+	},
+	{
+		"name": "weighted_value",
+		"type": "number",
+		"label": "Weighted value"
+	},
+	{
+		"name": "formatted_weighted_value",
+		"type": "text",
+		"label": "Formatted weighted value"
+	},
+	{
+		"name": "weighted_value_currency",
+		"type": "text",
+		"label": "Weighted value currency"
+	},
+	{
+		"name": "rotten_time",
+		"type": "text",
+		"label": "Rotten time"
+	},
+	{
+		"name": "owner_name",
+		"type": "text",
+		"label": "Owner name"
+	},
+	{
+		"name": "cc_email",
+		"type": "text",
+		"label": "Cc email"
+	},
+	{
+		"name": "org_hidden",
+		"type": "boolean",
+		"label": "Org hidden"
+	},
+	{
+		"name": "person_hidden",
+		"type": "boolean",
+		"label": "Person hidden"
+	},
+	{
+		"name": "average_time_to_won",
+		"type": "collection",
+		"spec": [
+			{
+				"name": "y",
+				"type": "number",
+				"label": "Y"
+			},
+			{
+				"name": "m",
+				"type": "number",
+				"label": "M"
+			},
+			{
+				"name": "d",
+				"type": "number",
+				"label": "D"
+			},
+			{
+				"name": "h",
+				"type": "number",
+				"label": "H"
+			},
+			{
+				"name": "i",
+				"type": "number",
+				"label": "I"
+			},
+			{
+				"name": "s",
+				"type": "number",
+				"label": "S"
+			},
+			{
+				"name": "total_seconds",
+				"type": "number",
+				"label": "Total seconds"
+			}
+		],
+		"label": "Average time to won"
+	},
+	{
+		"name": "average_stage_progress",
+		"type": "number",
+		"label": "Average stage progress"
+	},
+	{
+		"name": "age",
+		"type": "collection",
+		"spec": [
+			{
+				"name": "y",
+				"type": "number",
+				"label": "Y"
+			},
+			{
+				"name": "m",
+				"type": "number",
+				"label": "M"
+			},
+			{
+				"name": "d",
+				"type": "number",
+				"label": "D"
+			},
+			{
+				"name": "h",
+				"type": "number",
+				"label": "H"
+			},
+			{
+				"name": "i",
+				"type": "number",
+				"label": "I"
+			},
+			{
+				"name": "s",
+				"type": "number",
+				"label": "S"
+			},
+			{
+				"name": "total_seconds",
+				"type": "number",
+				"label": "Total seconds"
+			}
+		],
+		"label": "Age"
+	},
+	{
+		"name": "stay_in_pipeline_stages",
+		"type": "collection",
+		"label": "Stay in pipeline stages"
+	},
+	{
+		"name": "last_activity",
+		"type": "date",
+		"label": "Last activity"
+	},
+	{
+		"name": "next_activity",
+		"type": "date",
+		"label": "Next activity"
+	},
+	"rpc://InterfaceDeals"
+]

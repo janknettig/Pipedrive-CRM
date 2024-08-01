@@ -1,0 +1,41 @@
+[
+	{
+		"name": "filter_id",
+		"type": "select",
+		"label": "Filter",
+		"required": false,
+		"options": "rpc://FilterPersons"
+	},
+	{
+		"name": "user_id",
+		"type": "select",
+		"label": "User",
+		"required": false,
+		"options": "rpc://Users"
+	},
+	{
+		"help": "The maximum number of results to be worked with during one execution cycle.",
+		"name": "limit",
+		"type": "uinteger",
+		"label": "Limit",
+		"default": 2,
+		"required": true
+	},
+	{
+		"name": "triggerOn",
+		"label": "Trigger when",
+		"type": "select",
+		"required": true,
+		"options": [
+			{
+				"label": "Object created",
+				"value": "add_time",
+				"default": true
+			},
+			{
+				"label": "Object updated",
+				"value": "update_time"
+			}
+		]
+	}
+]

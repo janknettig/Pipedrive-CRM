@@ -1,0 +1,10 @@
+{
+    "url": "/leads/{{parameters.id}}",
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": "{{getResponseOutput(body.data, environment.timezone, metadata.interface)}}"
+    }
+}

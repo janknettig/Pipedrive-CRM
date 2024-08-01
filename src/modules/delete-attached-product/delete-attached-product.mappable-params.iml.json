@@ -1,0 +1,14 @@
+[
+	{
+		"name": "id",
+		"type": "number",
+		"label": "Deal ID",
+		"required": true
+	},
+	{
+		"name": "product_attachment_id",
+		"type": "number",
+		"label": "Product attachment ID",
+		"required": true
+	}
+]

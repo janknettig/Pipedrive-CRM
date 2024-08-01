@@ -1,0 +1,8 @@
+[
+    {
+        "name": "id",
+        "type": "uinteger",
+        "label": "Subscription ID",
+        "required": true
+    }
+]

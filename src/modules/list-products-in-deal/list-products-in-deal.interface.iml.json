@@ -1,0 +1,296 @@
+[
+	{
+		"name": "id",
+		"type": "number",
+		"label": "ID"
+	},
+	{
+		"name": "deal_id",
+		"type": "number",
+		"label": "Deal ID"
+	},
+	{
+		"name": "order_nr",
+		"type": "number",
+		"label": "Order nr"
+	},
+	{
+		"name": "product_id",
+		"type": "number",
+		"label": "Product ID"
+	},
+	{
+		"name": "product_variation_id",
+		"type": "text",
+		"label": "Product variant ID"
+	},
+	{
+		"name": "item_price",
+		"type": "number",
+		"label": "Item price"
+	},
+	{ // should be removed after adjusting period
+		"name": "discount_percentage",
+		"type": "number",
+		"label": "Discount percentage (deprecated)"
+	},
+	{
+		"name": "discount",
+		"type": "number",
+		"label": "Discount"
+	},
+	{
+		"name": "discount_type",
+		"type": "text",
+		"label": "Discount type"
+	},
+	{
+		"name": "duration",
+		"type": "number",
+		"label": "Duration"
+	},
+	{
+		"name": "sum_no_discount",
+		"type": "number",
+		"label": "Sum no discount"
+	},
+	{
+		"name": "sum",
+		"type": "number",
+		"label": "Sum"
+	},
+	{
+		"name": "currency",
+		"type": "text",
+		"label": "Currency"
+	},
+	{
+		"name": "enabled_flag",
+		"type": "boolean",
+		"label": "Enabled flag"
+	},
+	{
+		"name": "add_time",
+		"type": "date",
+		"label": "Add time"
+	},
+	{
+		"name": "last_edit",
+		"type": "date",
+		"label": "Last edit"
+	},
+	{
+		"name": "comments",
+		"type": "text",
+		"label": "Comments"
+	},
+	{
+		"name": "active_flag",
+		"type": "boolean",
+		"label": "Active flag"
+	},
+	{
+		"name": "name",
+		"type": "text",
+		"label": "Name"
+	},
+	{
+		"name": "sum_formatted",
+		"type": "text",
+		"label": "Sum formatted"
+	},
+	{
+		"name": "quantity_formatted",
+		"type": "text",
+		"label": "Quantity formatted"
+	},
+	{
+		"name": "quantity",
+		"type": "number",
+		"label": "Quantity"
+	},
+	{
+		"name": "tax",
+		"type": "number",
+		"label": "Tax"
+	},
+	{
+		"name": "tax_method",
+		"type": "text",
+		"label": "Tax method"
+	},
+    {
+		"name": "duration_unit",
+		"type": "text",
+		"label": "Duration Unit"
+	},
+	{
+		"name": "product",
+		"type": "collection",
+		"spec": [
+			{
+				"name": "id",
+				"type": "number",
+				"label": "ID"
+			},
+			{
+				"name": "name",
+				"type": "text",
+				"label": "Name"
+			},
+			{
+				"name": "code",
+				"type": "text",
+				"label": "Code"
+			},
+			{
+				"name": "description",
+				"type": "text",
+				"label": "Description"
+			},
+			{
+				"name": "unit",
+				"type": "text",
+				"label": "Unit"
+			},
+			{
+				"name": "tax",
+				"type": "number",
+				"label": "Tax"
+			},
+			{
+				"name": "category",
+				"type": "text",
+				"label": "Category"
+			},
+			{
+				"name": "active_flag",
+				"type": "boolean",
+				"label": "Active Flag"
+			},
+			{
+				"name": "selectable",
+				"type": "boolean",
+				"label": "Selectable"
+			},
+			{
+				"name": "first_char",
+				"type": "text",
+				"label": "First Char"
+			},
+			{
+				"name": "visible_to",
+				"type": "text",
+				"label": "Visible To"
+			},
+			{
+				"name": "owner_id",
+				"type": "collection",
+				"spec": [
+					{
+						"name": "id",
+						"type": "number",
+						"label": "ID"
+					},
+					{
+						"name": "name",
+						"type": "text",
+						"label": "Name"
+					},
+					{
+						"name": "email",
+						"type": "text",
+						"label": "Email"
+					},
+					{
+						"name": "has_pic",
+						"type": "number",
+						"label": "Has Pic"
+					},
+					{
+						"name": "pic_hash",
+						"type": "text",
+						"label": "Pic Hash"
+					},
+					{
+						"name": "active_flag",
+						"type": "boolean",
+						"label": "Active Flag"
+					},
+					{
+						"name": "value",
+						"type": "number",
+						"label": "Value"
+					}
+				],
+				"label": "Owner ID"
+			},
+			{
+				"name": "files_count",
+				"type": "text",
+				"label": "Files Count"
+			},
+			{
+				"name": "add_time",
+				"type": "text",
+				"label": "Add Time"
+			},
+			{
+				"name": "update_time",
+				"type": "text",
+				"label": "Update Time"
+			},
+			{
+				"name": "prices",
+				"type": "array",
+				"spec": {
+					"type": "collection",
+					"spec": [
+						{
+							"name": "id",
+							"type": "number",
+							"label": "ID"
+						},
+						{
+							"name": "product_id",
+							"type": "number",
+							"label": "Product ID"
+						},
+						{
+							"name": "price",
+							"type": "number",
+							"label": "Price"
+						},
+						{
+							"name": "currency",
+							"type": "text",
+							"label": "Currency"
+						},
+						{
+							"name": "cost",
+							"type": "number",
+							"label": "Cost"
+						},
+						{
+							"name": "overhead_cost",
+							"type": "number",
+							"label": "Overhead Cost"
+						},
+						{
+							"name": "price_formatted",
+							"type": "text",
+							"label": "Price Formatted"
+						}
+					]
+				},
+				"label": "Prices"
+			},
+			{
+				"name": "product_variations",
+				"type": "array",
+				"label": "Product Variations"
+			}
+		],
+		"label": "Product"
+	}
+]

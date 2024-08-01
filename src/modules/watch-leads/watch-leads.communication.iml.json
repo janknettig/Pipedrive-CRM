@@ -1,0 +1,29 @@
+{
+    "url": "/leads",
+    "qs": {
+        "archived_status": "{{parameters.archivedStatus}}",
+        "sort": "{{parameters.triggerOn}} DESC",
+        "limit": 500
+    },
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "iterate": "{{body.data}}",
+        "trigger": {
+            "id": "{{item.id}}",
+            "date": "{{item[parameters.triggerOn]}}",
+            "type": "date",
+            "order": "desc"
+        },
+        "output": "{{getResponseOutput(item, environment.timezone, metadata.interface)}}",
+        "limit": "{{parameters.limit}}"
+    },
+    "pagination": {
+        "condition": "{{body.additional_data.pagination.more_items_in_collection}}",
+        "qs": {
+            "start": "{{body.additional_data.pagination.next_start}}"
+        }
+    }
+}

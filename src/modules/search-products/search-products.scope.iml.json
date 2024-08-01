@@ -1,0 +1,5 @@
+[
+    "products:read",
+    "activities:read",
+    "users:read"
+]

@@ -1,0 +1,31 @@
+{
+    "url": "/mailbox/mailThreads",
+    "qs": {
+        "folder": "{{parameters.folder}}",
+        "limit": 500
+    },
+    "method": "GET",
+    "body": {},
+    "headers": {},
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "trigger": {
+            "id": "{{item.id}}",
+            "date": "{{parseDate(get(item, parameters.triggerOn), 'YYYY-MM-DD HH:mm:ss', 'UTC')}}",
+            "type": "date",
+            "order": "desc"
+        },
+        "output": "{{getResponseOutput(item, environment.timezone, metadata.interface)}}",
+        "iterate": "{{body.data}}",
+        "limit": "{{parameters.limit}}"
+    },
+    "pagination": {
+        "condition": "{{body.additional_data.pagination.more_items_in_collection}}",
+        "qs": {
+            "start": "{{body.additional_data.pagination.next_start}}"
+        }
+    }
+}

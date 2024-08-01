@@ -1,0 +1,34 @@
+[
+	{
+		"name": "term",
+		"type": "text",
+		"label": "Term",
+		"required": true
+	},
+	{
+		"name": "org_id",
+		"label": "Organization",
+		"help": "Must be an Id.",
+		"required": false,
+		"type": "number",
+		"rpc": {
+			"label": "Search",
+			"url": "rpc://SearchOrganizationsByName",
+			"parameters": [
+				{
+					"name": "q",
+					"label": "Query",
+					"help": "Search Organizations. Cannot be empty",
+					"type": "text",
+					"required": true
+				}
+			]
+		}
+	},
+	{
+		"name": "search_by_email",
+		"type": "boolean",
+		"label": "Search by email",
+		"help": "When enabled, term will only be matched against email addresses of people."
+	}
+]

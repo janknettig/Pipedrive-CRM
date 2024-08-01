@@ -1,0 +1,19 @@
+{
+	"url": "/{{parameters.object}}/{{parameters.id}}/followers",
+	"qs": {},
+	"method": "GET",
+	"body": {},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": {
+			"id": "{{item.id}}",
+			"user_id": "{{item.user_id}}",
+			"add_time": "{{parseDate(item.add_time, 'YYYY-MM-DD hh:mm:ss', environment.timezone)}}"
+		},
+		"iterate": "{{body.data}}"
+	}
+}

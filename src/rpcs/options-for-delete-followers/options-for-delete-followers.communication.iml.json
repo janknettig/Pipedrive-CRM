@@ -1,0 +1,34 @@
+[
+    // not needed anymore
+    {
+        "condition": "{{connection.apiKey}}",
+        "response": {
+            "output": {
+                "name": "object",
+                "type": "select",
+                "label": "Object",
+                "required": true,
+                "options": [
+                    { "label": "Deals", "value": "deals" },
+                    { "label": "Organizations", "value": "organizations" },
+                    { "label": "Persons", "value": "persons" }
+                ]
+            }
+        }
+    },
+	    {
+        "condition": "{{!connection.apiKey}}",
+        "response": {
+            "output": {
+                "name": "object",
+                "type": "select",
+                "label": "Object",
+                "required": true,
+				"help": "For OAuth connection only __Deals__ are available at the moment.",
+                "options": [
+                    { "label": "Deals", "value": "deals" }
+                ]
+            }
+        }
+    }
+]

@@ -1,0 +1,26 @@
+{
+    "url": "/organizations/{{parameters.id}}/deals",
+    "method": "GET",
+    "qs": {
+        "only_primary_association": "{{if(parameters.only_primary_association, 1, 0)}}",
+        "status": "{{parameters.status}}",
+        "limit": "{{if(parameters.limit > 500, 500, parameters.limit)}}"
+    },
+    "body": {},
+    "headers": {},
+    "response": {
+        "limit": "{{parameters.limit}}",
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": "{{getResponseOutput(item, environment.timezone, metadata.interface)}}",
+        "iterate": "{{body.data}}"
+    },
+    "pagination": {
+        "condition": "{{body.additional_data.pagination.more_items_in_collection}}",
+        "qs": {
+            "start": "{{body.additional_data.pagination.next_start}}"
+        }
+    }
+}

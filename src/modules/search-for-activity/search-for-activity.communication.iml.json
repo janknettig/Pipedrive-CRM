@@ -1,0 +1,30 @@
+{
+	"url": "/activities",
+	"qs": {
+		"user_id": "{{parameters.user_id}}",
+		"filter_id": "{{parameters.filter_id}}",
+		"type": "{{arrToStr(parameters.type)}}",
+		"done": "{{getBoolean(parameters.done)}}",
+		"start_date": "{{if(parameters.start_date, formatDate(parameters.start_date, 'YYYY-MM-DD', environment.timezone), undefined)}}",
+		"end_date": "{{if(parameters.end_date, formatDate(parameters.end_date, 'YYYY-MM-DD', environment.timezone), undefined)}}",
+		"limit": "{{if(parameters.limit > 500, 500, parameters.limit)}}"
+	},
+	"method": "GET",
+	"body": {},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": "{{getResponseOutput(item, environment.timezone, metadata.interface)}}",
+		"iterate": "{{body.data}}",
+		"limit": "{{parameters.limit}}"
+	},
+	"pagination": {
+		"condition": "{{body.additional_data.pagination.more_items_in_collection}}",
+		"qs": {
+			"start": "{{body.additional_data.pagination.next_start}}"
+		}
+	}
+}

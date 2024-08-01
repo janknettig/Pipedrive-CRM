@@ -1,0 +1,18 @@
+{
+    "url": "/subscriptions/recurring/{{parameters.id}}",
+    "method": "PUT",
+    "qs": {},
+    "body": {
+        "{{...}}": "{{omit(parameters, 'id', 'payments', 'effective_date')}}",
+        "effective_date": "{{formatDate(parameters.effective_date, 'YYYY-MM-DD')}}",
+        "payments": "{{if(parameters.payments,formatNestedDates(parameters.payments),undefined)}}"
+    },
+    "headers": {},
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": "{{getResponseOutput(body.data, environment.timezone, metadata.interface)}}"
+    }
+}

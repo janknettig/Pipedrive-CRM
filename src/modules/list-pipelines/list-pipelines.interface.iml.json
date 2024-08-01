@@ -1,0 +1,47 @@
+[
+	{
+		"name": "id",
+		"label": "Pipeline ID",
+		"type": "number"
+	},
+	{
+		"name": "name",
+		"label": "Name",
+		"type": "text"
+	},
+	{
+		"name": "url_title",
+		"label": "URL title",
+		"type": "url"
+	},
+	{
+		"name": "order_nr",
+		"label": "Order nr",
+		"type": "number"
+	},
+	{
+		"name": "active",
+		"label": "Active",
+		"type": "boolean"
+	},
+	{
+		"name": "add_time",
+		"label": "Add time",
+		"type": "date"
+	},
+	{
+		"name": "update_time",
+		"label": "Update time",
+		"type": "date"
+	},
+	{
+		"name": "selected",
+		"label": "Selected",
+		"type": "boolean"
+	},
+	{
+		"name": "deal_probability",
+		"label": "Deal probability",
+		"type": "boolean"
+	}
+]

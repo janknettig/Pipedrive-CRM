@@ -1,0 +1,129 @@
+[
+    {
+        "name": "id",
+        "type": "text",
+        "label": "ID"
+    },
+    {
+        "name": "type",
+        "type": "text",
+        "label": "Type"
+    },
+    {
+        "name": "title",
+        "type": "text",
+        "label": "Title"
+    },
+    {
+        "name": "owner",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "id",
+                "type": "number",
+                "label": "ID"
+            }
+        ],
+        "label": "Owner"
+    },
+    {
+        "name": "person",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "id",
+                "type": "number",
+                "label": "ID"
+            },
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+            }
+        ],
+        "label": "Person"
+    },
+    {
+        "name": "organization",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "id",
+                "type": "number",
+                "label": "ID"
+            },
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+            }
+        ],
+        "label": "Organization"
+    },
+    {
+        "name": "phones",
+        "type": "array",
+        "label": "Phones",
+        "spec": {
+            "type": "text",
+            "label": "Phone"
+        }
+    },
+    {
+        "name": "emails",
+        "type": "array",
+        "label": "Emails",
+        "spec": {
+            "type": "text",
+            "label": "Email"
+        }
+    },
+    {
+        "name": "custom_fields",
+        "type": "array",
+        "label": "Custom Fields",
+        "spec": {
+            "type": "text",
+            "label": "Custom Field"
+        }
+    },
+    {
+        "name": "notes",
+        "type": "array",
+        "label": "Notes",
+        "spec": {
+            "type": "text",
+            "label": "Note"
+        }
+    },
+    {
+        "name": "value",
+        "type": "number",
+        "label": "Value"
+    },
+    {
+        "name": "currency",
+        "type": "text",
+        "label": "Currency"
+    },
+    {
+        "name": "visible_to",
+        "type": "number",
+        "label": "Visible To"
+    },
+    {
+        "name": "is_archived",
+        "type": "boolean",
+        "label": "Is Archived"
+    },
+    {
+        "name": "was_seen",
+        "type": "boolean",
+        "label": "Was Seen"
+    },
+    {
+        "name": "result_score",
+        "type": "number",
+        "label": "Result Score"
+    }
+]

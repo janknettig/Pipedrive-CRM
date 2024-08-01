@@ -1,0 +1,8 @@
+[
+	{
+		"name": "id",
+		"type": "number",
+		"label": "Message ID",
+		"required": true
+	}
+]

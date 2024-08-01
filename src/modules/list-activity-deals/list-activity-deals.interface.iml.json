@@ -1,0 +1,219 @@
+[
+	{
+        "name": "id",
+        "type": "number",
+        "label": "Activity ID"
+    },
+    {
+        "name": "company_id",
+        "type": "number",
+        "label": "Company ID"
+    },
+    {
+        "name": "user_id",
+        "type": "number",
+        "label": "User ID"
+    },
+    {
+        "name": "done",
+        "type": "boolean",
+        "label": "Done"
+    },
+    {
+        "name": "type",
+        "type": "text",
+        "label": "Type"
+    },
+    {
+        "name": "reference_type",
+        "type": "text",
+        "label": "Reference type"
+    },
+    {
+        "name": "reference_id",
+        "type": "text",
+        "label": "Reference ID"
+    },
+    {
+        "name": "due_date",
+        "type": "date",
+        "label": "Due date"
+    },
+    {
+        "name": "due_date-raw",
+        "type": "date",
+        "label": "Due date (Raw)"
+    },
+    {
+        "name": "due_time",
+        "type": "date",
+        "label": "Due time"
+    },
+    {
+        "name": "duration",
+        "type": "text",
+        "label": "Duration"
+    },
+    {
+        "name": "add_time",
+        "type": "text",
+        "label": "Add time"
+    },
+    {
+        "name": "marked_as_done_time",
+        "type": "text",
+        "label": "Marked as done time"
+    },
+    {
+        "name": "last_notification_time",
+        "type": "text",
+        "label": "Last notification time"
+    },
+    {
+        "name": "last_notification_user_id",
+        "type": "text",
+        "label": "Last notification user ID"
+    },
+    {
+        "name": "notification_language_id",
+        "type": "text",
+        "label": "Notification language ID"
+    },
+    {
+        "name": "subject",
+        "type": "text",
+        "label": "Subject"
+    },
+    {
+        "name": "org_id",
+        "type": "text",
+        "label": "Org ID"
+    },
+    {
+        "name": "person_id",
+        "type": "text",
+        "label": "Person ID"
+    },
+    {
+        "name": "deal_id",
+        "type": "text",
+        "label": "Deal ID"
+    },
+    {
+        "name": "active_flag",
+        "type": "boolean",
+        "label": "Active flag"
+    },
+    {
+        "name": "update_time",
+        "type": "text",
+        "label": "Update time"
+    },
+    {
+        "name": "update_user_id",
+        "type": "text",
+        "label": "Update user ID"
+    },
+    {
+        "name": "gcal_event_id",
+        "type": "text",
+        "label": "Gcal event ID"
+    },
+    {
+        "name": "google_calendar_id",
+        "type": "text",
+        "label": "Google calendar ID"
+    },
+    {
+        "name": "google_calendar_etag",
+        "type": "text",
+        "label": "Google calendar etag"
+    },
+    {
+        "name": "source_timezone",
+        "type": "text",
+        "label": "Source timezone"
+    },
+    {
+        "name": "rec_rule",
+        "type": "text",
+        "label": "Rec rule"
+    },
+    {
+        "name": "rec_rule_extension",
+        "type": "text",
+        "label": "Rec rule extension"
+    },
+    {
+        "name": "rec_master_activity_id",
+        "type": "text",
+        "label": "Rec master activity ID"
+    },
+    {
+        "name": "note",
+        "type": "text",
+        "label": "Note"
+    },
+    {
+        "name": "created_by_user_id",
+        "type": "number",
+        "label": "Created by user ID"
+    },
+    {
+        "name": "participants",
+        "type": "array",
+        "label": "Participants",
+		"spec": [
+			 {
+				"name": "person_id",
+				"type": "number",
+				"label": "Person ID"
+			},
+			{
+				"name": "primary_flag",
+				"type": "boolean",
+				"label": "Primary flag"
+			}
+		]
+    },
+    {
+        "name": "series",
+        "type": "text",
+        "label": "Series"
+    },
+    {
+        "name": "org_name",
+        "type": "text",
+        "label": "Org name"
+    },
+    {
+        "name": "person_name",
+        "type": "text",
+        "label": "Person name"
+    },
+    {
+        "name": "deal_title",
+        "type": "text",
+        "label": "Deal title"
+    },
+    {
+        "name": "owner_name",
+        "type": "text",
+        "label": "Owner name"
+    },
+    {
+        "name": "person_dropbox_bcc",
+        "type": "text",
+        "label": "Person dropbox bcc"
+    },
+    {
+        "name": "deal_dropbox_bcc",
+        "type": "text",
+        "label": "Deal dropbox bcc"
+    },
+    {
+        "name": "assigned_to_user_id",
+        "type": "number",
+        "label": "Assigned to user ID"
+    }
+]

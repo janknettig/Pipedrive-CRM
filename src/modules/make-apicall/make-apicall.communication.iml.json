@@ -1,0 +1,21 @@
+{
+    "url": "/{{replace(parameters.url, '/^\//', emptystring)}}",
+    "method": "{{parameters.method}}",
+    "qs": {
+        "{{...}}": "{{toCollection(parameters.qs, 'key', 'value')}}"
+    },
+    "headers": {
+        "{{...}}": "{{toCollection(parameters.headers, 'key', 'value')}}"
+    },
+    "body": "{{getApiCallBody(parameters.body)}}",
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": {
+            "headers": "{{headers}}",
+            "body": "{{body}}"
+        }
+    }
+}

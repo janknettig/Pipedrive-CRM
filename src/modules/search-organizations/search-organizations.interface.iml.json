@@ -1,0 +1,160 @@
+[
+    {
+        "name": "result_score",
+        "type": "number",
+		"label": "Result score"
+    },
+    {
+        "name": "item",
+        "type": "collection",
+		"label": "Item",
+        "spec": [
+            {
+                "name": "id",
+                "type": "number",
+				"label": "Item ID"
+            },
+			{
+                "name": "title",
+                "type": "text",
+				"label": "Title"
+            },
+			{
+                "name": "status",
+                "type": "text",
+				"label": "Status"
+            },
+			{
+                "name": "value",
+                "type": "number",
+				"label": "Value"
+            },
+			{
+                "name": "currency",
+                "type": "text",
+				"label": "Currency"
+            },
+            {
+                "name": "type",
+                "type": "text",
+				"label": "Type"
+            },
+            {
+                "name": "name",
+                "type": "text",
+				"label": "Name"
+            },
+			{
+                "name": "phones",
+                "type": "array",
+				"label": "Phones"
+            },
+			{
+                "name": "emails",
+                "type": "array",
+				"label": "Emails"
+            },
+			{
+                "name": "pictures",
+                "type": "array",
+				"label": "Pictures"
+            },
+            {
+                "name": "address",
+                "type": "text",
+				"label": "Address"
+            },
+            {
+                "name": "visible_to",
+                "type": "number",
+				"label": "Visible to"
+            },
+            {
+                "name": "owner",
+                "type": "collection",
+				"label": "Owner",
+                "spec": [
+                    {
+                        "name": "id",
+                        "type": "number",
+						"label": "User ID"
+                    }
+                ]
+            },
+			{
+                "name": "stage",
+                "type": "collection",
+				"label": "Stage",
+                "spec": [
+                    {
+                        "name": "id",
+                        "type": "number",
+						"label": "Stage ID"
+                    },
+					{
+                        "name": "name",
+                        "type": "text",
+						"label": "Name"
+                    }
+                ]
+            },
+			{
+                "name": "person",
+                "type": "collection",
+				"label": "Person",
+                "spec": [
+                    {
+                        "name": "id",
+                        "type": "number",
+						"label": "Person ID"
+                    },
+					{
+                        "name": "name",
+                        "type": "text",
+						"label": "Name"
+                    }
+                ]
+            },
+			{
+                "name": "organization",
+                "type": "collection",
+				"label": "Organization",
+                "spec": [
+                    {
+                        "name": "id",
+                        "type": "number",
+						"label": "Organization ID"
+                    },
+					{
+                        "name": "name",
+                        "type": "text",
+						"label": "Name"
+                    },
+					{
+                        "name": "address",
+                        "type": "text",
+						"label": "Address"
+                    }
+                ]
+            },
+            {
+                "name": "custom_fields",
+				"label": "Custom fields",
+                "type": "array",
+                "spec": {
+                    "type": "text"
+                }
+            },
+            {
+                "name": "notes",
+				"label": "Notes",
+                "type": "array"
+            },
+            {
+                "name": "cc_email",
+				"label": "CC email",
+                "type": "email"
+            }
+        ]
+    }
+]

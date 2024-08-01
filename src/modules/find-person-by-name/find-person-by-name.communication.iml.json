@@ -1,0 +1,19 @@
+{
+	"url": "/persons/find",
+	"qs": {
+		"term": "{{parameters.term}}",
+		"org_id": "{{parameters.org_id}}",
+		"search_by_email": "{{getBoolean(parameters.search_by_email)}}"
+	},
+	"method": "GET",
+	"body": {},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": "{{getResponseOutput(item, environment.timezone, metadata.interface)}}",
+		"iterate": "{{body.data}}"
+	}
+}

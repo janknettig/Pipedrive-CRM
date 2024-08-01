@@ -1,0 +1,106 @@
+{
+    "authorize": {
+        "qs": {
+            "scope": "{{join(distinct(merge(oauth.scope, ifempty(parameters.scope, emptyarray))), ',')}}",
+            "client_id": "{{ifempty(parameters.clientId, common.clientId)}}",
+            "redirect_uri": "{{oauth.redirectUri}}",
+            "response_type": "code"
+        },
+        "url": "https://oauth.pipedrive.com/oauth/authorize",
+        "response": {
+            "temp": {
+                "code": "{{query.code}}"
+            }
+        }
+    },
+    "token": {
+        "url": "https://oauth.pipedrive.com/oauth/token",
+        "method": "POST",
+        "body": {
+            "code": "{{temp.code}}",
+            "client_id": "{{ifempty(data.clientId, common.clientId)}}",
+            "grant_type": "authorization_code",
+            "redirect_uri": "{{oauth.redirectUri}}",
+            "client_secret": "{{ifempty(data.clientSecret, common.clientSecret)}}"
+        },
+        "type": "urlencoded",
+        "response": {
+            "data": {
+                "expires": "{{addSeconds(now, body.expires_in)}}",
+                "accessToken": "{{body.access_token}}",
+                "refreshToken": "{{body.refresh_token}}",
+                "apiDomain": "{{body.api_domain}}"
+            },
+            "expires": "{{addDays(now, 60)}}"
+        },
+        "log": {
+            "sanitize": [
+                "request.body.code",
+                "request.body.client_secret",
+                "response.body.access_token",
+                "response.body.refresh_token"
+            ]
+        }
+    },
+    "refresh": {
+        "condition": "{{data.expires < addMinutes(now, 30)}}",
+        "url": "https://oauth.pipedrive.com/oauth/token",
+        "headers": {
+            "authorization": "Basic {{base64(ifempty(parameters.clientId, common.clientId) + ':' + ifempty(parameters.clientSecret, common.clientSecret))}}"
+        },
+        "method": "POST",
+        "body": {
+            "client_id": "{{ifempty(parameters.clientId, common.clientId)}}",
+            "grant_type": "refresh_token",
+            "client_secret": "{{ifempty(parameters.clientSecret, common.clientSecret)}}",
+            "refresh_token": "{{data.refreshToken}}"
+        },
+        "type": "urlencoded",
+        "response": {
+            "data": {
+                "expires": "{{addSeconds(now, body.expires_in)}}",
+                "accessToken": "{{body.access_token}}",
+                "refreshToken": "{{body.refresh_token}}",
+                "apiDomain": "{{body.api_domain}}"
+            },
+            "expires": "{{addDays(now, 60)}}"
+        },
+        "log": {
+            "sanitize": [
+                "request.body.client_secret",
+                "request.body.refresh_token",
+                "response.body.access_token",
+                "response.body.refresh_token"
+            ]
+        }
+    },
+    "info": {
+        "url": "{{getApiURL(connection.accessToken, connection.customDomain, connection.apiDomain)}}/users/me",
+        "headers": {
+            "authorization": "Bearer {{connection.accessToken}}"
+        },
+        "response": {
+            "uid": "{{body.id}}",
+            "metadata": {
+                "type": "text",
+                "value": "{{body.data.name}} {{body.data.email}}"
+            }
+        },
+        "log": {
+            "sanitize": [
+                "request.headers.authorization"
+            ]
+        }
+    },
+    "invalidate": {
+        "url": "https://oauth.pipedrive.com/oauth/revoke",
+        "headers": {
+            "authorization": "Bearer {{connection.accessToken}}"
+        },
+        "log": {
+            "sanitize": [
+                "request.headers.authorization"
+            ]
+        }
+    }
+}

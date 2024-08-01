@@ -1,0 +1,72 @@
+[
+    {
+        "name": "id",
+        "type": "number",
+        "label": "ID"
+    },
+    {
+        "name": "subscription_id",
+        "type": "number",
+        "label": "Subscription ID"
+    },
+    {
+        "name": "deal_id",
+        "type": "number",
+        "label": "Deal ID"
+    },
+    {
+        "name": "is_active",
+        "type": "boolean",
+        "label": "Is Active"
+    },
+    {
+        "name": "amount",
+        "type": "number",
+        "label": "Amount"
+    },
+    {
+        "name": "currency",
+        "type": "text",
+        "label": "Currency"
+    },
+    {
+        "name": "change_amount",
+        "type": "number",
+        "label": "Change Amount"
+    },
+    {
+        "name": "due_at",
+        "type": "text",
+        "label": "Due At"
+    },
+    {
+        "name": "due_at-raw",
+        "type": "text",
+        "label": "Due At (Raw)"
+    },
+    {
+        "name": "revenue_movement_type",
+        "type": "text",
+        "label": "Revenue Movement Type"
+    },
+    {
+        "name": "payment_type",
+        "type": "text",
+        "label": "Payment Type"
+    },
+    {
+        "name": "description",
+        "type": "text",
+        "label": "Description"
+    },
+    {
+        "name": "add_time",
+        "type": "text",
+        "label": "Add Time"
+    },
+    {
+        "name": "update_time",
+        "type": "text",
+        "label": "Update Time"
+    }
+]

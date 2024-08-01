@@ -1,0 +1,12 @@
+{
+    "qs": {
+        "archived_status": "{{ifempty(parameters.archivedStatus, null)}}"
+    },
+	"response": {
+		"limit": 100,
+		"output": {
+			"date": "{{item[parameters.triggerOn]}}",
+			"label": "{{item.title}}"
+		}
+	}
+}

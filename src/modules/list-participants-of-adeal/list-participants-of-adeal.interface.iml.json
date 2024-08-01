@@ -1,0 +1,572 @@
+[
+    {
+        "name": "id",
+        "type": "number",
+        "label": "ID"
+    },
+    {
+        "name": "person_id",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "active_flag",
+                "type": "boolean",
+                "label": "Active Flag"
+            },
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+            },
+            {
+                "name": "email",
+                "type": "array",
+                "spec": {
+                    "type": "collection",
+                    "spec": [
+                        {
+                            "name": "label",
+                            "type": "text",
+                            "label": "Label"
+                        },
+                        {
+                            "name": "value",
+                            "type": "text",
+                            "label": "Value"
+                        },
+                        {
+                            "name": "primary",
+                            "type": "boolean",
+                            "label": "Primary"
+                        }
+                    ]
+                },
+                "label": "Email"
+            },
+            {
+                "name": "phone",
+                "type": "array",
+                "spec": {
+                    "type": "collection",
+                    "spec": [
+                        {
+                            "name": "value",
+                            "type": "text",
+                            "label": "Value"
+                        },
+                        {
+                            "name": "primary",
+                            "type": "boolean",
+                            "label": "Primary"
+                        }
+                    ]
+                },
+                "label": "Phone"
+            },
+            {
+                "name": "owner_id",
+                "type": "number",
+                "label": "Owner ID"
+            },
+            {
+                "name": "value",
+                "type": "number",
+                "label": "Value"
+            }
+        ],
+        "label": "Person ID"
+    },
+    {
+        "name": "add_time",
+        "type": "date",
+        "label": "Add Time"
+    },
+    {
+        "name": "active_flag",
+        "type": "boolean",
+        "label": "Active Flag"
+    },
+    {
+        "name": "related_item_data",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "deal_id",
+                "type": "number",
+                "label": "Deal ID"
+            },
+            {
+                "name": "title",
+                "type": "text",
+                "label": "Title"
+            }
+        ],
+        "label": "Related Item Data"
+    },
+    {
+        "name": "person",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "id",
+                "type": "number",
+                "label": "ID"
+            },
+            {
+                "name": "company_id",
+                "type": "number",
+                "label": "Company ID"
+            },
+            {
+                "name": "owner_id",
+                "type": "collection",
+                "spec": [
+                    {
+                        "name": "id",
+                        "type": "number",
+                        "label": "ID"
+                    },
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "label": "Name"
+                    },
+                    {
+                        "name": "email",
+                        "type": "text",
+                        "label": "Email"
+                    },
+                    {
+                        "name": "has_pic",
+                        "type": "number",
+                        "label": "Has Pic"
+                    },
+                    {
+                        "name": "pic_hash",
+                        "type": "text",
+                        "label": "Pic Hash"
+                    },
+                    {
+                        "name": "active_flag",
+                        "type": "boolean",
+                        "label": "Active Flag"
+                    },
+                    {
+                        "name": "value",
+                        "type": "number",
+                        "label": "Value"
+                    }
+                ],
+                "label": "Owner ID"
+            },
+            {
+                "name": "org_id",
+                "type": "text",
+                "label": "Org ID"
+            },
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+            },
+            {
+                "name": "first_name",
+                "type": "text",
+                "label": "First Name"
+            },
+            {
+                "name": "last_name",
+                "type": "text",
+                "label": "Last Name"
+            },
+            {
+                "name": "open_deals_count",
+                "type": "number",
+                "label": "Open Deals Count"
+            },
+            {
+                "name": "related_open_deals_count",
+                "type": "number",
+                "label": "Related Open Deals Count"
+            },
+            {
+                "name": "closed_deals_count",
+                "type": "number",
+                "label": "Closed Deals Count"
+            },
+            {
+                "name": "related_closed_deals_count",
+                "type": "number",
+                "label": "Related Closed Deals Count"
+            },
+            {
+                "name": "participant_open_deals_count",
+                "type": "number",
+                "label": "Participant Open Deals Count"
+            },
+            {
+                "name": "participant_closed_deals_count",
+                "type": "number",
+                "label": "Participant Closed Deals Count"
+            },
+            {
+                "name": "email_messages_count",
+                "type": "number",
+                "label": "Email Messages Count"
+            },
+            {
+                "name": "activities_count",
+                "type": "number",
+                "label": "Activities Count"
+            },
+            {
+                "name": "done_activities_count",
+                "type": "number",
+                "label": "Done Activities Count"
+            },
+            {
+                "name": "undone_activities_count",
+                "type": "number",
+                "label": "Undone Activities Count"
+            },
+            {
+                "name": "files_count",
+                "type": "number",
+                "label": "Files Count"
+            },
+            {
+                "name": "notes_count",
+                "type": "number",
+                "label": "Notes Count"
+            },
+            {
+                "name": "followers_count",
+                "type": "number",
+                "label": "Followers Count"
+            },
+            {
+                "name": "won_deals_count",
+                "type": "number",
+                "label": "Won Deals Count"
+            },
+            {
+                "name": "related_won_deals_count",
+                "type": "number",
+                "label": "Related Won Deals Count"
+            },
+            {
+                "name": "lost_deals_count",
+                "type": "number",
+                "label": "Lost Deals Count"
+            },
+            {
+                "name": "related_lost_deals_count",
+                "type": "number",
+                "label": "Related Lost Deals Count"
+            },
+            {
+                "name": "active_flag",
+                "type": "boolean",
+                "label": "Active Flag"
+            },
+            {
+                "name": "phone",
+                "type": "array",
+                "spec": {
+                    "type": "collection",
+                    "spec": [
+                        {
+                            "name": "value",
+                            "type": "text",
+                            "label": "Value"
+                        },
+                        {
+                            "name": "primary",
+                            "type": "boolean",
+                            "label": "Primary"
+                        }
+                    ]
+                },
+                "label": "Phone"
+            },
+            {
+                "name": "email",
+                "type": "array",
+                "spec": {
+                    "type": "collection",
+                    "spec": [
+                        {
+                            "name": "label",
+                            "type": "text",
+                            "label": "Label"
+                        },
+                        {
+                            "name": "value",
+                            "type": "text",
+                            "label": "Value"
+                        },
+                        {
+                            "name": "primary",
+                            "type": "boolean",
+                            "label": "Primary"
+                        }
+                    ]
+                },
+                "label": "Email"
+            },
+            {
+                "name": "first_char",
+                "type": "text",
+                "label": "First Char"
+            },
+            {
+                "name": "update_time",
+                "type": "text",
+                "label": "Update Time"
+            },
+            {
+                "name": "delete_time",
+                "type": "text",
+                "label": "Delete Time"
+            },
+            {
+                "name": "add_time",
+                "type": "text",
+                "label": "Add Time"
+            },
+            {
+                "name": "visible_to",
+                "type": "text",
+                "label": "Visible To"
+            },
+            {
+                "name": "picture_id",
+                "type": "text",
+                "label": "Picture ID"
+            },
+            {
+                "name": "sync_needed",
+                "type": "boolean",
+                "label": "Sync Needed"
+            },
+            {
+                "name": "next_activity_date",
+                "type": "text",
+                "label": "Next Activity Date"
+            },
+            {
+                "name": "next_activity_time",
+                "type": "text",
+                "label": "Next Activity Time"
+            },
+            {
+                "name": "next_activity_id",
+                "type": "text",
+                "label": "Next Activity ID"
+            },
+            {
+                "name": "last_activity_id",
+                "type": "text",
+                "label": "Last Activity ID"
+            },
+            {
+                "name": "last_activity_date",
+                "type": "text",
+                "label": "Last Activity Date"
+            },
+            {
+                "name": "last_incoming_mail_time",
+                "type": "text",
+                "label": "Last Incoming Mail Time"
+            },
+            {
+                "name": "last_outgoing_mail_time",
+                "type": "text",
+                "label": "Last Outgoing Mail Time"
+            },
+            {
+                "name": "label",
+                "type": "text",
+                "label": "Label"
+            },
+            {
+                "name": "label_ids",
+                "type": "array",
+                "label": "Label Ids"
+            },
+            {
+                "name": "im",
+                "type": "array",
+                "spec": {
+                    "type": "collection",
+                    "spec": [
+                        {
+                            "name": "value",
+                            "type": "text",
+                            "label": "Value"
+                        },
+                        {
+                            "name": "primary",
+                            "type": "boolean",
+                            "label": "Primary"
+                        }
+                    ]
+                },
+                "label": "Im"
+            },
+            {
+                "name": "postal_address",
+                "type": "text",
+                "label": "Postal Address"
+            },
+            {
+                "name": "postal_address_lat",
+                "type": "text",
+                "label": "Postal Address Lat"
+            },
+            {
+                "name": "postal_address_long",
+                "type": "text",
+                "label": "Postal Address Long"
+            },
+            {
+                "name": "postal_address_subpremise",
+                "type": "text",
+                "label": "Postal Address Subpremise"
+            },
+            {
+                "name": "postal_address_street_number",
+                "type": "text",
+                "label": "Postal Address Street Number"
+            },
+            {
+                "name": "postal_address_route",
+                "type": "text",
+                "label": "Postal Address Route"
+            },
+            {
+                "name": "postal_address_sublocality",
+                "type": "text",
+                "label": "Postal Address Sublocality"
+            },
+            {
+                "name": "postal_address_locality",
+                "type": "text",
+                "label": "Postal Address Locality"
+            },
+            {
+                "name": "postal_address_admin_area_level_1",
+                "type": "text",
+                "label": "Postal Address Admin Area Level 1"
+            },
+            {
+                "name": "postal_address_admin_area_level_2",
+                "type": "text",
+                "label": "Postal Address Admin Area Level 2"
+            },
+            {
+                "name": "postal_address_country",
+                "type": "text",
+                "label": "Postal Address Country"
+            },
+            {
+                "name": "postal_address_postal_code",
+                "type": "text",
+                "label": "Postal Address Postal Code"
+            },
+            {
+                "name": "postal_address_formatted_address",
+                "type": "text",
+                "label": "Postal Address Formatted Address"
+            },
+            {
+                "name": "notes",
+                "type": "text",
+                "label": "Notes"
+            },
+            {
+                "name": "birthday",
+                "type": "text",
+                "label": "Birthday"
+            },
+            {
+                "name": "job_title",
+                "type": "text",
+                "label": "Job Title"
+            },
+            {
+                "name": "org_name",
+                "type": "text",
+                "label": "Org Name"
+            },
+            {
+                "name": "owner_name",
+                "type": "text",
+                "label": "Owner Name"
+            },
+            {
+                "name": "primary_email",
+                "type": "text",
+                "label": "Primary Email"
+            },
+            {
+                "name": "cc_email",
+                "type": "text",
+                "label": "Cc Email"
+            }
+        ],
+        "label": "Person"
+    },
+    {
+        "name": "added_by_user_id",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "id",
+                "type": "number",
+                "label": "ID"
+            },
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+            },
+            {
+                "name": "email",
+                "type": "text",
+                "label": "Email"
+            },
+            {
+                "name": "has_pic",
+                "type": "number",
+                "label": "Has Pic"
+            },
+            {
+                "name": "pic_hash",
+                "type": "text",
+                "label": "Pic Hash"
+            },
+            {
+                "name": "active_flag",
+                "type": "boolean",
+                "label": "Active Flag"
+            },
+            {
+                "name": "value",
+                "type": "number",
+                "label": "Value"
+            }
+        ],
+        "label": "Added By User ID"
+    },
+    {
+        "name": "related_item_type",
+        "type": "text",
+        "label": "Related Item Type"
+    },
+    {
+        "name": "related_item_id",
+        "type": "number",
+        "label": "Related Item ID"
+    }
+]

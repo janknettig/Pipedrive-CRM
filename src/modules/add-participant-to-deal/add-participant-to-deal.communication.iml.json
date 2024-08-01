@@ -1,0 +1,16 @@
+{
+	"url": "/deals/{{parameters.deal_id}}/participants",
+	"method": "POST",
+	"qs": {},
+	"body": {
+		"person_id": "{{parameters.person_id}}"
+	},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": null
+	}
+}

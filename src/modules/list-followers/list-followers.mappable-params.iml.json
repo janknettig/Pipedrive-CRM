@@ -1,0 +1,21 @@
+[
+	{
+		"name": "object",
+		"type": "select",
+		"label": "Object",
+		"required": true,
+		"options": [
+			{"label": "Deals", "value": "deals"},
+			{"label": "Organizations", "value": "organizations"},
+			{"label": "Persons", "value": "persons"},
+			{"label": "Products", "value": "products"},
+			{"label": "Users", "value": "users"}
+		]
+	},
+	{
+		"name": "id",
+		"type": "number",
+		"label": "Object ID",
+		"required": true
+	}
+]

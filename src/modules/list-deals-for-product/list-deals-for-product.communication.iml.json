@@ -1,0 +1,25 @@
+{
+    "url": "/products/{{parameters.id}}/deals",
+    "method": "GET",
+    "qs": {
+        "status": "{{parameters.status}}",
+        "limit": "{{min(500, parameters.limit)}}"
+    },
+    "body": {},
+    "headers": {},
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": "{{getResponseOutput(item, environment.timezone, metadata.interface)}}",
+        "limit": "{{parameters.limit}}",
+        "iterate": "{{body.data}}"
+    },
+    "pagination": {
+        "condition": "{{body.additional_data.pagination.more_items_in_collection && parameters.limit > 500}}",
+        "qs": {
+            "start": "{{body.additional_data.pagination.next_start}}"
+        }
+    }
+}

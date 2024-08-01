@@ -1,0 +1,18 @@
+{
+	"url": "/{{parameters.object}}/{{parameters.id}}/followers",
+	"method": "POST",
+	"qs": {},
+	"body": {
+		"user_id": "{{parameters.user_id}}"
+	},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": {
+			"id": "{{body.data.id}}"
+		}
+	}
+}

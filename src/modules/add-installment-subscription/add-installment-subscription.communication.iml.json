@@ -1,0 +1,16 @@
+{
+    "url": "/subscriptions/installment",
+    "method": "POST",
+    "body": {
+        "{{...}}": "{{omit(parameters, 'payments')}}",
+        "payments": "{{formatNestedDates(parameters.payments)}}"
+    },
+    "headers": {},
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": "{{getResponseOutput(body.data, environment.timezone, metadata.interface)}}"
+    }
+}

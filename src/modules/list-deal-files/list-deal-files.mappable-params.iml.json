@@ -1,0 +1,8 @@
+[
+	{
+		"name": "deal_id",
+		"label": "Deal ID",
+		"type": "number",
+		"required": true
+	}
+]

@@ -1,0 +1,16 @@
+{
+	"url": "/activities",
+	"method": "POST",
+	"qs": {},
+	"body": "{{getExpectInput(parameters, environment.timezone)}}",
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": {
+			"id": "{{body.data.id}}"
+		}
+	}
+}

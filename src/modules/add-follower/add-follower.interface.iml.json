@@ -1,0 +1,7 @@
+[
+	{
+		"name": "id",
+		"label": "Follower ID",
+		"type": "number"
+	}
+]

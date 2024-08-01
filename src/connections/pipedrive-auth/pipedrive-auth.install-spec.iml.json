@@ -1,0 +1,14 @@
+[
+	{
+		"name": "clientId",
+		"label": "Client ID",
+		"type": "text",
+		"required": true
+	},
+	{
+		"name": "clientSecret",
+		"label": "Client Secret",
+		"type": "text",
+		"required": true
+	}
+]

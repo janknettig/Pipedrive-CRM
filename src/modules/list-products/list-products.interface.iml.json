@@ -1,0 +1,157 @@
+[
+    {
+        "name": "id",
+        "type": "number",
+        "label": "Product ID"
+    },
+    {
+        "name": "name",
+        "type": "text",
+        "label": "Name"
+    },
+    {
+        "name": "code",
+        "type": "text",
+        "label": "Code"
+    },
+    {
+        "name": "unit",
+        "type": "text",
+        "label": "Unit"
+    },
+    {
+        "name": "tax",
+        "type": "number",
+        "label": "Tax"
+    },
+    {
+        "name": "active_flag",
+        "type": "boolean",
+        "label": "Active flag"
+    },
+    {
+        "name": "selectable",
+        "type": "boolean",
+        "label": "Selectable"
+    },
+    {
+        "name": "first_char",
+        "type": "text",
+        "label": "First char"
+    },
+    {
+        "name": "visible_to",
+        "type": "text",
+        "label": "Visible to"
+    },
+    {
+        "name": "owner_id",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "id",
+                "type": "number",
+                "label": "User ID"
+            },
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+            },
+            {
+                "name": "email",
+                "type": "email",
+                "label": "Email"
+            },
+            {
+                "name": "has_pic",
+                "type": "boolean",
+                "label": "Has pic"
+            },
+            {
+                "name": "pic_hash",
+                "type": "text",
+                "label": "Pic hash"
+            },
+            {
+                "name": "active_flag",
+                "type": "boolean",
+                "label": "Active flag"
+            },
+            {
+                "name": "value",
+                "type": "number",
+                "label": "Value"
+            }
+        ],
+        "label": "Owner"
+    },
+    {
+        "name": "files_count",
+        "type": "text",
+        "label": "Files count"
+    },
+	// Removal of followers_count response field from Products endpoints and webhook
+	//https://developers.pipedrive.com/changelog/post/removal-of-codefollowers_countcode-response-field-from-products-endpoints-and-webhook
+    /*{
+        "name": "followers_count",
+        "type": "number",
+        "label": "Followers count"
+    },*/
+    {
+        "name": "add_time",
+        "type": "date",
+        "label": "Add time"
+    },
+    {
+        "name": "update_time",
+        "type": "date",
+        "label": "Update time"
+    },
+    {
+        "name": "prices",
+        "type": "array",
+        "spec": {
+            "type": "collection",
+            "spec": [
+                {
+                    "name": "id",
+                    "type": "number",
+                    "label": "ID"
+                },
+                {
+                    "name": "product_id",
+                    "type": "number",
+                    "label": "Product ID"
+                },
+                {
+                    "name": "price",
+                    "type": "number",
+                    "label": "Price"
+                },
+                {
+                    "name": "currency",
+                    "type": "text",
+                    "label": "Currency"
+                },
+                {
+                    "name": "cost",
+                    "type": "number",
+                    "label": "Cost"
+                },
+                {
+                    "name": "overhead_cost",
+                    "type": "text",
+                    "label": "Overhead cost"
+                },
+                {
+                    "name": "price_formatted",
+                    "type": "text",
+                    "label": "Price formatted"
+                }
+            ]
+        },
+        "label": "Prices"
+    },
+	"rpc://InterfaceProducts"
+]

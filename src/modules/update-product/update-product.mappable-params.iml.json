@@ -1,0 +1,100 @@
+[
+	{
+		"name": "id",
+		"label": "Product ID",
+		"required": true,
+		"type": "number"
+	},
+	{
+		"name": "name",
+		"label": "Name",
+		"required": false,
+		"type": "text"
+	},
+	{
+		"name": "code",
+		"label": "Code",
+		"required": false,
+		"type": "text"
+	},
+	{
+		"name": "unit",
+		"label": "Unit",
+		"required": false,
+		"type": "text"
+	},
+	{
+		"name": "tax",
+		"label": "Tax",
+		"required": false,
+		"type": "number"
+	},
+	{
+		"name": "active_flag",
+		"label": "This product is active",
+		"required": false,
+		"type": "boolean"
+	},
+	{
+		"name": "owner_id",
+		"label": "Owner",
+		"required": false,
+		"type": "number",
+		"help": "Must be an Id.",
+		"rpc": {
+			"label": "Search",
+			"url": "rpc://SearchUsers",
+			"parameters": [
+				{
+					"name": "q",
+					"label": "Query",
+					"help": "Search Users. If empty, will list all users",
+					"type": "text"
+				}
+			]
+		}
+	},
+	{
+		"name": "visible_to",
+		"label": "Visible to",
+		"required": false,
+		"type": "select",
+		"options": [
+			{"label": "Owner & followers (private)", "value": "1"},
+			{"label": "Entire company (shared)", "value": "3"}
+		]
+	},
+	{
+		"name": "prices",
+		"label": "Prices",
+		"required": false,
+		"type": "array",
+		"spec": [
+			{
+				"name": "price",
+				"label": "Price",
+				"required": true,
+				"type": "number"
+			},
+			{
+				"name": "currency",
+				"label": "Currency",
+				"required": true,
+				"type": "text"
+			},
+			{
+				"name": "cost",
+				"label": "Cost",
+				"required": false,
+				"type": "number"
+			},
+			{
+				"name": "overhead_cost",
+				"label": "Overhead cost",
+				"required": false,
+				"type": "number"
+			}
+		]
+	},
+	"rpc://ExpectProductsCustom"
+]

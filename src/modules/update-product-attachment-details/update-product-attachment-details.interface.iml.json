@@ -1,0 +1,122 @@
+[
+    {
+        "name": "id",
+        "type": "number",
+        "label": "ID"
+    },
+    {
+        "name": "company_id",
+        "type": "number",
+        "label": "Company ID"
+    },
+    {
+        "name": "deal_id",
+        "type": "number",
+        "label": "Deal ID"
+    },
+    {
+        "name": "order_nr",
+        "type": "number",
+        "label": "Order Nr"
+    },
+    {
+        "name": "product_id",
+        "type": "number",
+        "label": "Product ID"
+    },
+    {
+        "name": "product_variation_id",
+        "type": "text",
+        "label": "Product Variation ID"
+    },
+    {
+        "name": "item_price",
+        "type": "number",
+        "label": "Item Price"
+    },
+    { // should be removed after adjusting period
+        "name": "discount_percentage",
+        "type": "number",
+        "label": "Discount percentage (deprecated)"
+    },
+    {
+        "name": "discount",
+        "type": "number",
+        "label": "Discount"
+    },
+    {
+        "name": "discount_type",
+        "type": "text",
+        "label": "Discount type"
+    },
+    {
+        "name": "duration",
+        "type": "number",
+        "label": "Duration"
+    },
+    {
+        "name": "duration_unit",
+        "type": "text",
+        "label": "Duration Unit"
+    },
+    {
+        "name": "sum_no_discount",
+        "type": "number",
+        "label": "Sum No Discount"
+    },
+    {
+        "name": "sum",
+        "type": "number",
+        "label": "Sum"
+    },
+    {
+        "name": "currency",
+        "type": "text",
+        "label": "Currency"
+    },
+    {
+        "name": "enabled_flag",
+        "type": "boolean",
+        "label": "Enabled Flag"
+    },
+    {
+        "name": "add_time",
+        "type": "text",
+        "label": "Add Time"
+    },
+    {
+        "name": "last_edit",
+        "type": "text",
+        "label": "Last Edit"
+    },
+    {
+        "name": "comments",
+        "type": "text",
+        "label": "Comments"
+    },
+    {
+        "name": "active_flag",
+        "type": "boolean",
+        "label": "Active Flag"
+    },
+    {
+        "name": "tax",
+        "type": "number",
+        "label": "Tax"
+    },
+    {
+        "name": "tax_method",
+        "type": "text",
+        "label": "Tax method"
+    },
+    {
+        "name": "name",
+        "type": "text",
+        "label": "Name"
+    },
+    {
+        "name": "quantity",
+        "type": "number",
+        "label": "Quantity"
+    }
+]

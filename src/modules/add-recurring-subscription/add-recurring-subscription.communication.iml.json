@@ -1,0 +1,17 @@
+{
+    "url": "/subscriptions/recurring",
+    "method": "POST",
+    "body": {
+        "{{...}}": "{{omit(parameters, 'start_date', 'payments')}}",
+        "start_date": "{{formatDate(parameters.start_date, 'YYYY-MM-DD')}}",
+        "payments": "{{if(parameters.payments, formatNestedDates(parameters.payments), undefined)}}"
+    },
+    "headers": {},
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": "{{getResponseOutput(body.data, environment.timezone, metadata.interface)}}"
+    }
+}

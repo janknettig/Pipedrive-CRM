@@ -1,0 +1,16 @@
+{
+    "url": "/products",
+    "method": "POST",
+    "qs": {},
+    "body": "{{getExpectInput(parameters, environment.timezone, 'boolean')}}",
+    "headers": {},
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": {
+            "id": "{{body.data.id}}"
+        }
+    }
+}

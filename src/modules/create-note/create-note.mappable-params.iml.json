@@ -1,0 +1,90 @@
+[
+	{
+		"name": "content",
+		"label": "Content",
+		"required": true,
+		"type": "text"
+	},
+	{
+		"name": "deal_id",
+		"label": "Deal ID",
+		"required": false,
+		"help": "Must be an Id.",
+		"type": "number"
+	},
+	{
+		"name": "person_id",
+		"label": "Person",
+		"required": false,
+		"help": "Must be an Id.",
+		"type": "number",
+		"rpc": {
+			"label": "Search",
+			"url": "rpc://SearchPersonsByName",
+			"parameters": [
+				{
+					"name": "q",
+					"label": "Query",
+					"help": "Search Persons. Cannot be empty",
+					"type": "text",
+					"required": true
+				},
+				{
+					"name": "search_by_email",
+					"label": "Search by email",
+					"type": "boolean",
+					"help": "If false, persons will be searched by name. If true, persons will be searched by email",
+					"default": false,
+					"required": true
+				}
+			]
+		}
+	},
+	{
+		"name": "org_id",
+		"label": "Organization",
+		"help": "Must be an Id.",
+		"required": false,
+		"type": "number",
+		"rpc": {
+			"label": "Search",
+			"url": "rpc://SearchOrganizationsByName",
+			"parameters": [
+				{
+					"name": "q",
+					"label": "Query",
+					"help": "Search Organizations. Cannot be empty",
+					"type": "text",
+					"required": true
+				}
+			]
+		}
+	},
+	{
+		"name": "add_time",
+		"label": "Add time",
+		"required": false,
+		"type": "date"
+	},
+	{
+		"name": "pinned_to_deal_flag",
+		"label": "Pinned to deal flag",
+		"required": false,
+		"type": "boolean",
+		"help": "If set, then results are filtered by note to deal pinning state (deal_id is also required)."
+	},
+	{
+		"name": "pinned_to_organization_flag",
+		"label": "Pinned to organization flag",
+		"required": false,
+		"type": "boolean",
+		"help": "If set, then results are filtered by note to organization pinning state (organization_id is also required)."
+	},
+	{
+		"name": "pinned_to_person_flag",
+		"label": "Pinned to person flag",
+		"required": false,
+		"type": "boolean",
+		"help": "If set, then results are filtered by note to person pinning state (person_id is also required)."
+	}
+]

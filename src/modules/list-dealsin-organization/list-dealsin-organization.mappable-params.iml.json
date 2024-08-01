@@ -1,0 +1,52 @@
+[
+    {
+        "name": "id",
+        "type": "select",
+        "label": "Organization ID",
+        "required": true,
+        "options": "rpc://Organizations"
+    },
+    {
+        "name": "status",
+        "type": "select",
+        "options": [
+            {
+                "value": "open",
+                "label": "Open"
+            },
+            {
+                "value": "won",
+                "label": "Won"
+            },
+            {
+                "value": "lost",
+                "label": "Lost"
+            },
+            {
+                "value": "deleted",
+                "label": "Deleted"
+            },
+            {
+                "value": "all_not_deleted",
+                "default": true,
+                "label": "All Not Deleted"
+            }
+        ],
+        "label": "Status"
+    },
+    {
+        "name": "only_primary_association",
+        "type": "boolean",
+        "label": "Only Primary Association",
+        "help": "If set, only deals that are directly associated to the organization are fetched. If not set (default), all deals are fetched that are either directly or indirectly related to the organization. Indirect relations include relations through custom, organization-type fields and through persons of the given organization.",
+        "required": true
+    },
+    {
+        "help": "The maximum number of results to be worked with during one execution cycle.",
+        "name": "limit",
+        "type": "uinteger",
+        "label": "Limit",
+        "default": 2,
+        "required": true
+    }
+]

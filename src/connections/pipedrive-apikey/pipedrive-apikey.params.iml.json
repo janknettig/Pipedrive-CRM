@@ -1,0 +1,15 @@
+[
+	{
+		"name": "apiKey",
+		"type": "text",
+		"label": "API token",
+		"required": true
+	},
+	{
+		"name": "customDomain",
+		"type": "text",
+		"label": "Custom domain",
+		"required": false,
+		"advanced": true
+	}
+]

@@ -1,0 +1,45 @@
+[
+	{
+		"name": "pipeline_id",
+		"type": "select",
+		"label": "Pipeline",
+		"required": true,
+		"options": "rpc://Pipelines"
+	},
+	{
+		"name": "stage_id",
+		"type": "select",
+		"label": "Stage",
+		"required": false,
+		"options": "rpc://Stages"
+	},
+	{
+		"name": "filter_id",
+		"type": "select",
+		"label": "Filter",
+		"required": false,
+		"options": "rpc://FilterDeals"
+	},
+	{
+		"name": "user_id",
+		"type": "select",
+		"label": "User",
+		"required": false,
+		"options": "rpc://Users"
+	},
+	{
+		"name": "everyone",
+		"type": "boolean",
+		"label": "Everyone",
+		"required": false,
+		"help": "If supplied, Filter and User will not be considered – instead, deals owned by everyone will be returned."
+	},
+	{
+		"help": "The maximum number of results to be worked with during one execution cycle.",
+		"name": "limit",
+		"type": "uinteger",
+		"label": "Limit",
+		"default": 2,
+		"required": true
+	}
+]

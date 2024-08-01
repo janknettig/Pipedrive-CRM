@@ -1,0 +1,105 @@
+[
+    {
+        "name": "id",
+        "type": "integer",
+        "label": "Person ID"
+    },
+    {
+        "name": "type",
+        "type": "text",
+        "label": "Type"
+    },
+    {
+        "name": "name",
+        "type": "text",
+        "label": "Name"
+    },
+    {
+        "name": "phones",
+        "type": "array",
+        "spec": {
+            "type": "text"
+        },
+        "label": "Phones"
+    },
+    {
+        "name": "emails",
+        "type": "array",
+        "spec": {
+            "type": "email"
+        },
+        "label": "Emails"
+    },
+    {
+        "name": "primary_email",
+        "type": "text",
+        "label": "Primary Email"
+    },
+    {
+        "name": "visible_to",
+        "type": "number",
+        "label": "Visible to"
+    },
+    {
+        "name": "owner",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "id",
+                "type": "integer",
+                "label": "Owner ID"
+            }
+        ],
+        "label": "Owner"
+    },
+    {
+        "name": "organization",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "id",
+                "type": "integer",
+                "label": "Organization ID"
+            },
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+            },
+            {
+                "name": "address",
+                "type": "text",
+                "label": "Address"
+            }
+        ],
+        "label": "Organization"
+    },
+    {
+        "name": "custom_fields",
+        "type": "array",
+        "spec": {
+            "type": "text"
+        },
+        "label": "Custom Fields"
+    },
+    {
+        "name": "notes",
+        "type": "array",
+        "label": "Notes"
+    },
+    {
+        "name": "update_time",
+        "type": "date",
+        "label": "Update Time"
+    },
+    {
+        "name": "pictures",
+        "type": "array",
+        "label": "Pictures"
+    },
+    {
+        "name": "result_score",
+        "type": "number",
+        "label": "Result Score"
+    }
+]

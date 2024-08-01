@@ -1,0 +1,9 @@
+{
+	"response": {
+		"output": {
+			"event": "{{payload.event}}",
+			"current": "{{getResponseOutput(payload.current, environment.timezone, metadata.interface, 'webhook')}}",
+			"previous": "{{getResponseOutput(payload.previous, environment.timezone, metadata.interface, 'webhook')}}"
+		}
+	}
+}

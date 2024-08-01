@@ -1,0 +1,8 @@
+[
+	{
+		"name": "id",
+		"type": "number",
+		"label": "Activity ID",
+		"required": true
+	}
+]

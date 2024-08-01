@@ -1,0 +1,13 @@
+{
+	"url": "/deals/{{parameters.id}}/products/{{parameters.product_attachment_id}}",
+	"method": "DELETE",
+	"qs": {},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": null
+	}
+}

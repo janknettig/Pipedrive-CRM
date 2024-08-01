@@ -1,0 +1,16 @@
+[
+    {
+        "name": "pipeline_id",
+        "type": "select",
+        "label": "Pipeline",
+        "required": false,
+        "options": "rpc://Pipelines"
+    },
+    {
+        "help": "The maximum number of results to be worked with during one execution cycle.",
+        "name": "limit",
+        "type": "uinteger",
+        "label": "Limit",
+        "default": 10
+    }
+]

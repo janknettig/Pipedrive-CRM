@@ -1,0 +1,17 @@
+[
+	{
+		"name": "id",
+		"type": "number",
+		"label": "Follower ID"
+	},
+	{
+		"name": "user_id",
+		"type": "number",
+		"label": "User ID"
+	},
+	{
+		"name": "add_time",
+		"type": "date",
+		"label": "Add time"
+	}
+]

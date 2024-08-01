@@ -1,0 +1,14 @@
+[
+    {
+        "name": "id",
+        "type": "uinteger",
+        "label": "Subscription ID",
+        "required": true
+    },
+    {
+        "name": "end_date",
+        "type": "date",
+        "help": "The subscription termination date. All payments after specified date will be deleted. Default value is the current date.",
+        "label": "End Date"
+    }
+]

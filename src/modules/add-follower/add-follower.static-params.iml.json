@@ -1,0 +1,37 @@
+[
+/*
+	{
+		"name": "connectionType",
+		"label": "Type of connection",
+		"type": "select",
+		"required": true,
+		"options": [
+			{
+				"label": "API Key", 
+				"value": "key",
+				"nested": [
+					{
+						"name": "account",
+						"label": "Connection",
+						"type": "account:pipedrive-key",
+						"required": true,
+						"default": true
+					}
+				]
+			},
+			{
+				"label": "OAuth", 
+				"value": "auth",
+				"nested": [
+					{
+						"name": "account",
+						"label": "Connection",
+						"type": "account:pipedrive-auth",
+						"required": true
+					}
+				]
+			}
+		]
+	}
+*/
+]

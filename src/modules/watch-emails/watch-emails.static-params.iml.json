@@ -1,0 +1,52 @@
+[
+    {
+        "name": "folder",
+        "type": "select",
+        "label": "Folder",
+        "required": true,
+        "options": [
+            {
+                "label": "Inbox",
+                "value": "inbox",
+                "default": true
+            },
+            {
+                "label": "Drafts",
+                "value": "drafts"
+            },
+            {
+                "label": "Sent",
+                "value": "sent"
+            },
+            {
+                "label": "Archive",
+                "value": "archive"
+            }
+        ]
+    },
+    {
+        "name": "triggerOn",
+        "label": "Trigger when",
+        "type": "select",
+        "required": true,
+        "options": [
+            {
+                "label": "Added",
+                "value": "add_time",
+                "default": true
+            },
+            {
+                "label": "Updated",
+                "value": "update_time"
+            }
+        ]
+    },
+    {
+        "help": "The maximum number of results to be worked with during one execution cycle.",
+        "name": "limit",
+        "type": "uinteger",
+        "label": "Limit",
+        "default": 2,
+        "required": true
+    }
+]

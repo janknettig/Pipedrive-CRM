@@ -1,0 +1,60 @@
+[
+	{
+		"name": "stage_id",
+		"type": "select",
+		"label": "Stage",
+		"required": false,
+		"options": "rpc://Stages"
+	},
+	{
+		"name": "filter_id",
+		"type": "select",
+		"label": "Filter",
+		"required": false,
+		"options": "rpc://FilterDeals"
+	},
+	{
+		"name": "owned_by_you",
+		"type": "boolean",
+		"label": "Owned by you",
+		"required": false
+	},
+	{
+		"name": "status",
+		"type": "select",
+		"label": "Status",
+		"required": false,
+		"options": [
+			{"label": "open", "value": "open"},
+			{"label": "won", "value": "won"},
+			{"label": "lost", "value": "lost"},
+			{"label": "deleted", "value": "deleted"},
+			{"label": "all not deleted", "value": "all_not_deleted"}
+		] 
+	},
+	{
+		"help": "The maximum number of results to be worked with during one execution cycle.",
+		"name": "limit",
+		"type": "uinteger",
+		"label": "Limit",
+		"default": 2,
+		"required": true
+	},
+	{
+		"name": "triggerOn",
+		"label": "Trigger when",
+		"type": "select",
+		"required": true,
+		"options": [
+			{
+				"label": "Object created",
+				"value": "add_time",
+				"default": true
+			},
+			{
+				"label": "Object updated",
+				"value": "update_time"
+			}
+		]
+	}
+]

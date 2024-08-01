@@ -1,0 +1,52 @@
+[
+	{
+		"name": "filter_id",
+		"type": "select",
+		"label": "Filter",
+		"required": false,
+		"options": "rpc://FilterActivities"
+	},
+	{
+		"name": "type",
+		"type": "select",
+		"label": "Type",
+		"multiple": true,
+		"required": false,
+		"options": "rpc://ActivityTypes"
+	},
+	{
+		"name": "user_id",
+		"type": "select",
+		"label": "User",
+		"dynamic": true,
+		"required": false,
+		"options": "rpc://Users",
+		"help": "ID of the user whose activities will be fetched. If omitted, the user associated with the API token will be used. If 0, activities for all company users will be fetched based on the permission sets."
+	},
+	{
+		"name": "start_date",
+		"type": "date",
+		"label": "Start date",
+		"required": false
+	},
+	{
+		"name": "end_date",
+		"type": "date",
+		"label": "End date",
+		"required": false
+	},
+	{
+		"name": "done",
+		"type": "boolean",
+		"label": "Activity is done",
+		"required": false
+	},
+	{
+		"help": "The maximum number of results to be worked with during one execution cycle.",
+		"name": "limit",
+		"type": "uinteger",
+		"label": "Limit",
+		"default": 2,
+		"required": true
+	}
+]

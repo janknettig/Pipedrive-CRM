@@ -1,0 +1,27 @@
+{
+	"url": "/searchResults",
+	"method": "GET",
+	"qs": {
+		"term": "{{parameters.term}}",
+		"item_type": "{{parameters.module}}",
+		"exact_match": "{{getBoolean(parameters.exact_match)}}",
+		"limit": "{{if(parameters.limit > 500, 500, parameters.limit)}}"
+	},
+	"body": {},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": "{{getResponseOutput(item, environment.timezone)}}",
+		"iterate": "{{body.data}}",
+		"limit": "{{parameters.limit}}"
+	},
+	"pagination": {
+		"condition": "{{body.additional_data.pagination.more_items_in_collection}}",
+		"qs": {
+			"start": "{{body.additional_data.pagination.next_start}}"
+		}
+	}
+}

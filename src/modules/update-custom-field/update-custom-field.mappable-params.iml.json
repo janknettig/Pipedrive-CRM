@@ -1,0 +1,29 @@
+[
+    {
+        "name": "orgId",
+        "type": "text",
+        "label": "Organization ID",
+        "required": true
+    },
+    {
+        "name": "fields",
+        "type": "array",
+        "label": "Fields",
+        "required": true,
+        "spec": [
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Field Identifier",
+                "required": true,
+                "help": "40-character field identifier, can be obtained with the Get an Organization module."
+            },
+            {
+                "name": "value",
+                "type": "text",
+                "label": "Value",
+                "required": true
+            }
+        ]
+    }
+]

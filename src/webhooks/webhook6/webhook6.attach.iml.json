@@ -1,0 +1,21 @@
+{
+    "url": "/webhooks",
+    "method": "POST",
+	"qs": {},
+    "body": {
+		"event_action": "{{parameters.event_action}}",
+		"event_object": "product",
+		"subscription_url": "{{webhook.url}}",
+		"http_auth_user": "{{parameters.http_auth_user}}",
+		"http_auth_password": "{{parameters.http_auth_password}}"
+	},
+    "response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+        "data": {
+            "externalHookId": "{{body.data.id}}"
+        }
+    }
+}

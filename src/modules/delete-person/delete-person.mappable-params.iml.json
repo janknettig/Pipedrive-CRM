@@ -1,0 +1,8 @@
+[
+	{
+		"name": "id",
+		"type": "number",
+		"label": "Person ID",
+		"required": true
+	}
+]

@@ -1,0 +1,23 @@
+[
+	{
+		"name": "id",
+		"type": "number",
+		"label": "Deal ID",
+		"required": true
+	},
+	{
+		"name": "include_product_data",
+		"label": "Include Product Data",
+		"type": "boolean",
+		"default": false,
+		"required": true
+	},
+	{
+		"help": "The maximum number of results to be worked with during one execution cycle.",
+		"name": "limit",
+		"type": "uinteger",
+		"label": "Limit",
+		"default": 2,
+		"required": true
+	}
+]

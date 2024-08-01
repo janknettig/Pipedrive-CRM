@@ -1,0 +1,14 @@
+{
+    "url": "/subscriptions/recurring/{{parameters.id}}/cancel",
+    "method": "PUT",
+    "qs": {},
+    "body": "{{omit(parameters, 'id')}}",
+    "headers": {},
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": "{{getResponseOutput(body.data, environment.timezone, metadata.interface)}}"
+    }
+}

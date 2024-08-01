@@ -1,0 +1,121 @@
+[
+    {
+        "name": "id",
+        "label": "Person ID",
+        "required": true,
+        "type": "number"
+    },
+    {
+        "name": "name",
+        "label": "Name",
+        "type": "text"
+    },
+    {
+        "name": "owner_id",
+        "label": "Owner",
+        "required": false,
+        "type": "number",
+        "help": "Must be an Id.",
+        "rpc": {
+            "label": "Search",
+            "url": "rpc://SearchUsers",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "Query",
+                    "help": "Search Users. If empty, will list all users",
+                    "type": "text"
+                }
+            ]
+        }
+    },
+    {
+        "name": "org_id",
+        "label": "Organization",
+        "help": "Must be an Id.",
+        "required": false,
+        "type": "number",
+        "rpc": {
+            "label": "Search",
+            "url": "rpc://SearchOrganizationsByName",
+            "parameters": [
+                {
+                    "name": "q",
+                    "label": "Query",
+                    "help": "Search Organizations. Cannot be empty",
+                    "type": "text",
+                    "required": true
+                }
+            ]
+        }
+    },
+    {
+        "name": "email",
+        "label": "Emails",
+        "required": false,
+        "type": "array",
+        "spec": [
+            {
+                "name": "label",
+                "type": "text",
+                "label": "Label"
+            },
+            {
+                "name": "value",
+                "type": "text",
+                "label": "Value"
+            },
+            {
+                "name": "primary",
+                "type": "boolean",
+                "label": "Is Primary"
+            }
+        ]
+    },
+    {
+        "name": "phone",
+        "label": "Phones",
+        "required": false,
+        "type": "array",
+        "spec": [
+            {
+                "name": "label",
+                "type": "text",
+                "label": "Label"
+            },
+            {
+                "name": "value",
+                "type": "text",
+                "label": "Value"
+            },
+            {
+                "name": "primary",
+                "type": "boolean",
+                "label": "Is Primary"
+            }
+        ]
+    },
+    {
+        "name": "add_time",
+        "label": "Add time",
+        "required": false,
+        "type": "date"
+    },
+    {
+        "name": "visible_to",
+        "label": "Visible to",
+        "required": false,
+        "type": "select",
+        "options": [
+            {
+                "label": "Owner & followers (private)",
+                "value": "1"
+            },
+            {
+                "label": "Entire company (shared)",
+                "value": "3"
+            }
+        ]
+    },
+    "rpc://ExpectPersonsCustom"
+]

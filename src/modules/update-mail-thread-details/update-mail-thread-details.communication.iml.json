@@ -1,0 +1,19 @@
+{
+	"url": "/mailbox/mailThreads/{{parameters.thread_id}}",
+	"method": "PUT",
+	"qs": {},
+	"body": {
+		"deal_id": "{{parameters.deal_id}}",
+		"shared_flag": "{{getBoolean(parameters.shared_flag)}}",
+		"read_flag": "{{getBoolean(parameters.read_flag)}}",
+		"archived_flag": "{{getBoolean(parameters.archived_flag)}}"
+	},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": null
+	}
+}

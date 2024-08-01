@@ -1,0 +1,116 @@
+[
+    {
+        "name": "id",
+        "type": "integer",
+        "label": "Deal ID"
+    },
+    {
+        "name": "type",
+        "type": "text",
+        "label": "Type"
+    },
+    {
+        "name": "title",
+        "type": "text",
+        "label": "Title"
+    },
+    {
+        "name": "value",
+        "type": "number",
+        "label": "Value"
+    },
+    {
+        "name": "currency",
+        "type": "text",
+        "label": "Currency"
+    },
+    {
+        "name": "status",
+        "type": "text",
+        "label": "Status"
+    },
+    {
+        "name": "visible_to",
+        "type": "number",
+        "label": "Visible to"
+    },
+    {
+        "name": "owner",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "id",
+                "type": "integer",
+                "label": "Owner ID"
+            }
+        ],
+        "label": "Owner"
+    },
+    {
+        "name": "stage",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "id",
+                "type": "integer",
+                "label": "Stage ID"
+            },
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+            }
+        ],
+        "label": "Stage"
+    },
+    {
+        "name": "person",
+        "type": "text",
+        "label": "Person"
+    },
+    {
+        "name": "organization",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "id",
+                "type": "integer",
+                "label": "Organization ID"
+            },
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+            },
+            {
+                "name": "address",
+                "type": "text",
+                "label": "Address"
+            }
+        ],
+        "label": "Organization"
+    },
+    {
+        "name": "custom_fields",
+        "type": "array",
+        "label": "Custom Fields"
+    },
+    {
+        "name": "notes",
+        "type": "array",
+        "spec": {
+            "type": "text"
+        },
+        "label": "Notes"
+    },
+    {
+        "name": "cc_email",
+        "type": "email",
+        "label": "CC Email"
+    },
+    {
+        "name": "result_score",
+        "type": "number",
+        "label": "Result Score"
+    }
+]

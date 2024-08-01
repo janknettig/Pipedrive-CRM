@@ -1,0 +1,275 @@
+[
+    {
+        "name": "id",
+        "type": "number",
+		"label": "Message ID"
+    },
+    {
+        "name": "account_id",
+        "type": "text",
+		"label": "Account ID"
+    },
+	{	
+		"name": "from",
+		"label": "From",
+		"type": "collection",
+		"spec": [
+			{
+				"name": "id",
+				"type": "number",
+				"label": "ID"
+			},
+			{
+				"name": "email_address",
+				"type": "email",
+				"label": "Email address"
+			},
+			{
+				"name": "name",
+				"type": "text",
+				"label": "Name"
+			},
+			{
+				"name": "linked_person_id",
+				"type": "text",
+				"label": "Linked person ID"
+			},
+			{
+				"name": "linked_person_name",
+				"type": "text",
+				"label": "Linked person name"
+			},
+			{
+				"name": "mail_message_party_id",
+				"type": "number",
+				"label": "Mail message party ID"
+			}
+		]
+	},
+	{	
+		"name": "to",
+		"label": "To",
+		"type": "collection",
+		"spec": [
+			{
+				"name": "id",
+				"type": "number",
+				"label": "ID"
+			},
+			{
+				"name": "email_address",
+				"type": "email",
+				"label": "Email address"
+			},
+			{
+				"name": "name",
+				"type": "text",
+				"label": "Name"
+			},
+			{
+				"name": "linked_person_id",
+				"type": "text",
+				"label": "Linked person ID"
+			},
+			{
+				"name": "linked_person_name",
+				"type": "text",
+				"label": "Linked person name"
+			},
+			{
+				"name": "mail_message_party_id",
+				"type": "number",
+				"label": "Mail message party ID"
+			}
+		]
+	},
+	{	
+		"name": "cc",
+		"label": "Cc",
+		"type": "collection",
+		"spec": [
+			{
+				"name": "id",
+				"type": "number",
+				"label": "ID"
+			},
+			{
+				"name": "email_address",
+				"type": "email",
+				"label": "Email address"
+			},
+			{
+				"name": "name",
+				"type": "text",
+				"label": "Name"
+			},
+			{
+				"name": "linked_person_id",
+				"type": "text",
+				"label": "Linked person ID"
+			},
+			{
+				"name": "linked_person_name",
+				"type": "text",
+				"label": "Linked person name"
+			},
+			{
+				"name": "mail_message_party_id",
+				"type": "number",
+				"label": "Mail message party ID"
+			}
+		]
+	},
+	{	
+		"name": "bcc",
+		"label": "Bcc",
+		"type": "collection",
+		"spec": [
+			{
+				"name": "id",
+				"type": "number",
+				"label": "ID"
+			},
+			{
+				"name": "email_address",
+				"type": "email",
+				"label": "Email address"
+			},
+			{
+				"name": "name",
+				"type": "text",
+				"label": "Name"
+			},
+			{
+				"name": "linked_person_id",
+				"type": "text",
+				"label": "Linked person ID"
+			},
+			{
+				"name": "linked_person_name",
+				"type": "text",
+				"label": "Linked person name"
+			},
+			{
+				"name": "mail_message_party_id",
+				"type": "number",
+				"label": "Mail message party ID"
+			}
+		]
+	},
+	{
+        "name": "body_url",
+        "type": "url",
+		"label": "Body URL"
+    },
+    {
+        "name": "user_id",
+        "type": "number",
+		"label": "User ID"
+    },
+    {
+        "name": "mail_thread_id",
+        "type": "number",
+		"label": "Mail Thread ID"
+    },
+    {
+        "name": "subject",
+        "type": "text",
+		"label": "Subject"
+    },
+    {
+        "name": "snippet",
+        "type": "text",
+		"label": "Snippet"
+    },
+    {
+        "name": "mail_tracking_status",
+        "type": "text",
+		"label": "Mail tracking status"
+    },
+    {
+        "name": "mail_link_tracking_enabled_flag",
+        "type": "number",
+		"label": "Mail link tracking enabled flag"
+    },
+    {
+        "name": "read_flag",
+        "type": "number",
+		"label": "Read flag"
+    },
+    {
+        "name": "draft",
+        "type": "text",
+		"label": "Draft"
+    },
+    {
+        "name": "draft_flag",
+        "type": "number",
+		"label": "Draft flag"
+    },
+    {
+        "name": "synced_flag",
+        "type": "number",
+		"label": "Synced flag"
+    },
+    {
+        "name": "deleted_flag",
+        "type": "number",
+		"label": "Deleted flag"
+    },
+    {
+        "name": "has_body_flag",
+        "type": "number",
+		"label": "Has body flag"
+    },
+    {
+        "name": "sent_flag",
+        "type": "number",
+		"label": "Sent flag"
+    },
+    {
+        "name": "sent_from_pipedrive_flag",
+        "type": "number",
+		"label": "Sent from pipedrive flag"
+    },
+    {
+        "name": "smart_bcc_flag",
+        "type": "number",
+		"label": "Smart bcc flag"
+    },
+    {
+        "name": "message_time",
+        "type": "date",
+		"label": "Message time"
+    },
+    {
+        "name": "add_time",
+        "type": "date",
+		"label": "Add time"
+    },
+    {
+        "name": "update_time",
+        "type": "date",
+		"label": "Update time"
+    },
+    {
+        "name": "has_attachments_flag",
+        "type": "number",
+		"label": "Has attachments flag"
+    },
+    {
+        "name": "has_inline_attachments_flag",
+        "type": "number",
+		"label": "Has inline attachments flag"
+    },
+    {
+        "name": "has_real_attachments_flag",
+        "type": "number",
+		"label": "Has read attachments flag"
+    },
+    {
+        "name": "write_flag",
+        "type": "boolean",
+		"label": "Write flag"
+    }
+]

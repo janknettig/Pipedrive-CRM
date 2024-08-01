@@ -1,0 +1,13 @@
+{
+	"url": "/{{parameters.object}}/{{parameters.id}}/followers/{{parameters.follower_id}}",
+	"method": "DELETE",
+	"qs": {},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": null
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"url": "https://{{ifempty(parameters.customDomain, 'api')}}.pipedrive.com/v1/userSettings",
+	"qs": {
+		"api_token": "{{parameters.apiKey}}"
+	},
+	"log": {
+		"sanitize": ["request.qs.api_token"]
+	}
+}

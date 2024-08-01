@@ -1,0 +1,135 @@
+[
+    {
+        "name": "id",
+        "type": "number",
+        "label": "Note ID"
+    },
+    {
+        "name": "company_id",
+        "type": "number",
+        "label": "Company ID"
+    },
+    {
+        "name": "user_id",
+        "type": "number",
+        "label": "User ID"
+    },
+    {
+        "name": "deal_id",
+        "type": "number",
+        "label": "Deal ID"
+    },
+    {
+        "name": "person_id",
+        "type": "number",
+        "label": "Person ID"
+    },
+    {
+        "name": "org_id",
+        "type": "text",
+        "label": "Org ID"
+    },
+    {
+        "name": "content",
+        "type": "text",
+        "label": "Content"
+    },
+    {
+        "name": "add_time",
+        "type": "date",
+        "label": "Add time"
+    },
+    {
+        "name": "update_time",
+        "type": "date",
+        "label": "Update time"
+    },
+    {
+        "name": "active_flag",
+        "type": "boolean",
+        "label": "Active flag"
+    },
+    {
+        "name": "pinned_to_deal_flag",
+        "type": "boolean",
+        "label": "Pinned to deal flag"
+    },
+    {
+        "name": "pinned_to_person_flag",
+        "type": "boolean",
+        "label": "Pinned to person flag"
+    },
+    {
+        "name": "pinned_to_organization_flag",
+        "type": "boolean",
+        "label": "Pinned to organization flag"
+    },
+    {
+        "name": "last_update_user_id",
+        "type": "text",
+        "label": "Last update user ID"
+    },
+    {
+        "name": "organization",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+            }
+        ],
+        "label": "Organization"
+    },
+    {
+        "name": "person",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+            }
+        ],
+        "label": "Person"
+    },
+    {
+        "name": "deal",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "title",
+                "type": "text",
+                "label": "Title"
+            }
+        ],
+        "label": "Deal"
+    },
+    {
+        "name": "user",
+        "type": "collection",
+        "spec": [
+            {
+                "name": "email",
+                "type": "email",
+                "label": "Email"
+            },
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+            },
+            {
+                "name": "icon_url",
+                "type": "text",
+                "label": "Icon url"
+            },
+            {
+                "name": "is_you",
+                "type": "boolean",
+                "label": "Is you"
+            }
+        ],
+        "label": "User"
+    }
+]

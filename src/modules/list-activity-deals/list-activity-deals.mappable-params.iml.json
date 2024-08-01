@@ -1,0 +1,23 @@
+[
+	{
+		"name": "id",
+		"type": "number",
+		"label": "Deal ID",
+		"required": true
+	},
+	{
+		"name": "done",
+		"type": "boolean",
+		"label": "Done",
+		"required": false,
+		"help": "Whether to fetch done or undone activities. If omitted from request, both undone and done activities are fetched."
+	},
+	{
+		"help": "The maximum number of results to be worked with during one execution cycle.",
+		"name": "limit",
+		"type": "uinteger",
+		"label": "Limit",
+		"default": 2,
+		"required": true
+	}
+]

@@ -1,0 +1,6 @@
+[
+    "deals:read",
+    "contacts:read",
+    "products:read",
+    "users:read"
+]

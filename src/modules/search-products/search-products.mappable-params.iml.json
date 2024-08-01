@@ -1,0 +1,43 @@
+[
+    {
+        "name": "term",
+        "type": "text",
+        "label": "Term",
+        "required": true,
+        "help": "The search term to look for. Minimum 2 characters (or 1 if using `Exact Match`)."
+    },
+    {
+        "name": "fields",
+        "type": "select",
+        "label": "Fields",
+        "multiple": true,
+        "help": "The fields to perform the search from. Defaults to all of them.",
+        "options": [
+            {
+                "label": "code",
+                "value": "code"
+            },
+            {
+                "label": "custom_fields",
+                "value": "custom_fields"
+            },
+            {
+                "label": "name",
+                "value": "name"
+            }
+        ]
+    },
+    {
+        "name": "exact_match",
+        "type": "boolean",
+        "label": "Exact Match",
+        "help": "When enabled, only full exact matches against the given term are returned. It is __not__ case sensitive."
+    },
+    {
+        "help": "The maximum number of results to be worked with during one execution cycle.",
+        "name": "limit",
+        "type": "uinteger",
+        "label": "Limit",
+        "default": 2
+    }
+]

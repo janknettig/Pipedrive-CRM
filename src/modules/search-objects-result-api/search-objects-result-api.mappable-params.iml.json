@@ -1,0 +1,52 @@
+[
+	{
+		"name": "term",
+		"label": "Term",
+		"type": "text",
+		"required": true
+	},
+	{
+		"name": "module",
+		"label": "Item type",
+		"type": "select",
+		"options": {
+			"store": [
+				{
+					"label": "Deal",
+					"value": "deal"
+				},
+				{
+					"label": "Person",
+					"value": "person"
+				},
+				{
+					"label": "Organization",
+					"value": "organization"
+				},
+				{
+					"label": "Product",
+					"value": "product"
+				},
+				{
+					"label": "File",
+					"value": "file"
+				}
+			]
+		},
+		"required": false
+	},
+	{
+		"name": "exact_match",
+		"label": "Exact match",
+		"type": "boolean",
+		"required": false
+	},
+	{
+		"help": "The maximum number of results to be worked with during one execution cycle.",
+		"name": "limit",
+		"type": "uinteger",
+		"label": "Limit",
+		"default": 2,
+		"required": true
+	}
+]

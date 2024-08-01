@@ -1,0 +1,7 @@
+[
+	{
+		"name": "id",
+		"label": "Product attachment ID",
+		"type": "number"
+	}
+]

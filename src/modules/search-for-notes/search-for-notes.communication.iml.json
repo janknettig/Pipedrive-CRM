@@ -1,0 +1,34 @@
+{
+	"url": "/notes",
+	"qs": {
+		"user_id": "{{parameters.user_id}}",
+		"deal_id": "{{parameters.deal_id}}",
+		"person_id": "{{parameters.person_id}}",
+		"org_id": "{{parameters.org_id}}",
+		"start_date": "{{if(parameters.start_date, formatDate(parameters.start_date, 'YYYY-MM-DD', environment.timezone), undefined)}}",
+		"end_date": "{{if(parameters.end_date, formatDate(parameters.end_date, 'YYYY-MM-DD', environment.timezone), undefined)}}",
+		"pinned_to_lead_flag": "{{boolToInt(parameters.pinned_to_lead_flag)}}",
+		"pinned_to_deal_flag": "{{boolToInt(parameters.pinned_to_deal_flag)}}",
+		"pinned_to_organization_flag": "{{boolToInt(parameters.pinned_to_organization_flag)}}",
+		"pinned_to_person_flag": "{{boolToInt(parameters.pinned_to_person_flag)}}",
+		"limit": "{{if(parameters.limit > 500, 500, parameters.limit)}}"
+	},
+	"method": "GET",
+	"body": {},
+	"headers": {},
+	"response": {
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": "{{getResponseOutput(item, environment.timezone, metadata.interface)}}",
+		"iterate": "{{body.data}}",
+		"limit": "{{parameters.limit}}"
+	},
+	"pagination": {
+		"condition": "{{body.additional_data.pagination.more_items_in_collection}}",
+		"qs": {
+			"start": "{{body.additional_data.pagination.next_start}}"
+		}
+	}
+}

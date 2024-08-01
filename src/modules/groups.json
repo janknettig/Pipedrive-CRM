@@ -1,0 +1,189 @@
+[
+	{
+		"label": "Deals",
+		"modules": [
+			"NewDealEvent",
+			"WatchDeals",
+			"CreateObject",
+			"UpdateDeal",
+			"DeleteDeal",
+			"GetDeal",
+			"ListDeals",
+			"searchDeals",
+			"GetPipelineDeals",
+			"GetStageDeals",
+			"listDealsForPerson",
+			"listDealsForProduct",
+			"listDealsinOrganization"
+		]
+	},
+	{
+		"label": "Leads",
+		"modules": [
+			"watchLeads",
+			"searchLeads",
+			"listLeads",
+			"getLead",
+			"createLead",
+			"updateLead",
+			"deleteLead"
+		]
+	},
+	{
+		"label": "Products in a deal",
+		"modules": [
+			"AddProductToDeal",
+			"UpdateProductAttachmentDetails",
+			"DeleteAttachedProduct",
+			"ListProductsInDeal"
+		]
+	},
+	{
+		"label": "Persons in a deal",
+		"modules": [
+			"AddParticipantToDeal",
+			"ListPersonsInDeal"
+		]
+	},
+	{
+		"label": "Participants in a deal",
+		"modules": [
+			"listParticipantsOfADeal"
+		]
+	},
+	{
+		"label": "Files in a deal",
+		"modules": [
+			"ListDealFiles"
+		]
+	},
+	{
+		"label": "Activities in a deal",
+		"modules": [
+			"ListActivityDeals"
+		]
+	},
+	{
+		"label": "Organizations",
+		"modules": [
+			"NewOrganizationEvent",
+			"WatchOrganizations",
+			"CreateOrganization",
+			"UpdateOrganization",
+			"DeleteOrganization",
+			"GetOrganization",
+			"ListOrganizations",
+			"searchOrganizations",
+			"UpdateCustomField"
+		]
+	},
+	{
+		"label": "Persons",
+		"modules": [
+			"NewPersonEvent",
+			"WatchPersons",
+			"CreatePerson",
+			"UpdatePerson",
+			"DeletePerson",
+			"GetPerson",
+			"GetPersons",
+			"FindPersonByName",
+			"searchPersons"
+		]
+	},
+	{
+		"label": "Products",
+		"modules": [
+			"NewProductEvent",
+			"WatchProducts",
+			"CreateProduct",
+			"UpdateProduct",
+			"DeleteProduct",
+			"GetProduct",
+			"ListProducts",
+			"searchProducts"
+		]
+	},
+	{
+		"label": "Notes",
+		"modules": [
+			"NewNoteEvent",
+			"WatchNotes",
+			"CreateNote",
+			"UpdateNote",
+			"DeleteNote",
+			"GetNote",
+			"SearchForNotes"
+		]
+	},
+	{
+		"label": "Activities",
+		"modules": [
+			"NewEvent",
+			"WatchActivities",
+			"CreateActivity",
+			"UpdateActivity",
+			"DeleteActivity",
+			"GetActivity",
+			"SearchForActivity"
+		]
+	},
+	{
+		"label": "Mail",
+		"modules": [
+			"UpdateMailThreadDetails",
+			"DeleteMailThread",
+			"GetMailThread",
+			"GetMessage",
+			"ListMailThreads",
+			"ListMessages"
+		]
+	},
+	{
+		"label": "Followers",
+		"modules": [
+			"AddFollower",
+			"DeleteFollower",
+			"ListFollowers"
+		]
+	},
+	{
+		"label": "Users",
+		"modules": [
+			"GetUser",
+			"ListUsers"
+		]
+	},
+	{
+		"label": "Files",
+		"modules": [
+			"UploadFile",
+			"DownloadFile"
+		]
+	},
+	{
+		"label": "Subscriptions",
+		"modules": [
+			"addRecurringSubscription",
+			"addInstallmentSubscription",
+			"updateInstallmentSubscription",
+			"updateRecurringSubscription",
+			"getSubscription",
+			"findSubscriptionByDeal",
+			"listSubscriptionPayments",
+			"cancelRecurringSubscription",
+			"deleteSubscription"
+		]
+	},
+	{
+		"label": "Other",
+		"modules": [
+			"ListPipelines",
+			"ListStages",
+			"SearchOrganizations",
+			"SearchObjectsResultAPI",
+			"MakeAPICall",
+			"watchEmails"
+		]
+	}
+]

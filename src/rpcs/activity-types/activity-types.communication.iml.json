@@ -1,0 +1,18 @@
+{
+	"url": "/activityTypes",
+	"method": "GET",
+	"qs": {},
+	"body": {},
+	"headers": {},
+	"response": {
+		"iterate": "{{body.data}}",
+		"error": {
+			"type": "DataError",
+			"message": "{{getErrors(body, statusCode)}}"
+		},
+		"output": {
+			"label": "{{item.name}}",
+			"value": "{{item.key_string}}"
+		}
+	}
+}

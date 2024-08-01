@@ -1,0 +1,13 @@
+{
+    "url": "/subscriptions/{{parameters.id}}",
+    "method": "DELETE",
+    "body": {},
+    "headers": {},
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": null
+    }
+}

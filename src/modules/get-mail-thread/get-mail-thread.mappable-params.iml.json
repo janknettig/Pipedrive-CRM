@@ -1,0 +1,8 @@
+[
+	{
+		"name": "id",
+		"type": "number",
+		"label": "Mail thread ID",
+		"required": true
+	}
+]

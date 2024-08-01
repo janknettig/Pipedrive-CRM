@@ -1,0 +1,27 @@
+{
+    "url": "/products/search",
+    "qs": {
+        "term": "{{parameters.term}}",
+        "fields": "{{if(parameters.fields, join(parameters.fields, ','))}}",
+        "exact_match": "{{parameters.exact_match}}",
+        "include_fields": "product.price"
+    },
+    "response": {
+        "error": {
+            "type": "DataError",
+            "message": "{{getErrors(body, statusCode)}}"
+        },
+        "output": {
+            "{{...}}": "{{getResponseOutput(item.item, environment.timezone, metadata.interface)}}",
+            "result_score": "{{item.result_score}}"
+        },
+        "iterate": "{{body.data.items}}",
+        "limit": "{{parameters.limit}}"
+    },
+    "pagination": {
+        "condition": "{{body.additional_data.pagination.more_items_in_collection}}",
+        "qs": {
+            "start": "{{body.additional_data.pagination.next_start}}"
+        }
+    }
+}

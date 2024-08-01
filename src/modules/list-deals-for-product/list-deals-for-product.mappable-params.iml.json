@@ -1,0 +1,45 @@
+[
+    {
+        "name": "id",
+        "type": "select",
+        "label": "Product ID",
+        "required": true,
+        "options": "rpc://listProducts"
+    },
+    {
+        "name": "status",
+        "type": "select",
+        "options": [
+            {
+                "value": "open",
+                "label": "Open"
+            },
+            {
+                "value": "won",
+                "label": "Won"
+            },
+            {
+                "value": "lost",
+                "label": "Lost"
+            },
+            {
+                "value": "deleted",
+                "label": "Deleted"
+            },
+            {
+                "value": "all_not_deleted",
+                "default": true,
+                "label": "All Not Deleted"
+            }
+        ],
+        "label": "Status"
+    },
+    {
+        "help": "The maximum number of results to be worked with during one execution cycle.",
+        "name": "limit",
+        "type": "uinteger",
+        "label": "Limit",
+        "default": 2,
+        "required": true
+    }
+]
