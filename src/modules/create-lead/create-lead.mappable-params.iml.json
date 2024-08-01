@@ -3,8 +3,7 @@
         "name": "title",
         "type": "text",
         "label": "Title",
-        "required": true,
-        "help": "This will show up as the name of the lead in your Leads inbox."
+        "required": true
     },
     {
         "name": "owner_id",
